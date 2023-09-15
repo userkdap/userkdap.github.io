@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- How to Validate URLs in JavaScript -->
+<!-- https://www.freecodecamp.org/news/how-to-validate-urls-in-javascript/ -->
+<!-- javascript - Download data URL file -->
+<!-- https://stackoverflow.com/questions/3916191/download-data-url-file -->
+<!-- Blob: Blob() constructor -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/Blob/Blob -->
+<!-- Blob -->
+<!-- https://javascript.info/blob -->
+<!-- css - Is there an opposite to display:none? -->
+<!-- https://stackoverflow.com/questions/17630945/is-there-an-opposite-to-displaynone -->
+<!-- revert - CSS: Cascading Style Sheets | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/CSS/revert -->
+<!-- javascript - Replace all strings "<" and ">" in a variable with "&lt;" and "&gt;" -->
+<!-- https://stackoverflow.com/questions/6093986/replace-all-strings-and-in-a-variable-with-lt-and-gt -->
+<!-- String.prototype.replace() - JavaScript | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace -->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ο συγγραφέας">
+    <meta name="description" content="Εμφάνιση συγκεκριμένων υποδιαιρέσεων του περιεχομένου">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="app.js" defer></script>
+    <title>Export Links</title>
+</head>
+
+<body>
+    <h2>Export Links</h2>
+    <section>Enter a URL below to generate a link to it</section>
+    <section><input type="url" id="href"></section>
+    <section>Enter a description for the URL (optional)</section>
+    <section><input type="text" id="title"></section>
+    <section>
+        <button id="generate">Generate Link</button>
+        <button id="clear-recent">Clear Recent</button>
+    </section>
+
+    <section class="out-link">Result: <output id="view-url" name="view-url" for="href"></output></section>
+    
+    <section><button id="clear">Clear</button></section>
+
+    <section class="control">
+        <ul id="url-list">
+        </ul>
+    </section>
+
+    <section><button id="export">Export Links</button></section>
+
+    <section class="control">
+        <label id="export-label" for="export-file-name">Enter name for exported file (optional)</label>
+        <div><input type="text" id="export-file-name" name="export-file-name"></div>
+    </section>
+</body>
+
+</html>
