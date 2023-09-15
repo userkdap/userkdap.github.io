@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<!-- Using files from web applications -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/File_API/Using_files_from_web_applications -->
+<!-- <input type="file"> - HTML: HyperText Markup Language | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file -->
+<!-- HTML <input type='file'> File Selection Event -->
+<!-- https://stackoverflow.com/questions/3528359/html-input-type-file-file-selection-event -->
+<!-- FileReader - Web APIs | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/FileReader -->
+<!-- FileReader: FileReader() constructor - Web APIs | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/FileReader/FileReader -->
+<!-- FileReader: readAsText() method - Web APIs | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsText -->
+<!-- HTML <input> accept Attribute -->
+<!-- https://www.w3schools.com/TAGS/att_input_accept.asp -->
+<!-- HTML attribute: accept - HTML: HyperText Markup Language | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/accept -->
+<!-- css - Is there an opposite to display:none? -->
+<!-- https://stackoverflow.com/questions/17630945/is-there-an-opposite-to-displaynone -->
+<!-- revert - CSS: Cascading Style Sheets | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/CSS/revert -->
+<!-- Matching an empty string with regex -->
+<!-- https://stackoverflow.com/questions/17618634/matching-an-empty-string-with-regex -->
+<!-- String.prototype.replace() - JavaScript | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace -->
+<!-- How can I get file extensions with JavaScript? -->
+<!-- https://stackoverflow.com/questions/190852/how-can-i-get-file-extensions-with-javascript -->
+<!-- How to get file extensions using JavaScript? -->
+<!-- https://www.geeksforgeeks.org/how-to-get-file-extensions-using-javascript/ -->
+<!-- How to Get File Extensions with JavaScript -->
+<!-- https://www.w3docs.com/snippets/javascript/how-to-get-file-extensions-with-javascript.html -->
+<!-- javascript - Download data URL file -->
+<!-- https://stackoverflow.com/questions/3916191/download-data-url-file -->
+<!-- Blob: Blob() constructor -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/Blob/Blob -->
+<!-- Blob -->
+<!-- https://javascript.info/blob -->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open | Edit | Export File</title>
+</head>
+
+<body>
+    <h2>Open | Edit | Export File</h2>
+    <section>
+        <input type="file" id="upload-file" accept="text/*" />
+        <button id="open-file">Open file</button>
+        <button id="export">Export file</button>
+        <button id="clear">Clear</button>
+        <span id="export-msg">
+            <!-- Textarea is empty -->
+        </span>
+    </section>
+
+    <section class="control">
+        <label id="export-label" for="export-file-name">Enter name for exported file (optional)</label>
+        <div><input type="text" id="export-file-name" name="export-file-name"></div>
+    </section>
+
+    <section>
+        <label for="file-content">File selected:</label>
+        <output id="file-details" name="file-details" for="file-content"></output>
+    </section>
+
+    <section>
+        <textarea id="file-content" name="file-content" rows="50" cols="100" spellcheck="false" autofocus></textarea>
+    </section>
+
+    <style>
+        :root {
+            /* χρώμα πλήκτρων */
+            --btn-color: teal;
+            /* χρώμα κειμένου πλήκτρων */
+            --btn-text: whitesmoke;
+            /* χρώμα μηνύματος επιτυχίας */
+            --msg-win-color: rgb(0, 128, 32);
+            /* χρώμα μηνύματος αποτυχίας */
+            --msg-wrong-color: crimson;
+            /* χρώμα κειμένου μηνύματος */
+            --msg-text: floralwhite;
+            /* χρώμα ιστορικού προσπαθειών */
+            --low-high-color: gray;
+        }
+
+        * {
+            /* για δοκιμαστική προβολή outline: 1px solid green; */
+            /* ορισμός box-sizing σε border-box για όλα τα στοιχεία του εγγράφου */
+            box-sizing: border-box;
+        }
+
+        body {
+            /* γραμματοσειρά της οικογένειας sans-serif */
+            font-family: Arial, Helvetica, sans-serif;
+            /* μέγεθος της γραμματοσειράς βάσης στο 100% άρα 16px (default τιμή) */
+            font-size: 100%;
+            color: darkblue;
+        }
+
+        section {
+            /* μέγεθος γραμματοσειράς 1.6rem=1.6*16px */
+            font-size: 1.6rem;
+            /* εσωτερικό περιθώριο αριστερά 1rem=16px */
+            padding-left: 1rem;
+            /* εξωτερικό περιθώριο πάνω 1rem=16px */
+            margin-top: 1rem;
+            /* εξωτερικό περιθώριο κάτω 0.5rem=0.5*16px */
+            margin-bottom: 0.5rem;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        textarea {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 1.6rem;
+            background-color: lightyellow;
+            color: darkblue;
+            width: 100%;
+            resize: none;
+        }
+
+        button {
+            /* χρώμα υποβάθρου των πλήκτρων */
+            background-color: var(--btn-color);
+            /* χρώμα κειμένου των πλήκτρων */
+            color: var(--btn-text);
+            /* μέγεθος γραμματοσειράς 1.6rem=1.6*16px ίδιο με το section */
+            font-size: 1.6rem;
+            /* γωνίες ελαφρά στρογγυλεμένες */
+            border-radius: 5%;
+            /* χρώμα πλαισίου διαφανές */
+            border-color: transparent;
+            /* ο δρομέας αλλάζει εμφάνιση ώστε να φαίνεται ότι μπορούμε να επιλέξουμε το πλήκτρο */
+            cursor: pointer;
+        }
+
+        button:hover {
+            /* ψευδό-κλάση όταν το ποντίκι είναι πάνω από την περιοχή κάθε πλήκτρου */
+            /* αλλαγή στη διαφάνεια */
+            opacity: 0.8;
+            filter: alpha(opacity=80);
+        }
+
+        button:focus {
+            /* ψευδό-κλάση όταν το πλήκτρο έχει το focus */
+            /* χρώμα στο περίγραμμα του πλήκτρου */
+            outline-color: dodgerblue;
+        }
+
+        #export {
+            /* το πλήκτρο #export αρχικά είναι κρυμμένο και δε μπορεί να δεχτεί events */
+            visibility: hidden;
+        }
+
+        #clear {
+            /* το πλήκτρο #clear αρχικά είναι κρυμμένο και δε μπορεί να δεχτεί events */
+            visibility: hidden;
+        }
+
+        .control {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        #export-label {
+            /* το label #export-label αρχικά είναι κρυμμένο */
+            display: none;
+        }
+
+        #export-file-name {
+            /* μέγεθος γραμματοσειράς 1.6rem=1.6*16px */
+            font-size: 1.6rem;
+            /* να παίρνει το 100% του πλάτους (width) του container */
+            width: 100%;
+            /* το πλaίσιο #export-file-name αρχικά είναι κρυμμένο και δε μπορεί να δεχτεί events */
+            display: none;
+        }
+
+        #export-file-name:focus {
+            /* ψευδό-κλάση όταν το πλαίσιο κειμένου έχει το focus */
+            /* χρώμα στο περίγραμμα του πλαισίου */
+            outline-color: dodgerblue;
+        }
+    </style>
+
+
+    <script type="text/Javascript">
+        const uploadFile = document.getElementById("upload-file");
+        const openFile = document.getElementById("open-file");
+        
+        const clickToExport = document.getElementById("export");
+        const clear = document.getElementById("clear");
+        const exportMsg = document.getElementById("export-msg");
+        
+        const fileContent = document.getElementById("file-content");
+        const fileDetails = document.getElementById("file-details");
+
+        const exportLabel = document.getElementById("export-label");
+        const exportFileName = document.getElementById("export-file-name");
+        
+        let allExports = "";
+        let fileExtension = "txt";
+
+        uploadFile.addEventListener("change", openLocalFile);
+        
+        // code that handles the click event
+        openFile.addEventListener("click", (event) => {
+            if (uploadFile) {
+                uploadFile.click();
+            }
+        });
+
+        fileContent.addEventListener("input", () => {
+            toggleControlElements("visible");
+            if (!isEmpty(fileContent.value)) {
+                toggleExportElements("revert");
+            } else {
+                fileExtension = "txt";
+                fileDetails.textContent = "";
+                toggleExportElements("none");
+            }
+        });
+        
+        clickToExport.addEventListener("click", exportFile);
+        clear.addEventListener("click", clearAll);
+
+        function openLocalFile() {
+            let currentFiles = uploadFile.files;
+            let selectedFile = currentFiles[0];
+            const reader = new FileReader();
+            // this will display a text file
+            // useCapture: false - The handler is executed in the bubbling phase, inner first, to outer
+            reader.addEventListener("load", printToTextArea, false);
+            reader.readAsText(selectedFile);
+            fileExtension = getFileExtension(selectedFile.name);
+            fileDetails.textContent = `${selectedFile.name} (${returnFileSize(selectedFile.size)})`;
+            toggleControlElements("visible");
+            toggleExportElements("revert");
+            // event listener printToTextArea
+            function printToTextArea() {
+                fileContent.value = reader.result;
+            }
+        }
+
+        function isEmpty(str) {
+            let spaces = /^\s*$/;
+            return spaces.test(str);
+        }
+
+        function getFileExtension(fileName) {
+            return fileName.substring(fileName.lastIndexOf('.') + 1);
+        }
+
+        function exportFile() {
+            if (!isEmpty(fileContent.value )) {
+                allExports = doubleDigits(setAllExports());
+                let textFile = fileContent.value;
+                let exportName = "";
+                let a = document.createElement('a');
+                a.href = URL.createObjectURL(new Blob([textFile], {type: `text/${fileExtension}`}));
+                (exportFileName.value !== "")? exportName = `${replaceSpaces(exportFileName.value)}.${fileExtension}`: exportName = `export-content-${allExports}.${fileExtension}`;
+                a.setAttribute("download", exportName);
+                a.click();
+                URL.revokeObjectURL(a.href);
+                delete a;
+                toggleExportElements("none");
+            } else {
+                exportMsg.textContent = "Textarea is empty";
+            }
+        }
+
+        function replaceSpaces(str) {
+            return str.replaceAll(" ", "-");
+        }
+
+        function setAllExports() {
+            let totalExports = Number(localStorage.getItem("totalExports"));
+            totalExports += 1;
+            localStorage.setItem("totalExports", totalExports);
+            return Number(localStorage.getItem("totalExports"));
+        }
+
+        function doubleDigits(numStr) {
+            if (numStr > 0 && numStr < 10) {
+                return "0"+numStr;
+            } else if (numStr > 9) {
+                return numStr;
+            }
+        }
+
+        function returnFileSize(number) {
+            if (number < 1024) {
+                return `${number} bytes`;
+            } else if (number >= 1024 && number < 1048576) {
+                return `${(number / 1024).toFixed(1)} KB`;
+            } else if (number >= 1048576 && number < 1073741824) {
+                return `${(number / 1048576).toFixed(1)} MB`;
+            } else if (number >= 1073741824) {
+                return `${(number / 1073741824).toFixed(1)} GB`;
+            }
+        }
+        
+        function toggleControlElements(visibilityState) {
+            clickToExport.style.visibility = visibilityState;
+            exportMsg.textContent = "";
+            clear.style.visibility = visibilityState;
+        }
+
+        function toggleExportElements(displayState) {
+            exportLabel.style.display = displayState;
+            exportFileName.value = "";
+            exportFileName.style.display = displayState;
+        }
+
+        function clearAll() {
+            fileContent.value = "";
+            fileDetails.textContent = "";
+            toggleExportElements("none");
+            toggleControlElements("hidden");
+        }
+    </script>
+</body>
+
+</html>
