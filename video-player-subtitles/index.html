@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- Regular expression for URL validation in JavaScript -->
+<!-- https://stackoverflow.com/questions/1410311/regular-expression-for-url-validation-in-javascript -->
+<!-- How to Validate URLs in JavaScript -->
+<!-- https://www.freecodecamp.org/news/how-to-validate-urls-in-javascript/ -->
+<!-- Check if an URL is valid or not using Regular Expression -->
+<!-- https://www.geeksforgeeks.org/check-if-an-url-is-valid-or-not-using-regular-expression/ -->
+<!-- Using files from web applications - Web APIs | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/File_API/Using_files_from_web_applications -->
+<!-- <input type="file"> - HTML: HyperText Markup Language | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file -->
+<!-- HTML <input type='file'> File Selection Event -->
+<!-- https://stackoverflow.com/questions/3528359/html-input-type-file-file-selection-event -->
+<!-- <video>: The Video Embed element - HTML: HyperText Markup Language | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video -->
+<!-- <track>: The Embed Text Track element- HTML: HyperText Markup Language | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track -->
+<!-- Adding captions and subtitles to HTML video - Developer guides | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video -->
+<!-- How to enable CORS for html5 video loading vtt file? -->
+<!-- https://stackoverflow.com/questions/45902293/how-to-enable-cors-for-html5-video-loading-vtt-file -->
+<!-- How to center a video inside HTML documents -->
+<!-- https://sebhastian.com/html-center-video/ -->
+<!-- MP4 video not working in HTML page by using html 5 Video tag -->
+<!-- https://stackoverflow.com/questions/45477852/mp4-video-not-working-in-html-page-by-using-html-5-video-tag -->
+<!-- URL: createObjectURL() static method - Web APIs | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL_static -->
+<!-- URL: revokeObjectURL() static method - Web APIs | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/URL/revokeObjectURL_static -->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ο συγγραφέας">
+    <meta name="description" content="Εμφάνιση συγκεκριμένων υποδιαιρέσεων του περιεχομένου">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="app.js" defer></script>
+    <title>Video Player with Subtitles</title>
+</head>
+
+<body>
+    <h2>Video Player with Subtitles</h2>
+    <section>
+        Enter a video URL below to view remote file or click to upload local file
+    </section>
+    <section>
+        <input type="url" id="doc-url">
+    </section>
+    <section>
+        <input type="file" id="upload-video" accept="video/mp4" />
+        <button id="add-video">Upload video file</button>
+    </section>
+    <section id="out-link">
+        File selected: <output id="view-url" name="result" for="doc-url"></output>
+    </section>
+    <section>
+        <button id="clear">Clear</button>
+    </section>
+    <figure id="i-frame"></figure>
+    <section>
+        <input type="file" id="upload-subs" accept="text/vtt" />
+        <button id="add-subs">Add subtitles (.vtt)</button>
+    </section>
+    <section>
+        <output id="file-info" name="subs-file" for="upload-subs"></output>
+    </section>
+</body>
+
+</html>
