@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- HTML URL Encoding Reference -->
+<!-- https://www.w3schools.com/tags/ref_urlencode.asp -->
+<!-- JavaScript encodeURIComponent() Method -->
+<!-- https://www.w3schools.com/jsref/jsref_encodeuricomponent.asp -->
+<!-- encodeURIComponent() - JavaScript | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent -->
+<!-- How to Copy Text to the Clipboard with JavaScript -->
+<!-- https://www.freecodecamp.org/news/copy-text-to-clipboard-javascript/ -->
+<!-- Clipboard: writeText() method - Web APIs | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText -->
+<!-- css - Is there an opposite to display:none? -->
+<!-- https://stackoverflow.com/questions/17630945/is-there-an-opposite-to-displaynone -->
+<!-- revert - CSS: Cascading Style Sheets | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/CSS/revert -->
+<!-- <video>: The Video Embed element - HTML: HyperText Markup Language | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video -->
+<!-- <track>: The Embed Text Track element- HTML: HyperText Markup Language | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track -->
+<!-- Adding captions and subtitles to HTML video - Developer guides | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video -->
+<!-- How to enable CORS for html5 video loading vtt file? -->
+<!-- https://stackoverflow.com/questions/45902293/how-to-enable-cors-for-html5-video-loading-vtt-file -->
+<!-- Using files from web applications - Web APIs | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/File_API/Using_files_from_web_applications -->
+<!-- <input type="file"> - HTML: HyperText Markup Language | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file -->
+<!-- HTML <input type='file'> File Selection Event -->
+<!-- https://stackoverflow.com/questions/3528359/html-input-type-file-file-selection-event -->
+<!-- How to center a video inside HTML documents -->
+<!-- https://sebhastian.com/html-center-video/ -->
+<!-- MP4 video not working in HTML page by using html5 Video tag -->
+<!-- https://stackoverflow.com/questions/45477852/mp4-video-not-working-in-html-page-by-using-html-5-video-tag -->
+<!-- URL: createObjectURL() static method - Web APIs | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL_static -->
+<!-- URL: revokeObjectURL() static method - Web APIs | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/URL/revokeObjectURL_static -->
+<!-- Blob: Blob() constructor - Web APIs | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/Blob/Blob -->
+<!-- Blob -->
+<!-- https://javascript.info/blob -->
+<!-- javascript - Download data URL file -->
+<!-- https://stackoverflow.com/questions/3916191/download-data-url-file -->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ο συγγραφέας">
+    <meta name="description" content="Εμφάνιση συγκεκριμένων υποδιαιρέσεων του περιεχομένου">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="app.js" defer></script>
+    <title>Video URL Viewer</title>
+</head>
+
+<body>
+    <h2>Video URL Viewer with Subtitles</h2>
+    <section>
+        Enter a video containing URL below to generate a link to view it
+    </section>
+    <section>
+        <input type="url" id="doc-url">
+    </section>
+    <section>
+        <button id="generate">View URL</button>
+        <button id="download-file">Download</button>
+        <button id="export">Export Links</button>
+        <button id="clear-recent">Clear Recent</button>
+    </section>
+    <section class="out-link">
+        Result: <output id="view-url" name="result" for="doc-url"></output>
+    </section>
+    <section class="control">
+        <button id="copy-url">Click to Copy</button>
+        <span id="copy-msg"></span>
+    </section>
+    <section>
+        <button id="clear">Clear</button>
+    </section>
+    <figure id="i-frame"></figure>
+    <section>
+        <input type="file" id="upload-subs" accept="text/vtt" />
+        <button id="add-subs">Add subtitles (.vtt)</button>
+    </section>
+    <section>
+        <output id="file-info" name="subs-file" for="upload-subs"></output>
+    </section>
+</body>
+
+</html>
