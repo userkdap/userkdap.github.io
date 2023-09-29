@@ -60,7 +60,7 @@
         }
 
         function generateLink() {
-            const anyOrigin = "http://www.whateverorigin.org/get?url=";
+            const anyOrigin = "https://www.whateverorigin.org/get?url=";
             if (checkInput(docUrl.value, DOMAIN_1)) {
                 domain = DOMAIN_1;
             } else if (checkInput(docUrl.value, DOMAIN_2)) {
@@ -166,7 +166,7 @@
         }
 
         function getEmbedUrl(embed_regex=/(?<=\"embedUrl\":\")(.+?)(?=\",)/) {
-            const anyOrigin = "http://www.whateverorigin.org/get?url=";
+            const anyOrigin = "https://www.whateverorigin.org/get?url=";
             if (html_text && embed_regex.test(html_text)) {
                 let embed_url = embed_regex.exec(html_text)[0];
                 embed_url = encodeURIComponent(embed_url);
