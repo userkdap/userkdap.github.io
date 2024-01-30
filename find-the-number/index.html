@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ο τίτλος να είναι "μάντεψε έναν αριθμό" -->
+    <title>Μάντεψε έναν αριθμό</title>
+    <!-- να συνδεθεί η σελίδα με τα εξωτερικά αρχεία find-the-number.css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- και find-the-number.js -->
+    <!-- με την επιλογή defer ώστε το script να εκτελεστεί αφού φορτωθεί το DOM -->
+    <script type="text/javascript" src="app.js" defer></script>
+</head>
+<body>
+    <header>Παιχνίδι: μάντεψε τον αριθμό</header>
+    <section id="instructions">
+        Έχουμε διαλέξει ένα τυχαίο αριθμό μεταξύ 1 και 100. 
+        Προσπάθησε να τον μαντέψεις σε 10 το πολύ προσπάθειες.
+        Κάθε φορά θα σού λέμε αν ο αριθμός που μάντεψες είναι μεγαλύτερος
+        ή μικρότερος από τον σωστό αριθμό.
+    </section>
+    <section id="guess">
+        <label for="new-guess">Μάντεψε: </label>
+        <!-- το μέγεθος του text (κουτί εισαγωγής αριθμού) να είναι 5 χαρακτήρες -->
+        <input type="text" name="new-guess" id="new-guess" size=5>
+        <button id="check"> Έλεγχος </button>
+
+    </section>
+    <section>
+        <div id="message">  </div>
+        <div id="low-high"></div>
+        <button id= "restart"> Παίξε ξανά </button>
+    </section>    
+</body>
+</html>
