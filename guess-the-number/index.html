@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Άσκηση - Βρες τον αριθμό</title>
+</head>
+
+<body>
+    <p>Βρες τον αριθμό!</p>
+    <p>Πληκτρολόγησε έναν αριθμό μεταξύ 1 και 100:</p>
+    <input type="text" name="guess" id="guess">
+    <button type="button" onclick="getGuess()">Παίξε</button>
+    <p id="message"></p>
+    <button type="button" onclick="newGuess()">Νέο παίχνιδι</button> <!-- Κουμπί για καθαρισμό οθόνης-->
+    <script type="text/javascript">
+        var n = Math.floor(Math.random() * 100 + 1);
+        const guess = document.getElementById("guess");
+        const message = document.getElementById("message");
+        function validNum(x) {
+            // If x is Not a Number or less than 1 or greater than 100
+            if (isNaN(x) || x < 1 || x > 100) {
+                return false;
+            } else return true;
+        }
+        function getGuess() {
+            var num = guess.value; //παίρνουμε την ιδιότητα value του input box
+            if (validNum(num)) {
+                if (num == n) {
+                    message.innerHTML = "Μπράβο το βρήκες!";
+                } else if (num > n) {
+                    message.innerHTML = "Έδωσες μεγαλύτερο αριθμό!";
+                } else if (num < n) {
+                    message.innerHTML = "Έδωσες μικρότερο αριθμό!";
+                }
+            } else {
+                message.innerHTML = "Δέν είναι έγκυρος";
+            }
+        }
+        function newGuess() {
+            n = Math.floor(Math.random() * 100 + 1); // νέος τυχαίος αριθμός
+            guess.value = ""; // καθαρίζει το input box
+            message.innerHTML = ""; // σβήνει το μήνυμα
+            guess.focus(); // φέρνει τον δρομέα μέσα στο input box
+        }
+    </script>
+</body>
+</html>
