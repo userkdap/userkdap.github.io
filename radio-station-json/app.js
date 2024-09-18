@@ -274,9 +274,7 @@
             clearBtn.style.display = displayState;
         }
 
-        //clickToLoad.addEventListener("click", () => { loadData("../stations-radiojar-clean.json", "json"); });
-        //clickToLoad.addEventListener("click", () => { loadData(source = "../stations.json", type = "json"); });
-        clickToLoad.addEventListener("click", () => { loadData(source = "../stations-clean.json", type = "json"); });
+        clickToLoad.addEventListener("click", () => { loadData(source = "/stations-clean.json", type = "json"); });
         
         async function loadData(source, type = "json") {
             let responseData = await subscribe(source, type = "json");
