@@ -28,7 +28,6 @@
         let allExports = "";
         let headers = null;
         let previousTrack = { "artist": "", "title": "", "duration": "" };
-        let rawData = null;
         let request = null;
         
         docUrl.addEventListener("keypress", checkKey);
@@ -274,7 +273,7 @@
             clearBtn.style.display = displayState;
         }
 
-        clickToLoad.addEventListener("click", () => { loadData(source = "/stations-clean.json", type = "json"); });
+        clickToLoad.addEventListener("click", () => { loadData(source = "/radio-station-json/stations-clean.json", type = "json"); });
         
         async function loadData(source, type = "json") {
             let responseData = await subscribe(source, type = "json");
