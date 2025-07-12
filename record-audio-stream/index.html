@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- <audio>: The Embed Audio element -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio -->
+<!-- HTMLAudioElement - Web APIs | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement -->
+<!-- Blob: Blob() constructor -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/Blob/Blob -->
+<!-- Blob -->
+<!-- https://javascript.info/blob -->
+<!-- How can I convert audio stream into MP3 and then save it into database? -->
+<!-- https://www.reddit.com/r/javascript/comments/5a6f46/how_can_i_convert_audio_stream_into_mp3_and_then/ -->
+<!-- MediaRecorder - Web APIs | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder -->
+<!-- Recording a media element - Web APIs | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element -->
+<!-- HTMLMediaElement: captureStream() method - Web APIs | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/captureStream -->
+<!-- javascript - TypeError, captureStream is not a function - Stack Overflow -->
+<!-- https://stackoverflow.com/questions/48623376/typeerror-capturestream-is-not-a-function -->
+<!-- MediaRecorder: pause() method - Web APIs | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/pause -->
+<!-- MediaRecorder: resume() method - Web APIs | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/resume -->
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Ο συγγραφέας">
+	<meta name="description" content="Εμφάνιση συγκεκριμένων υποδιαιρέσεων του περιεχομένου">
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="app.js" defer></script>
+	<title>Audio Stream Recorder</title>
+</head>
+
+<body>
+	<h2>Audio Stream Recorder</h2>
+
+	<section id="input-url">
+		<label for="doc-url">Type the URL of an audio stream in the input box below and press Enter</label>
+		<section><input type="url" id="doc-url" placeholder="https://88.198.10.229:8060/stream"></section>
+	</section>
+
+	<section class="buttons">
+		<button id="record-btn">🔴</button>
+		<button id="pause-btn">⏸</button>
+		<button id="stop-btn">⏹</button>
+		<button id="download-btn">Download</button>
+		<button id="clear-btn">Clear</button>
+	</section>
+
+	<section id="output-info">
+		<section id="msg-area" name="msg-area" for="doc-url"></section>
+		<label for="file-info">Resource:</label>
+		<output id="file-info" name="file-info" for="doc-url"></output>
+	</section>
+
+	<section id="i-frame"><!-- iframe --></section>
+
+</body>
+
+</html>
