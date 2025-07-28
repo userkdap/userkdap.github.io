@@ -65,20 +65,20 @@
         if (headers.has("Content-Type")) {
             contentType = headers.get("Content-Type"); // global contentType
             console.log(`contentType: ${contentType}`);
-            audioElem.pause();
+            //audioElem.pause();
             audioElem.src = source;
-            audioElem.load();
+            //audioElem.load();
             if (iframeElem.dataState = "active") {
                 //https://diesi.gr/player/js/player_new.js
                 iframeElem.src = resetAudio;
                 toggleDataState(iframeElem, dataState = "inactive");
                 toggleDataState(audioElem, dataState = "active");
             }
-            audioElem.play();
+            //audioElem.play();
         } else {
             iframeElem.src = source;
             if (audioElem.dataState = "active") {
-                audioElem.pause();
+                //audioElem.pause();
                 //https://diesi.gr/player/js/player_new.js
                 audioElem.src = resetAudio;
                 toggleDataState(audioElem, dataState = "inactive");
