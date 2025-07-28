@@ -1,7 +1,7 @@
 {
     "t0x7dyqmsuhvv": {
         "now_playing": "https://www.radiojar.com/api/stations/t0x7dyqmsuhvv/now_playing/",
-        "stream": "https://stream.radiojar.com/t0x7dyqmsuhvv",
+        "stream": "https://n06.radiojar.com/t0x7dyqmsuhvv?rj-ttl=5&rj-tok=AAABmFLMuXQAgKUDbnqGmvn8sg",
         "name": "99 FM Ράδιο 1"
     },
     "h693vkmhe5uvv": {
@@ -16,7 +16,7 @@
     },
     "wxc5sezupy5tv": {
         "now_playing": "https://www.radiojar.com/api/stations/wxc5sezupy5tv/now_playing/",
-        "stream": "https://stream.radiojar.com/wxc5sezupy5tv",
+        "stream": "https://n0a.radiojar.com/wxc5sezupy5tv?rj-ttl=5&rj-tok=AAABmFLNNdQAfc7NeuP2irGriQ",
         "name": "Alpha Καστοριά"
     },
     "g34k4f92n74tv": {
@@ -26,7 +26,7 @@
     },
     "e206r95qsp8uv": {
         "now_playing": "https://www.radiojar.com/api/stations/e206r95qsp8uv/now_playing/",
-        "stream": "https://stream.radiojar.com/e206r95qsp8uv",
+        "stream": "https://n03.radiojar.com/e206r95qsp8uv?rj-ttl=5&rj-tok=AAABmFLNe90AzTjeuHTgRbZaiA",
         "name": "Athens Free Radio"
     },
     "9ndpdg3c0s8uv": {
@@ -51,7 +51,7 @@
     },
     "duh3nm1v6hhvv": {
         "now_playing": "https://www.radiojar.com/api/stations/duh3nm1v6hhvv/now_playing/",
-        "stream": "https://stream.radiojar.com/duh3nm1v6hhvv",
+        "stream": "https://n01.radiojar.com/duh3nm1v6hhvv?rj-ttl=5&rj-tok=AAABmFLOKLIAC08jpMFEkOwsgQ",
         "name": "Cosmos 103.8"
     },
     "htczr9epmchvv": {
@@ -66,7 +66,7 @@
     },
     "opa-radio": {
         "now_playing": "https://www.radiojar.com/api/stations/opa-radio/now_playing/",
-        "stream": "https://stream.radiojar.com/opa-radio",
+        "stream": "https://n0e.radiojar.com/opa-radio?rj-ttl=5&rj-tok=AAABmFLOfsEAM5wL6Nk8UHBjFQ",
         "name": "Music Ward"
     },
     "cthtwxk5yvduv": {
@@ -101,22 +101,22 @@
     },
     "gt0xy4z88f0uv": {
         "now_playing": "https://www.radiojar.com/api/stations/gt0xy4z88f0uv/now_playing/",
-        "stream": "https://stream.radiojar.com/gt0xy4z88f0uv",
+        "stream": "https://n03.radiojar.com/gt0xy4z88f0uv?rj-ttl=5&rj-tok=AAABmFLO-UwADjc0ReBn2JVy6w",
         "name": "Love 97.5 Classics"
     },
     "tkeve70hqd0uv": {
         "now_playing": "https://www.radiojar.com/api/stations/tkeve70hqd0uv/now_playing/",
-        "stream": "https://stream.radiojar.com/tkeve70hqd0uv",
+        "stream": "https://n10.radiojar.com/tkeve70hqd0uv?rj-ttl=5&rj-tok=AAABmFLPS9YAJP--yTarN3O0Nw",
         "name": "Love 97.5 Trap"
     },
     "20n2b23u7mruv": {
         "now_playing": "https://www.radiojar.com/api/stations/20n2b23u7mruv/now_playing/",
-        "stream": "https://stream.radiojar.com/20n2b23u7mruv",
+        "stream": "https://n01.radiojar.com/20n2b23u7mruv?rj-ttl=5&rj-tok=AAABmFLPgWIAj22BGb9xrg7w-w",
         "name": "Love 97.5 Z"
     },
     "qt9gf4hhdwzuv": {
         "now_playing": "https://www.radiojar.com/api/stations/qt9gf4hhdwzuv/now_playing/",
-        "stream": "https://stream.radiojar.com/qt9gf4hhdwzuv",
+        "stream": "https://n01.radiojar.com/qt9gf4hhdwzuv?rj-ttl=5&rj-tok=AAABmFLPtM4AjyiEVMC7YOOklQ",
         "name": "Max 93.4"
     },
     "c27wx6pdh8vtv": {
@@ -126,7 +126,7 @@
     },
     "5tyqrwpgpfeuv": {
         "now_playing": "https://www.radiojar.com/api/stations/5tyqrwpgpfeuv/now_playing/",
-        "stream": "https://stream.radiojar.com/5tyqrwpgpfeuv",
+        "stream": "http://n13.radiojar.com/5tyqrwpgpfeuv?rj-ttl=5&rj-tok=AAABmFLP8s0AYgulx6iTScVjEg",
         "name": "Monkey Bros Radio"
     },
     "w6c6bssk95vtv": {
@@ -136,27 +136,27 @@
     },
     "29e98fkcks3vv": {
         "now_playing": "https://www.radiojar.com/api/stations/29e98fkcks3vv/now_playing/",
-        "stream": "https://stream.radiojar.com/29e98fkcks3vv",
+        "stream": "https://n05.radiojar.com/29e98fkcks3vv?rj-ttl=5&rj-tok=AAABmFLQL20AmHodLGyqtyDEKA",
         "name": "Nitro 102.5"
     },
     "93c3avwu48hvv": {
         "now_playing": "https://www.radiojar.com/api/stations/93c3avwu48hvv/now_playing/",
-        "stream": "https://stream.radiojar.com/93c3avwu48hvv",
+        "stream": "https://n10.radiojar.com/93c3avwu48hvv?rj-ttl=5&rj-tok=AAABmFLQXOYApqLYSjLt-OWIiw",
         "name": "NRG 95"
     },
     "apb4wybq36duv": {
         "now_playing": "https://www.radiojar.com/api/stations/apb4wybq36duv/now_playing/",
-        "stream": "https://stream.radiojar.com/apb4wybq36duv",
+        "stream": "https://n10.radiojar.com/apb4wybq36duv?rj-ttl=5&rj-tok=AAABmFLQl6cA_-g2vBHUHmssvA",
         "name": "NRG 101.5"
     },
     "u8c2yr3sp42vv": {
         "now_playing": "https://www.radiojar.com/api/stations/u8c2yr3sp42vv/now_playing/",
-        "stream": "https://stream.radiojar.com/u8c2yr3sp42vv",
+        "stream": "https://n0f.radiojar.com/u8c2yr3sp42vv?rj-ttl=5&rj-tok=AAABmFLQzdsA6KexJL_YV1cTdQ",
         "name": "Ogdoo"
     },
     "48cz219puzzuv": {
         "now_playing": "https://www.radiojar.com/api/stations/48cz219puzzuv/now_playing/",
-        "stream": "https://stream.radiojar.com/48cz219puzzuv",
+        "stream": "https://n0d.radiojar.com/48cz219puzzuv?rj-ttl=5&rj-tok=AAABmFLQ-gUA9-Uv_n1xg2jYFQ",
         "name": "Pemptousia"
     },
     "pepper": {
@@ -166,7 +166,7 @@
     },
     "s87smqqfewzuv": {
         "now_playing": "https://www.radiojar.com/api/stations/s87smqqfewzuv/now_playing/",
-        "stream": "https://stream.radiojar.com/s87smqqfewzuv",
+        "stream": "https://n0c.radiojar.com/s87smqqfewzuv?rj-ttl=5&rj-tok=AAABmFLROX8A9_MOdzNhICVKzA",
         "name": "Picasso 102.7"
     },
     "431m8b6qcm5tv": {
@@ -176,17 +176,17 @@
     },
     "gzr6836ty7zuv": {
         "now_playing": "https://www.radiojar.com/api/stations/gzr6836ty7zuv/now_playing/",
-        "stream": "https://stream.radiojar.com/gzr6836ty7zuv",
+        "stream": "https://n01.radiojar.com/gzr6836ty7zuv?rj-ttl=5&rj-tok=AAABmFLRhoQAQSFsXStpY-mIaw",
         "name": "PolisView"
     },
     "weqykpegsm5tv": {
         "now_playing": "https://www.radiojar.com/api/stations/weqykpegsm5tv/now_playing/",
-        "stream": "https://stream.radiojar.com/weqykpegsm5tv",
+        "stream": "https://n10.radiojar.com/weqykpegsm5tv?rj-ttl=5&rj-tok=AAABmFLRuvAA1L79pr4JF6w2Bg",
         "name": "Purple"
     },
     "kddqnna7yxmtv": {
         "now_playing": "https://www.radiojar.com/api/stations/kddqnna7yxmtv/now_playing/",
-        "stream": "https://stream.radiojar.com/kddqnna7yxmtv",
+        "stream": "https://n02.radiojar.com/kddqnna7yxmtv?rj-ttl=5&rj-tok=AAABmFLR6qAAD5uzE1Zc53fk0A",
         "name": "Radio Paris"
     },
     "yv5xu5h7zwwtv": {
@@ -196,57 +196,57 @@
     },
     "6uqfysrasm0uv": {
         "now_playing": "https://www.radiojar.com/api/stations/6uqfysrasm0uv/now_playing/",
-        "stream": "https://stream.radiojar.com/6uqfysrasm0uv",
+        "stream": "https://n0c.radiojar.com/6uqfysrasm0uv?rj-ttl=5&rj-tok=AAABmFLSJ3sAV2_R4UQCA3PaFQ",
         "name": "Radiobird"
     },
     "d3n35mr218hvv": {
         "now_playing": "https://www.radiojar.com/api/stations/d3n35mr218hvv/now_playing/",
-        "stream": "https://stream.radiojar.com/d3n35mr218hvv",
+        "stream": "https://n0c.radiojar.com/d3n35mr218hvv?rj-ttl=5&rj-tok=AAABmFLSW0cAM9B7sbyge_-6jg",
         "name": "RadioMak"
     },
     "gbrgkbcfnq5tv": {
         "now_playing": "https://www.radiojar.com/api/stations/gbrgkbcfnq5tv/now_playing/",
-        "stream": "https://stream.radiojar.com/gbrgkbcfnq5tv",
+        "stream": "https://n0c.radiojar.com/gbrgkbcfnq5tv?rj-ttl=5&rj-tok=AAABmFLSjpEAwfCBFT9BSkwsbg",
         "name": "Ραδιοτσάμπουνο"
     },
     "aw1w2xfx1vduv": {
         "now_playing": "https://www.radiojar.com/api/stations/aw1w2xfx1vduv/now_playing/",
-        "stream": "https://stream.radiojar.com/aw1w2xfx1vduv",
+        "stream": "https://n08.radiojar.com/aw1w2xfx1vduv?rj-ttl=5&rj-tok=AAABmFLSwP8AolYQHLQynvbZzA",
         "name": "Ρυθμός 94.9"
     },
     "radio-apopsi": {
         "now_playing": "https://www.radiojar.com/api/stations/radio-apopsi/now_playing/",
-        "stream": "https://stream.radiojar.com/radio-apopsi",
+        "stream": "https://n0b.radiojar.com/radio-apopsi?rj-ttl=5&rj-tok=AAABmFLS_I8Asnh4pHOJnNfW_g",
         "name": "Radio Apopsi"
     },
     "083wqknmsuhvv": {
         "now_playing": "https://www.radiojar.com/api/stations/083wqknmsuhvv/now_playing/",
-        "stream": "https://stream.radiojar.com/083wqknmsuhvv",
+        "stream": "https://n0e.radiojar.com/083wqknmsuhvv?rj-ttl=5&rj-tok=AAABmFLTMrQAyY8Puq-fStp7jQ",
         "name": "Rainbow 89"
     },
     "vhknc3c8ktuvv": {
         "now_playing": "https://www.radiojar.com/api/stations/vhknc3c8ktuvv/now_playing/",
-        "stream": "https://stream.radiojar.com/vhknc3c8ktuvv",
+        "stream": "https://n01.radiojar.com/vhknc3c8ktuvv?rj-ttl=5&rj-tok=AAABmFLTszMAjECtkg_BEaX-mw",
         "name": "Rainbow 89 Alternative"
     },
     "ztqh29c8ktuvv": {
         "now_playing": "https://www.radiojar.com/api/stations/ztqh29c8ktuvv/now_playing/",
-        "stream": "https://stream.radiojar.com/ztqh29c8ktuvv",
+        "stream": "https://n02.radiojar.com/ztqh29c8ktuvv?rj-ttl=5&rj-tok=AAABmFLT47MARXWl3l1UQdBZWQ",
         "name": "Rainbow 89 Pop"
     },
     "akf7zea5kzuvv": {
         "now_playing": "https://www.radiojar.com/api/stations/akf7zea5kzuvv/now_playing/",
-        "stream": "https://stream.radiojar.com/akf7zea5kzuvv",
+        "stream": "https://n01.radiojar.com/akf7zea5kzuvv?rj-ttl=5&rj-tok=AAABmFLUEhoAwwDVk_GfDfrCIQ",
         "name": "Rainbow 89 Μπλε"
     },
     "4nwwcyesv8hvv": {
         "now_playing": "https://www.radiojar.com/api/stations/4nwwcyesv8hvv/now_playing/",
-        "stream": "https://stream.radiojar.com/4nwwcyesv8hvv",
+        "stream": "https://n09.radiojar.com/4nwwcyesv8hvv?rj-ttl=5&rj-tok=AAABmFLUOmgADrZXnjrAHesnQA",
         "name": "Rainbow 89 Christmas"
     },
     "aay95tkmb": {
         "now_playing": "https://www.radiojar.com/api/stations/aay95tkmb/now_playing/",
-        "stream": "https://stream.radiojar.com/aay95tkmb",
+        "stream": "https://n0f.radiojar.com/aay95tkmb?rj-ttl=5&rj-tok=AAABmFLUbywANhcvcAGKWQvm5A",
         "name": "Roxx Radio "
     },
     "g4tyehk5yvduv": {
@@ -256,12 +256,12 @@
     },
     "mg2vq26eewzuv": {
         "now_playing": "https://www.radiojar.com/api/stations/mg2vq26eewzuv/now_playing/",
-        "stream": "https://stream.radiojar.com/mg2vq26eewzuv",
+        "stream": "https://n03.radiojar.com/mg2vq26eewzuv?rj-ttl=5&rj-tok=AAABmFLUvK0AB8bvQfWSr--Daw",
         "name": "Sfera 96.6"
     },
     "kzu8u5w8vzuvv": {
         "now_playing": "https://www.radiojar.com/api/stations/kzu8u5w8vzuvv/now_playing/",
-        "stream": "https://stream.radiojar.com/kzu8u5w8vzuvv",
+        "stream": "https://n0e.radiojar.com/kzu8u5w8vzuvv?rj-ttl=5&rj-tok=AAABmFLU_lAAVQinYlWLcHpvGw",
         "name": "Simple Radio"
     },
     "zeqcyyvu48hvv": {
@@ -271,7 +271,7 @@
     },
     "yb7bcbkfewzuv": {
         "now_playing": "https://www.radiojar.com/api/stations/yb7bcbkfewzuv/now_playing/",
-        "stream": "https://stream.radiojar.com/yb7bcbkfewzuv",
+        "stream": "https://n02.radiojar.com/yb7bcbkfewzuv?rj-ttl=5&rj-tok=AAABmFLVTvgA0bEisUACz4BMog",
         "name": "Sport 96.3"
     },
     "fg3tm92rxeruv": {
@@ -286,27 +286,27 @@
     },
     "nkqh9th47vzuv": {
         "now_playing": "https://www.radiojar.com/api/stations/nkqh9th47vzuv/now_playing/",
-        "stream": "https://stream.radiojar.com/nkqh9th47vzuv",
+        "stream": "https://n02.radiojar.com/nkqh9th47vzuv?rj-ttl=5&rj-tok=AAABmFLVmIUAXBNkxsCgLNhpXg",
         "name": "Αιγαίο Live 95.8"
     },
     "1qpu1agw4mzuv": {
         "now_playing": "https://www.radiojar.com/api/stations/1qpu1agw4mzuv/now_playing/",
-        "stream": "https://stream.radiojar.com/1qpu1agw4mzuv",
+        "stream": "https://n0d.radiojar.com/1qpu1agw4mzuv?rj-ttl=5&rj-tok=AAABmFLVzR4APTT-4wZqobHfPQ",
         "name": "Δημοτικό Ραδιόφωνο Ιωαννίνων 98.7"
     },
     "e8n41erbay8uv": {
         "now_playing": "https://www.radiojar.com/api/stations/e8n41erbay8uv/now_playing/",
-        "stream": "https://stream.radiojar.com/e8n41erbay8uv",
+        "stream": "https://n0e.radiojar.com/e8n41erbay8uv?rj-ttl=5&rj-tok=AAABmFLV-7AAfLCKLZjy6DFEpQ",
         "name": "ΕΑΠ Non Stop Music"
     },
     "2rsrhmepefq": {
         "now_playing": "https://www.radiojar.com/api/stations/2rsrhmepefq/now_playing/",
-        "stream": "https://stream.radiojar.com/2rsrhmepefq",
+        "stream": "https://n07.radiojar.com/2rsrhmepefq?rj-ttl=5&rj-tok=AAABmFLWK10AJxjVMR6atcJ7_w",
         "name": "Έμπνευση 107 FM"
     },
     "g6eg7gpa6k5tv": {
         "now_playing": "https://www.radiojar.com/api/stations/g6eg7gpa6k5tv/now_playing/",
-        "stream": "https://stream.radiojar.com/g6eg7gpa6k5tv",
+        "stream": "http://n13.radiojar.com/g6eg7gpa6k5tv?rj-ttl=5&rj-tok=AAABmFLWZZYA3gOLsDGpWoLS_g",
         "name": "Μεσόγειος 105.4"
     },
     "f4pqr7wu48hvv": {
@@ -316,7 +316,7 @@
     },
     "u34mus9cy72vv": {
         "now_playing": "https://www.radiojar.com/api/stations/u34mus9cy72vv/now_playing/",
-        "stream": "https://stream.radiojar.com/u34mus9cy72vv",
+        "stream": "https://n11.radiojar.com/u34mus9cy72vv?rj-ttl=5&rj-tok=AAABmFLWqD4AYeI_ZFK6RXoDTA",
         "name": "Παραδοσιακό Radio"
     },
     "un4tp96kb": {
@@ -326,22 +326,22 @@
     },
     "ybz2g5nh5ehvv": {
         "now_playing": "https://www.radiojar.com/api/stations/ybz2g5nh5ehvv/now_playing/",
-        "stream": "https://stream.radiojar.com/ybz2g5nh5ehvv",
+        "stream": "https://n10.radiojar.com/ybz2g5nh5ehvv?rj-ttl=5&rj-tok=AAABmFLXn_8AEPQETqo7ZBS3iQ",
         "name": "Ράδιο Πάντειον"
     },
     "ypdwy53ce6hvv": {
         "now_playing": "https://www.radiojar.com/api/stations/ypdwy53ce6hvv/now_playing/",
-        "stream": "https://stream.radiojar.com/ypdwy53ce6hvv",
+        "stream": "https://n09.radiojar.com/ypdwy53ce6hvv?rj-ttl=5&rj-tok=AAABmFLXyisAGbatWe6YYVZ4Fw",
         "name": "Ράδιο Πάντειον Sports"
     },
     "v1hkvv4gk72vv": {
         "now_playing": "https://www.radiojar.com/api/stations/v1hkvv4gk72vv/now_playing/",
-        "stream": "https://stream.radiojar.com/v1hkvv4gk72vv",
+        "stream": "https://n0d.radiojar.com/v1hkvv4gk72vv?rj-ttl=5&rj-tok=AAABmFLX_XwAwOY3loF9kuiNlA",
         "name": "Ρυθμός Κομοτηνής 103.1"
     },
     "819r8wupdrruv": {
         "now_playing": "https://www.radiojar.com/api/stations/819r8wupdrruv/now_playing/",
-        "stream": "https://stream.radiojar.com/819r8wupdrruv",
+        "stream": "https://n01.radiojar.com/819r8wupdrruv?rj-ttl=5&rj-tok=AAABmFLYLYoAi-1NY_0JmXnrmw",
         "name": "Σκύλος 90"
     },
     "kokkino-ath": {
@@ -356,7 +356,7 @@
     },
     "s5sa2z0mtceuv": {
         "now_playing": "https://www.radiojar.com/api/stations/s5sa2z0mtceuv/now_playing/",
-        "stream": "https://stream.radiojar.com/s5sa2z0mtceuv",
+        "stream": "https://n07.radiojar.com/s5sa2z0mtceuv?rj-ttl=5&rj-tok=AAABmFLYh-YAfbZrwxfeUBxAQg",
         "name": "Στο Κόκκινο Πάτρα 107.7"
     },
     "gnomi": {
