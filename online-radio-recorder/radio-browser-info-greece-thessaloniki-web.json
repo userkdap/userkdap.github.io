@@ -1,0 +1,401 @@
+{
+    "7a02ba38-997f-4a39-a15f-e3c38e8cd0c3": {
+        "name": "BARS RADIO",
+        "stream": "http://88.99.171.20:8020/stream",
+        "state": "Thessaloniki",
+        "now_playing": "http://88.99.171.20:8020/currentsong",
+        "band": "Web"
+    },
+    "5565917c-7b61-47b1-b1ff-bc38cd0a9b7f": {
+        "name": "To Pikap",
+        "stream": "http://comet.shoutca.st:8430/autodj",
+        "state": "Thessaloniki",
+        "now_playing": "http://comet.shoutca.st:8430/autodj.xspf",
+        "band": "Web"
+    },
+    "b0eeda1f-033d-49e0-849a-90b840b95357": {
+        "name": "Mansta Radio",
+        "stream": "http://i6.streams.ovh:16012/autodj",
+        "state": "Thessaloniki",
+        "now_playing": "http://i6.streams.ovh:16012/autodj.xspf",
+        "band": "Web"
+    },
+    "e6c30a88-bb69-403a-9309-c2552cac7214": {
+        "name": "Mansta Radio Live",
+        "stream": "http://i6.streams.ovh:16012/live",
+        "state": "Thessaloniki",
+        "now_playing": "http://i6.streams.ovh:16012/live.xspf",
+        "band": "Web"
+    },
+    "1ac2e8a4-901b-4d4c-9af0-6eb05c5d8f3f": {
+        "name": "GRD Terra Radio",
+        "stream": "http://play.streams.gr:22072/stream",
+        "state": "Thessaloniki",
+        "now_playing": "http://play.streams.gr:22072/currentsong",
+        "band": "Web"
+    },
+    "960de1a4-0601-11e8-ae97-52543be04c81": {
+        "name": "Studio3 Thessaloniki",
+        "stream": "http://stream3.468.gr:9994/stream",
+        "state": "Thessaloniki",
+        "now_playing": "http://stream3.468.gr:9994/currentsong",
+        "band": "Web"
+    },
+    "3f7bc647-57c6-440f-b844-8ec953fbe27c": {
+        "name": "Pavlos Vasileiou Live",
+        "stream": "https://azuracast.streams.gr/listen/paulosvasileioulive/radio.mp3",
+        "state": "Thessaloniki",
+        "now_playing": "https://azuracast.streams.gr/listen/paulosvasileioulive/radio.mp3.xspf",
+        "band": "Web"
+    },
+    "f45dcde7-843e-426a-b45d-fdd5f7710096": {
+        "name": "Radio Xalastra",
+        "stream": "https://azuralive.streams.ovh/listen/xalastraradio/radio.mp3",
+        "state": "Thessaloniki",
+        "now_playing": "https://azuralive.streams.ovh/listen/xalastraradio/radio.mp3.xspf",
+        "band": "Web"
+    },
+    "630c0f18-daa3-4f63-b0e6-aa3cee83a860": {
+        "name": "FreshRadio",
+        "stream": "https://c2.radioboss.fm:8157/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://c2.radioboss.fm:8157/autodj.xspf",
+        "band": "Web"
+    },
+    "56b0690b-23ae-4d09-9b7e-6e6fb77e8c8d": {
+        "name": "Echoes.gr - NetRadio",
+        "stream": "https://cast.tunzilla.com/http://85.17.75.146/echoes",
+        "state": "Thessaloniki",
+        "now_playing": "",
+        "band": "Web"
+    },
+    "3b2fb322-5ad8-4015-9a78-9e6805a67c3c": {
+        "name": "Radio MusicArtclub",
+        "stream": "https://eu9.fastcast4u.com/proxy/musicart/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://eu9.fastcast4u.com/proxy/musicart/currenstsong",
+        "band": "Web"
+    },
+    "35ee9c33-341e-4f95-8e53-3937c8347e43": {
+        "name": "Radio Nowhere",
+        "stream": "https://i.streams.ovh:9364/autodj",
+        "state": "Thessaloniki",
+        "now_playing": "https://i.streams.ovh:9364/autodj.xspf",
+        "band": "Web"
+    },
+    "ca71d20c-a66b-4b60-8d21-7106995dd42b": {
+        "name": "Fishbone Radio",
+        "stream": "https://icepool.silvacast.com/DEFJAY.mp3",
+        "state": "Thessaloniki",
+        "now_playing": "https://icepool.silvacast.com/DEFJAY.mp3.xspf",
+        "band": "Web"
+    },
+    "90938fb8-07b1-42c3-aa30-c87498acf16b": {
+        "name": "Ghost12 Radio",
+        "stream": "https://listen.radioking.com/radio/629863/stream/692359",
+        "state": "Thessaloniki",
+        "now_playing": "",
+        "band": "Web"
+    },
+    "9e0cfe2d-bf15-4b85-ae4c-3da1ffd1feba": {
+        "name": "ThessRadio",
+        "stream": "https://noc.ezhellas.com:30580/live",
+        "state": "Thessaloniki",
+        "now_playing": "https://noc.ezhellas.com:30580/live.xspf",
+        "band": "Web"
+    },
+    "5b2654a1-3ef2-451c-a9ef-53c5b5a1def6": {
+        "name": "Εntropia Radio",
+        "stream": "https://radio.hostchefs.net/proxy/entropiaradio/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://radio.hostchefs.net/proxy/entropiaradio/currentsong",
+        "band": "Web"
+    },
+    "fc15b96c-c649-422e-b4ab-1e48c34e18f0": {
+        "name": "Arty Radio",
+        "stream": "https://radio.streamings.gr/proxy/artyradio/autodj",
+        "state": "Thessaloniki",
+        "now_playing": "https://radio.streamings.gr/proxy/artyradio/autodj.xspf",
+        "band": "Web"
+    },
+    "e6d259fd-1e75-402e-ae73-c8a9c1625fd6": {
+        "name": "Ianos Radio",
+        "stream": "https://radio.streamings.gr/proxy/feelmusic2021/autodj",
+        "state": "Thessaloniki",
+        "now_playing": "https://radio.streamings.gr/proxy/feelmusic2021/autodj.xspf",
+        "band": "Web"
+    },
+    "a7e7a235-47ae-4637-88e1-8f4fbe434df6": {
+        "name": "Point-Radio",
+        "stream": "https://radio.streamings.gr/proxy/radioepafi/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://radio.streamings.gr/proxy/radioepafi/autodj.xspf",
+        "band": "Web"
+    },
+    "9754dd31-a04a-444a-b95e-353b02196bc6": {
+        "name": "Point-Radio Pop",
+        "stream": "https://radio.streamings.gr/proxy/radioepafi/stream2",
+        "state": "Thessaloniki",
+        "now_playing": "https://radio.streamings.gr/proxy/radioepafi/stream2.xspf",
+        "band": "Web"
+    },
+    "314b8d5b-b23b-48c2-af00-868f9a6be938": {
+        "name": "Radio Roben",
+        "stream": "https://radio.streamings.gr/proxy/radioepafi/stream3",
+        "state": "Thessaloniki",
+        "now_playing": "https://radio.streamings.gr/proxy/radioepafi/stream3_autodj.xspf",
+        "band": "Web"
+    },
+    "c2ed0d69-8ade-4d68-a94c-813784cb1068": {
+        "name": "Ράδιο Σάρωθρον",
+        "stream": "https://radios.studio110.eu/radio/8010/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://radios.studio110.eu/radio/8010/currentsong",
+        "band": "Web"
+    },
+    "94541d50-4cd9-490a-8419-ceb81d819200": {
+        "name": "Splash Online",
+        "stream": "https://rdst.win:48198/autodj",
+        "state": "Thessaloniki",
+        "now_playing": "https://rdst.win:48198/autodj.xspf",
+        "band": "Web"
+    },
+    "2f829253-e680-4d9b-aa4c-20794c1c08fa": {
+        "name": "Άξενος",
+        "stream": "https://s14.myradiostream.com/:29172/listen.mp3",
+        "state": "Thessaloniki",
+        "now_playing": "https://s14.myradiostream.com/:29172/currentsong",
+        "band": "Web"
+    },
+    "9442a34d-7ab2-41ef-9734-ffaaf6e3fbf3": {
+        "name": "OFF Radio",
+        "stream": "https://s3.yesstreaming.net:17062/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://s3.yesstreaming.net:17062/currentsong",
+        "band": "Web"
+    },
+    "4806292f-ab24-4c55-b93b-ba192f95ac87": {
+        "name": "Radio 9 Θεσσαλονίκη",
+        "stream": "https://solid55.streamupsolutions.com/proxy/gygasbfj/autodj",
+        "state": "Thessaloniki",
+        "now_playing": "https://solid55.streamupsolutions.com/proxy/gygasbfj/autodj.xspf",
+        "band": "Web"
+    },
+    "12e589c5-9482-431f-a786-50abad4a793e": {
+        "name": "Radio Fantasy GR",
+        "stream": "https://solid55.streamupsolutions.com/proxy/radiofantasy/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://solid55.streamupsolutions.com/proxy/radiofantasy/stream.xspf",
+        "band": "Web"
+    },
+    "5a163884-ea3c-48c5-ba69-a9c5425d033b": {
+        "name": "Smooth Radio Thessaloniki",
+        "stream": "https://solid9.streamupsolutions.com/proxy/lrazisyb/autodj",
+        "state": "Thessaloniki",
+        "now_playing": "https://solid9.streamupsolutions.com/proxy/lrazisyb/autodj.xspf",
+        "band": "Web"
+    },
+    "b8af9479-a6bb-42b6-9d44-e4da6bab0c1d": {
+        "name": "Psyland.live",
+        "stream": "https://sp.streams.ovh:8020/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://sp.streams.ovh:8020/currentsong",
+        "band": "Web"
+    },
+    "ab2753d6-e5aa-43e9-acba-38a5e5062cb3": {
+        "name": "My Radio - Shmera.gr",
+        "stream": "https://sp3.streams.ovh/8058/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://sp3.streams.ovh:8058/currentsong",
+        "band": "Web"
+    },
+    "6312550a-609b-4c74-981c-01bbb204a61a": {
+        "name": "Star Classic Radio GR",
+        "stream": "https://starclassicserver2021.radioca.st/live",
+        "state": "Thessaloniki",
+        "now_playing": "https://starclassicserver2021.radioca.st/live.xspf",
+        "band": "Web"
+    },
+    "4b08e02a-47a0-41ea-8a81-cebe14e05927": {
+        "name": "Camara Radio",
+        "stream": "https://stream.radiojar.com/252ry9dgytzuv",
+        "state": "Thessaloniki",
+        "now_playing": "https://www.radiojar.com/api/stations/252ry9dgytzuv/now_playing/",
+        "band": "Web"
+    },
+    "a08d83c5-f458-4a77-970b-df8a819880c2": {
+        "name": "Monkey Bros Radio",
+        "stream": "https://stream.radiojar.com/5tyqrwpgpfeuv",
+        "state": "Thessaloniki",
+        "now_playing": "https://www.radiojar.com/api/stations/5tyqrwpgpfeuv/now_playing/",
+        "band": "Web"
+    },
+    "8036628f-99eb-404f-8b63-0c90c250f95b": {
+        "name": "Παραδοσιακό Radio",
+        "stream": "https://stream.radiojar.com/u34mus9cy72vv",
+        "state": "Thessaloniki",
+        "now_playing": "https://www.radiojar.com/api/stations/u34mus9cy72vv/now_playing/",
+        "band": "Web"
+    },
+    "07034f53-f75e-4beb-b72f-1d8571c44bc0": {
+        "name": "Club FM GR",
+        "stream": "https://stream.zeno.fm/z8cp1nqwhnruv",
+        "state": "Thessaloniki",
+        "now_playing": "https://api.zeno.fm/mounts/metadata/subscribe/z8cp1nqwhnruv",
+        "band": "Web"
+    },
+    "255b27cb-0fd0-4a42-b88f-a9152266c1bb": {
+        "name": "Figaro Disco",
+        "stream": "https://stream.zeno.fm/u9b7ayh6na0uv",
+        "state": "Thessaloniki",
+        "now_playing": "https://api.zeno.fm/mounts/metadata/subscribe/u9b7ayh6na0uv",
+        "band": "Web"
+    },
+    "961362fd-14bb-46d3-9016-a0ff7b0a599f": {
+        "name": "Figaro the 90s vs 00s",
+        "stream": "https://stream.zeno.fm/9tpnqvg8uswtv",
+        "state": "Thessaloniki",
+        "now_playing": "https://api.zeno.fm/mounts/metadata/subscribe/9tpnqvg8uswtv",
+        "band": "Web"
+    },
+    "bbc68f59-62a9-4d40-ab77-0128fdccb160": {
+        "name": "Galaxy Music Acoustic Music",
+        "stream": "https://stream.zeno.fm/wcp3bwwtruhvv",
+        "state": "Thessaloniki",
+        "now_playing": "https://api.zeno.fm/mounts/metadata/subscribe/wcp3bwwtruhvv",
+        "band": "Web"
+    },
+    "206d6a59-18a6-4c50-a2b3-fae6776fc05b": {
+        "name": "Galaxy Music Chillout & Lounge",
+        "stream": "https://stream.zeno.fm/kn8byvtb6uhvv",
+        "state": "Thessaloniki",
+        "now_playing": "https://api.zeno.fm/mounts/metadata/subscribe/kn8byvtb6uhvv",
+        "band": "Web"
+    },
+    "c06bb39a-c503-4dfa-99e9-d070e31aef0a": {
+        "name": "Galaxy Music Greek Mix",
+        "stream": "https://stream.zeno.fm/ahwwv9myuxhvv",
+        "state": "Thessaloniki",
+        "now_playing": "https://api.zeno.fm/mounts/metadata/subscribe/ahwwv9myuxhvv",
+        "band": "FM"
+    },
+    "37b36c32-c99f-488b-8194-a624d18d32e5": {
+        "name": "Galaxy Music Soft Acoustic Music",
+        "stream": "https://stream.zeno.fm/6s35tuptxc9uv",
+        "state": "Thessaloniki",
+        "now_playing": "https://api.zeno.fm/mounts/metadata/subscribe/6s35tuptxc9uv",
+        "band": "Web"
+    },
+    "f79fd038-c80c-4eee-b841-c47881855e28": {
+        "name": "Galaxy Music The 80's Channel",
+        "stream": "https://stream.zeno.fm/af9c5urm9rhvv",
+        "state": "Thessaloniki",
+        "now_playing": "https://api.zeno.fm/mounts/metadata/subscribe/af9c5urm9rhvv",
+        "band": "Web"
+    },
+    "400cffe2-0f38-4953-8977-50f1188022da": {
+        "name": "Galaxy Music The Blues Rock",
+        "stream": "https://stream.zeno.fm/g261akwwnuhvv",
+        "state": "Thessaloniki",
+        "now_playing": "https://api.zeno.fm/mounts/metadata/subscribe/g261akwwnuhvv",
+        "band": "Web"
+    },
+    "67a7fed2-8905-42f8-a799-96f143decfa9": {
+        "name": "Galaxy Music The Deep House",
+        "stream": "https://stream.zeno.fm/sgehc2mzwd0uv",
+        "state": "Thessaloniki",
+        "now_playing": "https://api.zeno.fm/mounts/metadata/subscribe/sgehc2mzwd0uv",
+        "band": "Web"
+    },
+    "72890024-dec0-4e21-bcf2-ae48dfc72495": {
+        "name": "Galaxy Music The Love Songs",
+        "stream": "https://stream.zeno.fm/718bfqy5muhvv",
+        "state": "Thessaloniki",
+        "now_playing": "https://api.zeno.fm/mounts/metadata/subscribe/718bfqy5muhvv",
+        "band": "Web"
+    },
+    "1bdcd2d7-e70c-43e4-addb-6413810fbbc2": {
+        "name": "Galaxy Music The Rock",
+        "stream": "https://stream.zeno.fm/qs656ttnfuhvv",
+        "state": "Thessaloniki",
+        "now_playing": "https://api.zeno.fm/mounts/metadata/subscribe/qs656ttnfuhvv",
+        "band": "Web"
+    },
+    "62f008fe-0cc9-4893-9b98-f664918f5e5f": {
+        "name": "Galaxy Music The Rock Classic",
+        "stream": "https://stream.zeno.fm/vkq1uwm55uhvv",
+        "state": "Thessaloniki",
+        "now_playing": "https://api.zeno.fm/mounts/metadata/subscribe/vkq1uwm55uhvv",
+        "band": "Web"
+    },
+    "9b88a8cc-5d2f-4f5b-aae2-c98e9ea5a7d2": {
+        "name": "Galaxy Music The Rock Metal Ballads",
+        "stream": "https://stream.zeno.fm/fe300c1tpuhvv",
+        "state": "Thessaloniki",
+        "now_playing": "https://api.zeno.fm/mounts/metadata/subscribe/fe300c1tpuhvv",
+        "band": "Web"
+    },
+    "2d23347b-14b0-4c6a-ad64-c2cee7c238b9": {
+        "name": "P.R.S. Web Radio",
+        "stream": "https://stream.zeno.fm/o50yg1juau4tv",
+        "state": "Thessaloniki",
+        "now_playing": "https://api.zeno.fm/mounts/metadata/subscribe/o50yg1juau4tv",
+        "band": "Web"
+    },
+    "b63a3132-aa61-4089-831b-28273af64d46": {
+        "name": "Radio Scarlet",
+        "stream": "https://stream.zeno.fm/mdmsfa2g9rhvv",
+        "state": "Thessaloniki",
+        "now_playing": "https://api.zeno.fm/mounts/metadata/subscribe/mdmsfa2g9rhvv",
+        "band": "Web"
+    },
+    "77f6b194-18ea-43fc-837a-3663b91dca1e": {
+        "name": "Radio Vorras",
+        "stream": "https://stream.zeno.fm/7qebzd7uhrhvv",
+        "state": "Thessaloniki",
+        "now_playing": "https://api.zeno.fm/mounts/metadata/subscribe/7qebzd7uhrhvv",
+        "band": "Web"
+    },
+    "0983e39c-ba91-494b-9149-acf3c8b2275d": {
+        "name": "Rock Lab Radio Ballads",
+        "stream": "https://stream.zeno.fm/a47236vzmg8uv",
+        "state": "Thessaloniki",
+        "now_playing": "https://api.zeno.fm/mounts/metadata/subscribe/a47236vzmg8uv",
+        "band": "Web"
+    },
+    "13de0d78-5056-4157-9021-5e5528b6f339": {
+        "name": "Rock Lab Radio",
+        "stream": "https://stream.zeno.fm/n9kkufkbqtzuv",
+        "state": "Thessaloniki",
+        "now_playing": "https://api.zeno.fm/mounts/metadata/subscribe/n9kkufkbqtzuv",
+        "band": "Web"
+    },
+    "63569691-972b-41ad-81c4-e45a83d927c8": {
+        "name": "Metal Lab Radio",
+        "stream": "https://stream.zeno.fm/1q8a1u23dm8uv",
+        "state": "Thessaloniki",
+        "now_playing": "https://api.zeno.fm/mounts/metadata/subscribe/1q8a1u23dm8uv",
+        "band": "Web"
+    },
+    "7d0ddbf4-5867-4f7f-ace5-0ca915c0ad8d": {
+        "name": "Travellers Web Radio",
+        "stream": "https://stream.zeno.fm/n4yfk24tm2zuv",
+        "state": "Thessaloniki",
+        "now_playing": "https://api.zeno.fm/mounts/metadata/subscribe/n4yfk24tm2zuv",
+        "band": "Web"
+    },
+    "edfa6d67-1224-4510-9cc3-6d9b75bebd7f": {
+        "name": "Travellers 80s Radio",
+        "stream": "https://stream.zeno.fm/lrtsn2q49ymtv",
+        "state": "Thessaloniki",
+        "now_playing": "https://api.zeno.fm/mounts/metadata/subscribe/lrtsn2q49ymtv",
+        "band": "Web"
+    },
+    "6adfa796-345f-48fd-a47d-845a8833dad5": {
+        "name": "Trust Radio GR",
+        "stream": "https://stream.zeno.fm/xgc8syov4fcvv",
+        "state": "Thessaloniki",
+        "now_playing": "https://api.zeno.fm/mounts/metadata/subscribe/xgc8syov4fcvv",
+        "band": "Web"
+    }
+}

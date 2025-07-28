@@ -1,0 +1,429 @@
+{
+    "b9dec512-fece-485e-84b8-5107fd8f8dbc": {
+        "name": "Ράδιο Ακρίτες FM 102.3",
+        "stream": "http://akritespontou.live24.gr/akritespontou",
+        "state": "Thessaloniki",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "ae5b880e-f2a3-11e8-a471-52543be04c81": {
+        "name": "Λαϊκός 87,6",
+        "stream": "http://derti.live24.gr/laikos876",
+        "state": "Thessaloniki",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "0f5151ae-3d4a-459d-8aa5-674fb2c44351": {
+        "name": "Plus Radio 102.6",
+        "stream": "http://eco.onestreaming.com:8039/stream",
+        "state": "Thessaloniki",
+        "now_playing": "http://eco.onestreaming.com:8039/currentsong",
+        "band": "FM"
+    },
+    "98acc30f-a0ed-4e0e-831a-a0b8360e871c": {
+        "name": "Κοσμοράδιο 95.1",
+        "stream": "http://eco.onestreaming.com:8689/stream",
+        "state": "Thessaloniki",
+        "now_playing": "http://eco.onestreaming.com:8689/currentsong",
+        "band": "FM"
+    },
+    "516a0830-1ed0-426b-8962-8c5192874b32": {
+        "name": "Λυδία 94.2 FM",
+        "stream": "http://eu1.radiolydia.com:1086/stream",
+        "state": "Thessaloniki",
+        "now_playing": "http://eu1.radiolydia.com:1086/currentsong",
+        "band": "FM"
+    },
+    "6afaefec-15ae-4ede-97ad-25d5d88e8856": {
+        "name": "Palmos 96.5",
+        "stream": "https://cast1.asurahosting.com/proxy/palmos965/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://cast1.asurahosting.com/proxy/palmos965/stream.xspf",
+        "band": "FM"
+    },
+    "e6ae1436-3d0b-465c-8448-2031b8e7ed35": {
+        "name": "More 103",
+        "stream": "https://eco.onestreaming.com/proxy/moreradio/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://eco.onestreaming.com/proxy/moreradio/currentsong",
+        "band": "FM"
+    },
+    "be455527-dc36-425c-a946-302bf082dda2": {
+        "name": "Ερωτικός FM 94.8",
+        "stream": "https://eu1.fastcast4u.com/proxy/nmarog01/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://eu1.fastcast4u.com/proxy/nmarog01/currentsong",
+        "band": "FM"
+    },
+    "ea46bae3-3e29-403d-a6e5-505a74bcc260": {
+        "name": "Μινόρε 96.1",
+        "stream": "https://eu3.fastcast4u.com/proxy/nmarog00/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://eu3.fastcast4u.com/proxy/nmarog00/currentsong",
+        "band": "FM"
+    },
+    "bdb3a9d6-e2ec-4030-8b23-da3a4c35ba18": {
+        "name": "Ράδιο Θεσσαλονίκη 94.5",
+        "stream": "https://eu7.fastcast4u.com/proxy/nmarog02/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://eu7.fastcast4u.com/proxy/nmarog02/currentsong",
+        "band": "FM"
+    },
+    "93934398-d62e-44de-9212-5e3d57784529": {
+        "name": "Sohos FM 88.7",
+        "stream": "https://eu7.fastcast4u.com/proxy/sohosfm/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://eu7.fastcast4u.com/proxy/sohosfm/currentsong",
+        "band": "FM"
+    },
+    "5f695ae5-da9f-4366-a715-f4fa76b61bae": {
+        "name": "Χρώμα 105,8 - Θεσσαλονίκη",
+        "stream": "https://hroma1058thess.live24.gr/hroma1058thess",
+        "state": "Thessaloniki",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "0399e080-ae01-47e1-ac5a-20e859107877": {
+        "name": "Radio Ekrixi 99.8",
+        "stream": "https://ice.greekstream.net/ekrixifm",
+        "state": "Thessaloniki",
+        "now_playing": "https://ice.greekstream.net/ekrixifm.xspf",
+        "band": "FM"
+    },
+    "c90a120f-1c4d-474c-9a8d-3750505c5670": {
+        "name": "Focus FM 103.6",
+        "stream": "https://ice.greekstream.net/focusfm",
+        "state": "Thessaloniki",
+        "now_playing": "https://ice.greekstream.net/focusfm.xspf",
+        "band": "FM"
+    },
+    "51535588-be3b-4fbc-b957-66689c0abf82": {
+        "name": "Γνώμη 93.7",
+        "stream": "https://ice.greekstream.net/gnomi",
+        "state": "Thessaloniki",
+        "now_playing": "https://ice.greekstream.net/gnomi.xspf",
+        "band": "FM"
+    },
+    "d2a194c9-ce38-4e24-b60b-a2fa3d2c53a7": {
+        "name": "Πρακτορείο 104,9",
+        "stream": "https://ice.greekstream.net/praktoreio",
+        "state": "Thessaloniki",
+        "now_playing": "https://ice.greekstream.net/praktoreio.xspf",
+        "band": "FM"
+    },
+    "10fb0625-1641-4978-bc0b-185bd54bf15f": {
+        "name": "Super FM 101 Thessaloniki",
+        "stream": "https://ice.greekstream.net/superfm",
+        "state": "Thessaloniki",
+        "now_playing": "https://ice.greekstream.net/superfm.xspf",
+        "band": "FM"
+    },
+    "cc35bc82-0829-4890-9e41-1791af0250c8": {
+        "name": "Yellow Radio 101.7",
+        "stream": "https://ice.greekstream.net/yellow",
+        "state": "Thessaloniki",
+        "now_playing": "https://ice.greekstream.net/yellow.xspf",
+        "band": "FM"
+    },
+    "0ecbff4f-5b94-4924-a146-e5b2f26c342d": {
+        "name": "Tivoli Radio",
+        "stream": "https://radio.streamings.gr/proxy/yellownewstream/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://radio.streamings.gr/proxy/yellownewstream/stream.xspf",
+        "band": "FM"
+    },
+    "e999e8bb-5767-4966-ada9-9b510888031f": {
+        "name": "Ραδιόφωνο 90,4 FM ΘΕΣΣΑΛΟΝΙΚΗ",
+        "stream": "https://icecast.902.gr:8001/904",
+        "state": "Thessaloniki",
+        "now_playing": "https://icecast.902.gr:8001/904.xspf",
+        "band": "FM"
+    },
+    "aaed3352-f11f-4cae-812d-61aeba8e9df0": {
+        "name": "RSO 91.7",
+        "stream": "https://rso917greece.radioca.st/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://rso917greece.radioca.st/currentsong",
+        "band": "FM"
+    },
+    "48faa3f4-76cf-40d9-8dd6-34728a15ad20": {
+        "name": "Fly 104",
+        "stream": "https://imagine2.radioca.st/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://imagine2.radioca.st/currentsong",
+        "band": "FM"
+    },
+    "08231184-20f1-4bc2-9ca5-d8fd34202f9d": {
+        "name": "Imagine 89.7",
+        "stream": "https://imagine897.radioca.st/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://imagine897.radioca.st/currentsong",
+        "band": "FM"
+    },
+    "8bc69d21-9864-4560-887c-48654d9650bb": {
+        "name": "Paidaki 97.5",
+        "stream": "https://paidaki975.radioca.st/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://paidaki975.radioca.st/currentsong",
+        "band": "FM"
+    },
+    "d50167bb-8ace-4c2e-be83-eb51fbb62082": {
+        "name": "Status FM 107.7",
+        "stream": "https://loki.mental-media.gr/proxy/statusf1/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://ice.greekstream.net/statusfm.xspf",
+        "band": "FM"
+    },
+    "7eb5cf56-8f13-441c-9a6b-a864113b7bda": {
+        "name": "Metropolis 95.5",
+        "stream": "https://metromedia.live24.gr/metropolis955thess",
+        "state": "Thessaloniki",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "7221e2cd-0c95-4ea8-a434-93957134d313": {
+        "name": "Republic Radio",
+        "stream": "https://metromedia.live24.gr/republicthess",
+        "state": "Thessaloniki",
+        "now_playing": "http://s10.voscast.com:9878/currentsong",
+        "band": "FM"
+    },
+    "d788ab49-aa54-4edb-ba37-023c2c846161": {
+        "name": "Τρανζίστορ 100.3",
+        "stream": "https://metromedia.live24.gr/tranzistor1003thess",
+        "state": "Thessaloniki",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "a97c49ec-2386-45bd-a481-7bb766754ea7": {
+        "name": "Velvet 96.8",
+        "stream": "https://metromedia.live24.gr/velvet968thess",
+        "state": "Thessaloniki",
+        "now_playing": "http://s10.voscast.com:9942/currentsong",
+        "band": "FM"
+    },
+    "e35681de-deaf-4803-88a4-f6ad38da5006": {
+        "name": "Velvet 96.8 Ballads",
+        "stream": "https://metromedia.live24.gr/velvetbaladsthess",
+        "state": "Thessaloniki",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "69473976-6506-4146-8328-aea835ac706f": {
+        "name": "Velvet 96.8 Rock",
+        "stream": "https://metromedia.live24.gr/velvetrockthess",
+        "state": "Thessaloniki",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "de186e01-d7a8-4930-9a1d-acece19960b5": {
+        "name": "Zoo 90.8",
+        "stream": "https://metromedia.live24.gr/zoo908thess",
+        "state": "Thessaloniki",
+        "now_playing": "https://ice.greekstream.net/zoo995.xspf",
+        "band": "FM"
+    },
+    "7f19ed2b-0ec6-420b-8d42-ac4f55231362": {
+        "name": "Zoo 90.8 Dance",
+        "stream": "https://metromedia.live24.gr/zoodancethess",
+        "state": "Thessaloniki",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "4014ce10-c849-47e5-aae7-af0ccb1a6b56": {
+        "name": "Zoo 90.8 Hits",
+        "stream": "https://metromedia.live24.gr/zoohitsthess",
+        "state": "Thessaloniki",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "b1132502-220e-4165-b72d-69bf03e947f8": {
+        "name": "Zoo 90.8 RnB",
+        "stream": "https://metromedia.live24.gr/zoornbthess",
+        "state": "Thessaloniki",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "d460db94-e29f-44fb-81fe-ef52c663c3d0": {
+        "name": "Karamela 92.4",
+        "stream": "https://netradio.live24.gr/924fm-thess",
+        "state": "Thessaloniki",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "5e6e0255-1f34-4cf7-9aaa-5b191005a980": {
+        "name": "Flash Radio 99.4",
+        "stream": "https://netradio.live24.gr/flash994thes",
+        "state": "Thessaloniki",
+        "now_playing": "https://webradio.northbridge.gr/proxy/flash994/source.xspf",
+        "band": "FM"
+    },
+    "2c801102-3995-40a3-9557-13d84702b84e": {
+        "name": "Music 107.1 Thess",
+        "stream": "https://netradio.live24.gr/music1071thess",
+        "state": "Thessaloniki",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "408fe120-61e0-45ab-9b2c-f7d2b70c1d71": {
+        "name": "Μελωδία Θεσσαλονίκης 98",
+        "stream": "https://netradio.live24.gr/north98thess",
+        "state": "Thessaloniki",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "3d40e6ce-ea46-4553-a76d-c6e9f7aa4ff9": {
+        "name": "Πανόραμα 984",
+        "stream": "https://netradio.live24.gr/panorama984",
+        "state": "Thessaloniki",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "a4baa137-819b-4bef-b556-ba75aa9a4c20": {
+        "name": "FM100.6",
+        "stream": "https://panel.gwebstream.com:2020/stream/fm1006skg",
+        "state": "Thessaloniki",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "fafa833d-7974-11e8-83fa-52543be04c81": {
+        "name": "FM100",
+        "stream": "https://panel.gwebstream.com:2020/stream/fm100skg",
+        "state": "Thessaloniki",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "97ec5cf7-5423-4b76-952c-62e9e0c82762": {
+        "name": "1055 Rock",
+        "stream": "https://radio.1055rock.gr:31056/live",
+        "state": "Thessaloniki",
+        "now_playing": "https://radio.1055rock.gr:31056/live.xspf",
+        "band": "FM"
+    },
+    "a013301d-5b46-49a4-9307-0e2730024ca6": {
+        "name": "1055 Xtreme",
+        "stream": "https://radio.1055rock.gr:32056/live",
+        "state": "Thessaloniki",
+        "now_playing": "https://radio.1055rock.gr:32056/live.xspf",
+        "band": "FM"
+    },
+    "29520b48-7973-11e8-83fa-52543be04c81": {
+        "name": "Love 106,5",
+        "stream": "https://radio.1055rock.gr:32669/live",
+        "state": "Thessaloniki",
+        "now_playing": "https://radio.1055rock.gr:32669/live.xspf",
+        "band": "FM"
+    },
+    "fe5d7288-54e5-474d-bfd2-c0a61fb99d30": {
+        "name": "Ble.fm 92.5 Θεσσαλονίκη",
+        "stream": "https://radio.lancom.gr:9006/stream1",
+        "state": "Thessaloniki",
+        "now_playing": "https://radio.lancom.gr:9006/stream1.xspf",
+        "band": "FM"
+    },
+    "31091bbc-2817-46e4-ac47-75248985409a": {
+        "name": "City 106.1",
+        "stream": "https://radio.lancom.gr:9012/stream5",
+        "state": "Thessaloniki",
+        "now_playing": "https://radio.lancom.gr:9012/stream5.xspf",
+        "band": "FM"
+    },
+    "864de369-7823-4282-8927-0f94e5f98af2": {
+        "name": "Libero 107.4",
+        "stream": "https://radio.libero.fm:10750/128",
+        "state": "Thessaloniki",
+        "now_playing": "https://radio.libero.fm:10750/128.xspf",
+        "band": "FM"
+    },
+    "977a6d58-0f4a-4981-9fa4-03c67efd6c2e": {
+        "name": "ΕΡΤ 102FM",
+        "stream": "https://radiostreaming.ert.gr/ert-102fm",
+        "state": "Thessaloniki",
+        "now_playing": "https://www.ertecho.gr/wp-json/meta/v1/radio/844",
+        "band": "FM"
+    },
+    "9d8cf601-dc3c-49be-89c2-019ec28726a9": {
+        "name": "ΕΡΤ 958FM",
+        "stream": "https://radiostreaming.ert.gr/ert-958fm",
+        "state": "Thessaloniki",
+        "now_playing": "https://www.ertecho.gr/wp-json/meta/v1/radio/845",
+        "band": "FM"
+    },
+    "691c1061-fb6f-4790-b9b9-56df50fb1c22": {
+        "name": "Μύθος στα FM 93.4",
+        "stream": "https://s2.free-shoutcast.com/stream/18560",
+        "state": "Thessaloniki",
+        "now_playing": "http://s2.free-shoutcast.com:18560/currentsong",
+        "band": "FM"
+    },
+    "11c41ae1-06f5-44a7-85ea-5ab142b508e7": {
+        "name": "Rock Radio 104.7",
+        "stream": "https://s9.yesstreaming.net:2199/proxy/anyhowmo/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://s9.yesstreaming.net:2199/proxy/anyhowmo/currentsong",
+        "band": "FM"
+    },
+    "6b3bf78d-51f6-4132-b7ed-8c8e324b50c1": {
+        "name": "Shook Radio 104.4",
+        "stream": "https://sh.onweb.gr/8812/stream",
+        "state": "Thessaloniki",
+        "now_playing": "http://s1.onweb.gr:8812/currentsong",
+        "band": "FM"
+    },
+    "c2414fb3-8c43-4c48-9c9c-d569f359f343": {
+        "name": "Radio 88miso",
+        "stream": "https://solid33.streamupsolutions.com/proxy/sxxaojkx/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://solid33.streamupsolutions.com/proxy/sxxaojkx/currentsong",
+        "band": "FM"
+    },
+    "e6545e9c-c670-4f92-8115-c7f2c117ceb6": {
+        "name": "Rainbow 89",
+        "stream": "https://stream.radiojar.com/083wqknmsuhvv",
+        "state": "Thessaloniki",
+        "now_playing": "https://www.radiojar.com/api/stations/083wqknmsuhvv/now_playing/",
+        "band": "FM"
+    },
+    "9cca6ce4-03a6-49f8-9e4e-07566f0008c4": {
+        "name": "Rainbow 89 Christmas",
+        "stream": "https://stream.radiojar.com/4nwwcyesv8hvv",
+        "state": "Thessaloniki",
+        "now_playing": "https://www.radiojar.com/api/stations/4nwwcyesv8hvv/now_playing/",
+        "band": "FM"
+    },
+    "a0d7a649-d5ad-4e04-85f2-554e7131c2af": {
+        "name": "Rainbow 89 Μπλε",
+        "stream": "https://stream.radiojar.com/akf7zea5kzuvv",
+        "state": "Thessaloniki",
+        "now_playing": "https://www.radiojar.com/api/stations/akf7zea5kzuvv/now_playing/",
+        "band": "FM"
+    },
+    "99f9102a-cc41-44ea-b76b-44cb7a7dbf11": {
+        "name": "Rainbow 89 Alternative",
+        "stream": "https://stream.radiojar.com/vhknc3c8ktuvv",
+        "state": "Thessaloniki",
+        "now_playing": "https://www.radiojar.com/api/stations/vhknc3c8ktuvv/now_playing/",
+        "band": "FM"
+    },
+    "bcc72d03-a45d-4e96-8fc3-6de611864ebc": {
+        "name": "Rainbow 89 Pop",
+        "stream": "https://stream.radiojar.com/ztqh29c8ktuvv",
+        "state": "Thessaloniki",
+        "now_playing": "https://www.radiojar.com/api/stations/ztqh29c8ktuvv/now_playing/",
+        "band": "FM"
+    },
+    "abc5ccc3-562b-4bad-a5c4-f7b30f5a76ff": {
+        "name": "99 FM Radio 1",
+        "stream": "https://stream.radiojar.com/t0x7dyqmsuhvv",
+        "state": "Thessaloniki",
+        "now_playing": "https://www.radiojar.com/api/stations/t0x7dyqmsuhvv/now_playing/",
+        "band": "FM"
+    },
+    "8deb34aa-3e1a-4229-bb41-9d282cdf0740": {
+        "name": "Στο Κόκκινο 91,4 - Θεσσαλονίκη",
+        "stream": "https://stream.radiojar.com/275p8ssmb",
+        "state": "Thessaloniki",
+        "now_playing": "https://www.radiojar.com/api/stations/275p8ssmb/now_playing/",
+        "band": "FM"
+    }
+}

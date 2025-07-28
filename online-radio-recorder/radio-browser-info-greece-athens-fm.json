@@ -1,0 +1,674 @@
+{
+    "ca932026-594e-11e9-a622-52543be04c81": {
+        "name": "Αθήνα 9,84",
+        "stream": "http://athina984.live24.gr/athina984",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "719803ed-2dc7-4c45-ae41-c29d3481e253": {
+        "name": "Galaxy 92 FM",
+        "stream": "http://galaxy.live24.gr/galaxy9292",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "6071697f-c477-4705-9133-bd15680ca118": {
+        "name": "Minore",
+        "stream": "http://minorefm.live24.gr/minorefm",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "962418d1-0601-11e8-ae97-52543be04c81": {
+        "name": "Παραπολιτικά FM 90.1",
+        "stream": "http://netradio.live24.gr/athinaradio",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "961f6001-0601-11e8-ae97-52543be04c81": {
+        "name": "Best 92.6",
+        "stream": "http://netradio.live24.gr/best1222",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "94ccfb6e-3d68-4ec0-a106-908ad7b85292": {
+        "name": "Δρόμος 89,8 FM",
+        "stream": "http://netradio.live24.gr/dromos2",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "f0bbdd58-945a-4336-8ed6-7784f65946b5": {
+        "name": "My Radio 104,6",
+        "stream": "http://streaming.myradio1046.fm/myradio1046",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "df716345-217b-4c1e-9f0a-8f58dce692aa": {
+        "name": "Athens Rock 96.9",
+        "stream": "https://az10.yesstreaming.net/radio/8060/radio.mp3",
+        "state": "Athens",
+        "now_playing": "https://az10.yesstreaming.net/radio/8060/radio.mp3.xspf",
+        "band": "FM"
+    },
+    "d2055784-6625-4de0-ba48-c4077e804464": {
+        "name": "Λάμψη 92,3",
+        "stream": "https://az11.yesstreaming.net/radio/8140/radio.mp3",
+        "state": "Athens",
+        "now_playing": "https://az11.yesstreaming.net/radio/8140/radio.mp3.xspf",
+        "band": "FM"
+    },
+    "1439f2fc-bb7a-46f9-a67e-cff0fde4b283": {
+        "name": "Radio Blackman 103.3",
+        "stream": "https://cloud.123hosting.gr:2200/radio/black9326?mp=/stream",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "912ed691-5054-4316-a7af-3c5ec7cbc120": {
+        "name": "Easy 97.2",
+        "stream": "https://easy972.live24.gr/easy972",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "1bd9a340-b2c6-42d1-88ee-f3cbfdac910b": {
+        "name": "Hot 104.6",
+        "stream": "https://hotfm.live24.gr/hotfm",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "aff145d7-493f-4c13-9446-0d9506954c96": {
+        "name": "Kiss 92.9",
+        "stream": "https://kissfm.live24.gr/kissfmathens",
+        "state": "Athens",
+        "now_playing": "https://songs.live24.gr/live24stats/songs.xsl",
+        "band": "FM"
+    },
+    "52bd2225-1c1e-4114-8335-8327dadba8ea": {
+        "name": "KISSmas",
+        "stream": "https://netradio.live24.gr/kiss-web-xmas",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "f1a5857f-9825-4eba-b48e-e345e82e9f5f": {
+        "name": "Εκκλησία της Ελλάδας 89.5",
+        "stream": "https://loki.mental-media.gr:8038/stream",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "5fae4075-7560-4e8a-a3ff-4b8d0666fe02": {
+        "name": "Πειραϊκή Εκκλησία 91,2 FM",
+        "stream": "https://impradio2.bytemasters.gr/8002/stream",
+        "state": "Piraeus",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "9e1fb996-1303-4e0c-8c5e-d6471ea8e01e": {
+        "name": "Μάχη 99.8 FM",
+        "stream": "https://maxhfm.streams.gr/ic/maxhfm/stream",
+        "state": "Athens",
+        "now_playing": "https://maxhfm.streams.gr/ic/maxhfm/stream.xspf",
+        "band": "FM"
+    },
+    "964607f7-0601-11e8-ae97-52543be04c81": {
+        "name": "Mad Radio 106.2",
+        "stream": "https://mediaserver.mad.tv/stream",
+        "state": "Athens",
+        "now_playing": "https://mediaserver.mad.tv/stream.xspf",
+        "band": "FM"
+    },
+    "761b40cb-4856-4bad-b7ea-ce83b5041789": {
+        "name": "Nostos 100.6",
+        "stream": "https://neos.win:37878/stream",
+        "state": "Athens",
+        "now_playing": "https://neos.win:37878/stream.xspf",
+        "band": "FM"
+    },
+    "fffa0320-34a0-406e-b3d1-3e93dd2c630d": {
+        "name": "Athens Radio DeeJay 95.2",
+        "stream": "https://netradio.live24.gr/athensdeejay",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "8cb11062-8fcb-4a74-8b4f-ea438de61f92": {
+        "name": "Κανάλι 1 90,4",
+        "stream": "https://netradio.live24.gr/kanali1peiraia",
+        "state": "Piraeus",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "4451b8c9-c73c-482a-8d9f-df43ba1254fc": {
+        "name": "Mousikos 98.6",
+        "stream": "https://netradio.live24.gr/mousikos986",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "d13972f9-95c6-4320-a132-ada4898220f1": {
+        "name": "Music 89.2",
+        "stream": "https://netradio.live24.gr/music892",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "795cbab5-7a10-413e-ab0a-2b8f4daa064e": {
+        "name": "Over FM 104,9",
+        "stream": "https://netradio.live24.gr/overfm-internet",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "7c00ed76-3c33-4947-a636-0d74d63bf597": {
+        "name": "Νότες 96",
+        "stream": "https://netradio.live24.gr/stylfmathens",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "9646068e-0601-11e8-ae97-52543be04c81": {
+        "name": "Voice 102.5",
+        "stream": "https://nitro.live24.gr/nitro4555",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "98ddb392-f89e-4a15-beaf-87e06c0e3573": {
+        "name": "Ελληνικός 93.2",
+        "stream": "https://orange.live24.gr/orange9320",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "11455d09-ed8e-4f00-929e-6373ca349b1c": {
+        "name": "Επικοινωνία 94",
+        "stream": "https://radio.streamings.gr/proxy/epikoinwnia94fm/live",
+        "state": "Athens",
+        "now_playing": "https://radio.streamings.gr/proxy/epikoinwnia94fm/live.xspf",
+        "band": "FM"
+    },
+    "1356620c-43f0-49bb-b0a8-444c5b4d45a4": {
+        "name": "Lyra FM 91.4",
+        "stream": "https://i4.streams.ovh/ic/lyrafm/live",
+        "state": "Athens",
+        "now_playing": "https://i4.streams.ovh/ic/lyrafm/live.xspf",
+        "band": "FM"
+    },
+    "d6b93a07-6fd0-4660-b05b-7a8eae7371ec": {
+        "name": "ART FM 102.7",
+        "stream": "https://radio.webmonster.gr:8030/artfm906hi",
+        "state": "Athens",
+        "now_playing": "https://radio.webmonster.gr:8030/artfm906hi.xspf",
+        "band": "FM"
+    },
+    "c3cb95e3-8943-4aee-ba84-9da807d71150": {
+        "name": "ΕΡΤ Πρώτο Πρόγραμμα",
+        "stream": "https://radiostreaming.ert.gr/ert-proto",
+        "state": "Athens",
+        "now_playing": "https://www.ertecho.gr/wp-json/meta/v1/radio/842",
+        "band": "FM"
+    },
+    "388c7f4c-9911-49e0-b7c9-3643c1373003": {
+        "name": "ΕΡΤ Δεύτερο Πρόγραμμα",
+        "stream": "https://radiostreaming.ert.gr/ert-deftero",
+        "state": "Athens",
+        "now_playing": "https://www.ertecho.gr/wp-json/meta/v1/radio/839",
+        "band": "FM"
+    },
+    "101c3185-4e10-4a41-9903-fa1beead08db": {
+        "name": "ΕΡΤ Δεύτερο Λαϊκά",
+        "stream": "https://radiostreaming.ert.gr/ert-talaika",
+        "state": "Athens",
+        "now_playing": "https://www.ertecho.gr/wp-json/meta/v1/radio/16358",
+        "band": "FM"
+    },
+    "3e0ef068-a982-490b-ad70-6b2fc2e92dfc": {
+        "name": "ΕΡΤ Δεύτερο Παραδοσιακά",
+        "stream": "https://radiostreaming.ert.gr/ert-defteroparadosiaka",
+        "state": "Athens",
+        "now_playing": "https://www.ertecho.gr/wp-json/meta/v1/radio/28548",
+        "band": "FM"
+    },
+    "07cdff02-57c7-46ef-8a7c-33ead8434b12": {
+        "name": "ΕΡΤ Τρίτο Πρόγραμμα",
+        "stream": "https://radiostreaming.ert.gr/ert-trito",
+        "state": "Athens",
+        "now_playing": "https://www.ertecho.gr/wp-json/meta/v1/radio/843",
+        "band": "FM"
+    },
+    "786e440b-8c41-4f20-9838-77eaf36514da": {
+        "name": "ΕΡΤ Τρίτο Μαέστρο",
+        "stream": "https://radiostreaming.ert.gr/ert-trito-maestro",
+        "state": "Athens",
+        "now_playing": "https://www.ertecho.gr/wp-json/meta/v1/radio/24583",
+        "band": "FM"
+    },
+    "476f290c-cb65-4f85-bb3d-089e9eb83673": {
+        "name": "ERT Christmas Radio",
+        "stream": "https://radiostreaming.ert.gr/ert-seasonal",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "da2e57f2-fa35-41b5-87c9-10572177e394": {
+        "name": "ΕΡΤ Kosmos",
+        "stream": "https://radiostreaming.ert.gr/ert-kosmos",
+        "state": "Athens",
+        "now_playing": "https://www.ertecho.gr/wp-json/meta/v1/radio/837",
+        "band": "FM"
+    },
+    "8cb1e9af-1135-4f45-b25f-fb6bcbf7a32c": {
+        "name": "ΕΡΤ Kosmos Jazz",
+        "stream": "https://radiostreaming.ert.gr/ert-webjazz",
+        "state": "Athens",
+        "now_playing": "https://www.ertecho.gr/wp-json/meta/v1/radio/1007",
+        "band": "FM"
+    },
+    "32cc288a-f7d0-47ad-be1f-bb6ffe701e18": {
+        "name": "ΕΡΑ ΣΠΟΡ",
+        "stream": "https://radiostreaming.ert.gr/ert-erasport",
+        "state": "Athens",
+        "now_playing": "https://www.ertecho.gr/wp-json/meta/v1/radio/840",
+        "band": "FM"
+    },
+    "605b2521-e764-42ba-8be0-473fc096a3b3": {
+        "name": "Zeppelin 106.7",
+        "stream": "https://radiostreaming.ert.gr/ert-zeppelin",
+        "state": "Athens",
+        "now_playing": "https://www.ertecho.gr/wp-json/meta/v1/radio/838",
+        "band": "FM"
+    },
+    "961f9a79-0601-11e8-ae97-52543be04c81": {
+        "name": "Real FM 97.8",
+        "stream": "https://realfm.live24.gr/realfm",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "b32e1fc6-f362-4c53-8667-59ac7100b826": {
+        "name": "Real Xmas",
+        "stream": "https://realxmas.live24.gr/realxmas",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "dec88d4d-39bc-4e53-8aca-3cb763536bab": {
+        "name": "Sfera 102.2",
+        "stream": "https://sfera.live24.gr/sfera4132",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "52fe7ea5-50dc-4c63-b5ff-b27f55da0972": {
+        "name": "Sfera 102.2 Λαϊκά",
+        "stream": "https://politismedia-sec3.live24.gr/sfera1022laika",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "df231d5e-42c7-4761-ac50-39c698a3c5cc": {
+        "name": "Sfera 102.2 Kids",
+        "stream": "https://politismedia-sec3.live24.gr/sfera1022kids",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "38a3e837-16ff-49fd-b931-85ec09a8bc54": {
+        "name": "Sfera 102.2 Trap",
+        "stream": "https://politismedia-sec3.live24.gr/sfera1022trap",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "e1305c38-d6ab-4087-8d94-e355d9401bb6": {
+        "name": "Πειρατικός FM 99.5",
+        "stream": "https://shoutcast.k-planet.eu:9800/stream",
+        "state": "Athens",
+        "now_playing": "https://shoutcast.k-planet.eu:9800/currentsong",
+        "band": "FM"
+    },
+    "80cc7186-2384-4e71-bed9-756108581acc": {
+        "name": "Blue Space 107.2",
+        "stream": "https://sp1.19cloudsnetwork.gr/8008/stream",
+        "state": "Athens",
+        "now_playing": "https://sp1.19cloudsnetwork.gr/8008/stream.xspf",
+        "band": "FM"
+    },
+    "190431c7-246f-44ad-bcef-8c0316c060bb": {
+        "name": "Κρήτη FM 87.5",
+        "stream": "https://tls-chrome.live24.gr/1361",
+        "state": "Athens",
+        "now_playing": "http://s3.onweb.gr:8878/currentsong",
+        "band": "FM"
+    },
+    "960c2c57-0601-11e8-ae97-52543be04c81": {
+        "name": "Love Radio 97.5",
+        "stream": "http://netradio.live24.gr/loveradio-1000",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "245d49d3-e306-49d4-82fb-f87332e1472c": {
+        "name": "Love 97.5 Classics",
+        "stream": "https://stream.radiojar.com/gt0xy4z88f0uv",
+        "state": "Athens",
+        "now_playing": "https://www.radiojar.com/api/stations/gt0xy4z88f0uv/now_playing/",
+        "band": "FM"
+    },
+    "e5f559c5-b493-4a36-a13c-faa491d5b393": {
+        "name": "Love 97.5 Z",
+        "stream": "https://stream.radiojar.com/20n2b23u7mruv",
+        "state": "Athens",
+        "now_playing": "https://www.radiojar.com/api/stations/20n2b23u7mruv/now_playing/",
+        "band": "FM"
+    },
+    "1b291f22-f6ba-44d7-b3fd-f61275aea007": {
+        "name": "Love 97.5 Xmas",
+        "stream": "https://stream.radiojar.com/gt0xy4z88f0uv",
+        "state": "Athens",
+        "now_playing": "https://www.radiojar.com/api/stations/gt0xy4z88f0uv/now_playing/",
+        "band": "FM"
+    },
+    "17596e0a-3d66-4d1f-bb05-de443345196a": {
+        "name": "Love 97.5 Trap",
+        "stream": "https://stream.radiojar.com/tkeve70hqd0uv",
+        "state": "Athens",
+        "now_playing": "https://www.radiojar.com/api/stations/tkeve70hqd0uv/now_playing/",
+        "band": "FM"
+    },
+    "96b37cae-4795-4e9a-92be-178f16216ecf": {
+        "name": "Ρυθμός 94.9",
+        "stream": "https://stream.radiojar.com/aw1w2xfx1vduv",
+        "state": "Athens",
+        "now_playing": "https://www.radiojar.com/api/stations/aw1w2xfx1vduv/now_playing/",
+        "band": "FM"
+    },
+    "5f774691-05c7-48d6-89e0-26f39aacb3aa": {
+        "name": "Athens Free Radio",
+        "stream": "https://stream.radiojar.com/e206r95qsp8uv",
+        "state": "Athens",
+        "now_playing": "https://www.radiojar.com/api/stations/e206r95qsp8uv/now_playing/",
+        "band": "FM"
+    },
+    "43a3c60b-0544-431a-8018-6fedba8fc3a4": {
+        "name": "Στο Κόκκινο 105.5 Αθήνα",
+        "stream": "https://stream.radiojar.com/kokkino-ath",
+        "state": "Athens",
+        "now_playing": "https://www.radiojar.com/api/stations/kokkino-ath/now_playing/",
+        "band": "FM"
+    },
+    "e6d38cbb-868b-4345-8e5e-5cd76a770843": {
+        "name": "Alpha Radio 98.9",
+        "stream": "https://stream.radiojar.com/xcdg6yggzfeuv",
+        "state": "Athens",
+        "now_playing": "https://www.radiojar.com/api/stations/xcdg6yggzfeuv/now_playing/",
+        "band": "FM"
+    },
+    "f28d16cd-4515-43ed-9cc8-c25e56190e23": {
+        "name": "Pepper 96.6",
+        "stream": "https://stream.radiojar.com/pepper",
+        "state": "Athens",
+        "now_playing": "https://www.radiojar.com/api/stations/pepper/now_playing/",
+        "band": "FM"
+    },
+    "21838fd1-b14f-4ee5-b751-b28cf61600b2": {
+        "name": "Happy 104",
+        "stream": "http://ath10400fm-radioplayer.live24.gr/ath10400fm",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "41db2fa7-70e4-4f2f-b2f2-9218a46ea13c": {
+        "name": "Μέντα 88",
+        "stream": "https://netradio.live24.gr/menta88ath",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "2d9dfa25-7379-460b-8cd0-fe163af26ebe": {
+        "name": "ΣΚΑΪ 100.3",
+        "stream": "https://skai.live24.gr/skai1003",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "96185f35-0601-11e8-ae97-52543be04c81": {
+        "name": "ΣΠΟΡ FM 94.6",
+        "stream": "https://sportfm.live24.gr/sportfm7712",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "4e79c0af-4dea-4b83-a850-f11329460dc7": {
+        "name": "Δίεση 101.3",
+        "stream": "https://n17a-eu.rcs.revma.com/gkfwrhqxbfhvv",
+        "state": "Athens",
+        "now_playing": "https://api.diesi.gr/playing-now/",
+        "band": "FM"
+    },
+    "ccdc8e96-f3bc-4703-86ba-5b6aa0c92304": {
+        "name": "Μελωδία 99.2",
+        "stream": "https://stream.rcs.revma.com/8tdwa6ez1duvv",
+        "state": "Athens",
+        "now_playing": "wss://metadata.aiir.net/now-playing",
+        "band": "FM"
+    },
+    "313dbd5d-f9f3-474a-82cc-1b5472676982": {
+        "name": "Μελωδία 99.2 Τα Μεγάλα Κλασικά ",
+        "stream": "https://stream.rcs.revma.com/xecq4980ubuvv",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "9623f57e-0601-11e8-ae97-52543be04c81": {
+        "name": "Μελωδία 99.2 Οι Φωνές του Σήμερα",
+        "stream": "https://stream.rcs.revma.com/qaeqa480ubuvv",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "c99e1b89-3b33-4408-b254-8ea1045f25b0": {
+        "name": "Μελωδία 99.2 Κασέτες: Επιλογές",
+        "stream": "https://stream.rcs.revma.com/h9mge780ubuvv",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "3bd46a05-e589-4263-8eb9-680e45400947": {
+        "name": "Μελωδία 99.2 Τα Τραγούδια του 90",
+        "stream": "https://stream.rcs.revma.com/cdkb8a90ubuvv",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "957adb0b-6f0e-463b-b2b3-abe618720540": {
+        "name": "Μελωδία 99.2 Οι Μπαλάντες",
+        "stream": "https://stream.rcs.revma.com/3x421180ubuvv",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "4baef746-5835-45ae-9e63-bd4103b52244": {
+        "name": "Μελωδία 99.2 Ο Νέος Freedom",
+        "stream": "https://stream.rcs.revma.com/z0ymkz80ubuvv",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "2082b774-1082-419d-ad13-a0ce9c10a759": {
+        "name": "Red 96.3",
+        "stream": "https://stream.rcs.revma.com/e4d84zez1duvv",
+        "state": "Athens",
+        "now_playing": "wss://metadata.aiir.net/now-playing",
+        "band": "FM"
+    },
+    "3be866d3-f5ce-4f03-835b-2271b3996273": {
+        "name": "Red 96.3 80's",
+        "stream": "https://stream.rcs.revma.com/40uryq80ubuvv",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "90e22c53-c626-4ac7-876d-d03d4ee8c3d2": {
+        "name": "Red 96.3 Metal",
+        "stream": "https://stream.rcs.revma.com/pt14gt80ubuvv",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "96118e26-0601-11e8-ae97-52543be04c81": {
+        "name": "Red 96.3 90's",
+        "stream": "https://stream.rcs.revma.com/vwqwss80ubuvv",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "c24314b1-32d0-4963-a7f5-0f41985a5e88": {
+        "name": "Red 96.3 Ultimate RED Battle",
+        "stream": "https://stream.rcs.revma.com/ytmuf580ubuvv ",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "79225ba4-8f30-44fd-bccd-6c963432ff38": {
+        "name": "Red 96.3 00's",
+        "stream": "https://stream.rcs.revma.com/cgq5bq80ubuvv",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "614eccdb-d268-4214-993b-dc3e076a02b4": {
+        "name": "Red 96.3 New Music",
+        "stream": "https://stream.rcs.revma.com/u53pdv80ubuvv",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "9622b8e0-0601-11e8-ae97-52543be04c81": {
+        "name": "En Lefko 87.7",
+        "stream": "https://stream.rcs.revma.com/kwste9dz1duvv",
+        "state": "Athens",
+        "now_playing": "wss://metadata.aiir.net/now-playing",
+        "band": "FM"
+    },
+    "e51bb156-8aa8-4897-adaf-4f026bcaeee9": {
+        "name": "En Lefko 87.7 Electronica",
+        "stream": "https://stream.rcs.revma.com/s4saqn30ubuvv",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "112531b1-9f5e-11e9-a787-52543be04c81": {
+        "name": "En Lefko 87.7 Nu Funk / Nu Soul",
+        "stream": "https://stream.rcs.revma.com/z2zavp30ubuvv",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "34486042-34ce-419f-a121-32c3735efe9e": {
+        "name": "En Lefko 87.7 Alternative",
+        "stream": "https://stream.rcs.revma.com/mxq33f30ubuvv",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "c3d33977-ce93-4c7e-b0d3-6115fbd80244": {
+        "name": "En Lefko 87.7 Dinner Jazz",
+        "stream": "https://stream.rcs.revma.com/9u8nek30ubuvv",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "e82b3c2b-665b-4745-82f2-990195dd8759": {
+        "name": "En Lefko 87.7 World Music",
+        "stream": "https://stream.rcs.revma.com/s1m17r30ubuvv",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "6cbaa6b6-bc85-4f67-924d-1f1027c67ca4": {
+        "name": "Hit 88.9",
+        "stream": "https://stream.rcs.revma.com/r0yaerez1duvv",
+        "state": "Athens",
+        "now_playing": "wss://metadata.aiir.net/now-playing",
+        "band": "FM"
+    },
+    "d4af7110-96bf-4388-8fd5-e2cf356c96a7": {
+        "name": "Hit 88.9 Workout",
+        "stream": "https://stream.rcs.revma.com/taann5k01duvv",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "7c22650e-82d6-453f-b61d-f9fdc4862bbc": {
+        "name": "Hit 88.9 Top 40",
+        "stream": "https://stream.rcs.revma.com/x9tczv70ubuvv",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "873bc6e5-2632-424c-a044-5b08b9655c19": {
+        "name": "Hit 88.9 Summer",
+        "stream": "https://stream.rcs.revma.com/b2msku70ubuvv",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "7e990e80-cf13-493b-9a7d-5cdc7e79fe02": {
+        "name": "Hit 88.9 Dance & RnB",
+        "stream": "https://stream.rcs.revma.com/r532up70ubuvv",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "b9e1f76e-41fd-11e9-aa55-52543be04c81": {
+        "name": "Hit 88.9 Relax",
+        "stream": "https://stream.rcs.revma.com/vrr7hs70ubuvv",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "96463caa-0601-11e8-ae97-52543be04c81": {
+        "name": "Kids Radio 88.6",
+        "stream": "https://stream.rcs.revma.com/n7d6z9ez1duvv",
+        "state": "Athens",
+        "now_playing": "wss://metadata.aiir.net/now-playing",
+        "band": "FM"
+    },
+    "4ea2d213-d064-422c-bde9-e57550318023": {
+        "name": "Kids Radio 88.6 Ώρα για ύπνο",
+        "stream": "https://stream.rcs.revma.com/v9bfxk80ubuvv",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "575d0526-c12e-415a-b0b2-7354ea7ee165": {
+        "name": "Kids Radio 88.6 Kids Party (0-6 ετών)",
+        "stream": "https://stream.rcs.revma.com/trdyb470ubuvv",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "55c60e35-6182-4747-8287-9c81dd8ca3ab": {
+        "name": "Kids Radio 88.6 Αγαπημένα παιδικά (0-6 ετών)",
+        "stream": "https://stream.rcs.revma.com/n4y6h970ubuvv",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "6e2a1c0a-4c87-498e-9371-86e571f21eb9": {
+        "name": "Kids Radio 88.6 Top Hits (7-12 ετών)",
+        "stream": "https://stream.rcs.revma.com/qc95tuzu398uv",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    }
+}
