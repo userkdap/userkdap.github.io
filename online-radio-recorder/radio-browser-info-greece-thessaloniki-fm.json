@@ -1,35 +1,35 @@
 {
     "b9dec512-fece-485e-84b8-5107fd8f8dbc": {
         "name": "Ράδιο Ακρίτες FM 102.3",
-        "stream": "http://akritespontou.live24.gr/akritespontou",
+        "stream": "https://akritespontou.live24.gr/akritespontou",
         "state": "Thessaloniki",
         "now_playing": "",
         "band": "FM"
     },
     "ae5b880e-f2a3-11e8-a471-52543be04c81": {
         "name": "Λαϊκός 87,6",
-        "stream": "http://derti.live24.gr/laikos876",
+        "stream": "https://derti.live24.gr/laikos876",
         "state": "Thessaloniki",
         "now_playing": "",
         "band": "FM"
     },
     "0f5151ae-3d4a-459d-8aa5-674fb2c44351": {
         "name": "Plus Radio 102.6",
-        "stream": "http://eco.onestreaming.com:8039/stream",
+        "stream": "https://eco.onestreaming.com:18814/stream",
         "state": "Thessaloniki",
         "now_playing": "http://eco.onestreaming.com:8039/currentsong",
         "band": "FM"
     },
     "98acc30f-a0ed-4e0e-831a-a0b8360e871c": {
         "name": "Κοσμοράδιο 95.1",
-        "stream": "http://eco.onestreaming.com:8689/stream",
+        "stream": "https://eco.onestreaming.com:18812/stream",
         "state": "Thessaloniki",
         "now_playing": "http://eco.onestreaming.com:8689/currentsong",
         "band": "FM"
     },
     "516a0830-1ed0-426b-8962-8c5192874b32": {
         "name": "Λυδία 94.2 FM",
-        "stream": "http://eu1.radiolydia.com:1086/stream",
+        "stream": "https://tls-chrome.live24.gr/271",
         "state": "Thessaloniki",
         "now_playing": "http://eu1.radiolydia.com:1086/currentsong",
         "band": "FM"
