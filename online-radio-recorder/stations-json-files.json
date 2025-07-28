@@ -1,22 +1,22 @@
 {
     "thessaloniki-fm": {
         "name": "Thessaloniki FM Radio",
-        "file": "../radio-browser-info-greece-thessaloniki-fm.json"
+        "file": "radio-browser-info-greece-thessaloniki-fm.json"
     },
     "thessaloniki-web": {
         "name": "Thessaloniki Web Radio",
-        "file": "../radio-browser-info-greece-thessaloniki-web.json"
+        "file": "radio-browser-info-greece-thessaloniki-web.json"
     },
     "athens-fm": {
         "name": "Athens FM Radio",
-        "file": "../radio-browser-info-greece-athens-fm.json"
+        "file": "radio-browser-info-greece-athens-fm.json"
     },
     "athens-web": {
         "name": "Athens Web Radio",
-        "file": "../radio-browser-info-greece-athens-web.json"
+        "file": "radio-browser-info-greece-athens-web.json"
     },
     "sample-picks": {
         "name": "Sample Picks",
-        "file": "../stations-info-radiojar-ice-greekstream-greece.json"
+        "file": "stations-info-radiojar-ice-greekstream-greece.json"
     }        
 }
