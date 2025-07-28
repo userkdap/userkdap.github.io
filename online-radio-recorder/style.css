@@ -1,0 +1,278 @@
+        :root {
+            /* χρώμα πλήκτρων */
+            --btn-color: teal;
+            --navy: #073a53;
+            /* χρώμα κειμένου πλήκτρων */
+            --btn-text: whitesmoke;
+            /* χρώμα μηνύματος επιτυχίας */
+            --msg-win-color: rgb(0, 128, 32);
+            /* χρώμα μηνύματος αποτυχίας */
+            --msg-wrong-color: crimson;
+            /* χρώμα κειμένου μηνύματος */
+            --msg-text: floralwhite;
+            /* χρώμα ιστορικού προσπαθειών */
+            --low-high-color: gray;
+            --clear-btn-color: #5256ad;
+            --sans-serif: "Plex", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+            --monospace: Consolas, monaco, monospace;
+            /*
+			--navy: #073a53;
+			--teal: #6bc4ce;
+			--turquoise: #47AFB4;
+			--steel-gray: #3f5667;
+			--dark-white: #d9dbe2;
+			--light-white: #edf0f4;
+			--near-white: #f7f8fa;
+			--radius: 4px;
+			*/
+        }
+
+        * {
+            /* για δοκιμαστική προβολή outline: 1px solid green; */
+            /* ορισμός box-sizing σε border-box για όλα τα στοιχεία του εγγράφου */
+            box-sizing: border-box;
+        }
+
+        body {
+            /* γραμματοσειρά της οικογένειας sans-serif */
+            /* font-family: Arial, Helvetica, sans-serif; */
+            /* font-family: "Courier New", Courier, monospace; */
+            font-family: var(--monospace);
+            /* μέγεθος της γραμματοσειράς βάσης στο 100% άρα 16px (default τιμή) */
+            font-size: 100%;
+            background-color: lightsteelblue;
+            color: darkblue;
+        }
+
+        section {
+            /* μέγεθος γραμματοσειράς 1.6rem=1.6*16px */
+            font-size: 1.6rem;
+            /* εσωτερικό περιθώριο αριστερά 1rem=16px */
+            /* padding-left: 1rem; */
+            /* εξωτερικό περιθώριο πάνω 1rem=16px */
+            margin-top: 1rem;
+            /* εξωτερικό περιθώριο κάτω 0.5rem=0.5*16px */
+            /* margin-bottom: 0.5rem; */
+            margin-bottom: 1rem;
+        }
+
+        button {
+            font-family: var(--sans-serif);
+            /* χρώμα υποβάθρου των πλήκτρων */
+            background-color: var(--btn-color);
+            /* χρώμα κειμένου των πλήκτρων */
+            color: var(--btn-text);
+            /* μέγεθος γραμματοσειράς 1.6rem=1.6*16px ίδιο με το section #guess */
+            font-size: 1.6rem;
+            /* γωνίες ελαφρά στρογγυλεμένες */
+            /* border-radius: 5%; */
+            border-radius: 4px;
+            /* εσωτερικό περιθώριο 0.6rem 1.6rem */
+            padding: 8px 16px;
+            /* χρώμα πλαισίου διαφανές */
+            border-color: transparent;
+            /* ο δρομέας αλλάζει εμφάνιση ώστε να φαίνεται ότι μπορούμε να επιλέξουμε το πλήκτρο */
+            cursor: pointer;
+        }
+
+        button:hover {
+            /* ψευδό-κλάση όταν το ποντίκι είναι πάνω από την περιοχή κάθε πλήκτρου */
+            /* αλλαγή στη διαφάνεια */
+            /* filter: alpha(opacity=80); */
+            opacity: 0.8;
+        }
+
+        button:focus {
+            /* ψευδό-κλάση όταν το πλήκτρο έχει το focus */
+            /* χρώμα στο περίγραμμα του πλήκτρου */
+            outline-color: dodgerblue;
+        }
+
+        .recorders {
+            display: flex;
+            justify-content: space-between;
+            column-gap: 10px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            column-gap: 10px;
+        }
+
+        #record-btn {
+            background-color: var(--navy);
+            flex-grow: 1;
+        }
+
+        #pause-btn {
+            background-color: var(--navy);
+            flex-grow: 1;
+        }
+
+        #stop-btn {
+            background-color: var(--navy);
+            flex-grow: 1;
+        }
+
+        #download-btn {
+            background-color: var(--navy);
+            flex-grow: 1;
+        }
+
+        h1 {
+            /* to avoid margin collapsing */
+            /* margin-bottom: 0; */
+            border: none;
+        }
+
+        #clear-btn {
+            flex-grow: 1;
+        }
+
+        /* How To Create a Toggle Switch */
+        /* https://www.w3schools.com/howto/howto_css_switch.asp */
+        /* The switch - the box around the slider */
+        .switch {
+            position: relative;
+            display: inline-block;
+            /* width: 60px; */
+            /* height: 34px; */
+            width: 80px;
+            height: 32px;
+        }
+
+        /* Hide default HTML checkbox */
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        /* The slider */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+            /* Rounded sliders */
+            /* border-radius: 34px; */
+            border-radius: 32px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            /* height: 26px; */
+            /* width: 26px; */
+            height: 24px;
+            width: 24px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+            /* Rounded sliders */
+            border-radius: 50%;
+        }
+
+        input:checked+.slider {
+            background-color: dodgerblue;
+        }
+
+        input:focus+.slider {
+            box-shadow: 0 0 1px dodgerblue;
+        }
+
+        input:checked+.slider:before {
+            /* -webkit-transform: translateX(26px); */
+            /* -ms-transform: translateX(26px); */
+            /* transform: translateX(26px); */
+            -webkit-transform: translateX(48px);
+            -ms-transform: translateX(48px);
+            transform: translateX(48px);
+        }
+
+        .rec-check {
+            border: none;
+            margin: 0;
+        }
+
+        datalist {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-size: 1rem;
+        }
+
+        #msg-area {
+            /* το πλάισιο #msg-area αρχικά είναι κρυμμένο και δε μπορεί να δεχτεί events */
+            display: none;
+        }
+
+        #select-preset {
+            /* γραμματοσειρά της οικογένειας sans-serif */
+            font-family: Arial, Helvetica, sans-serif;
+            /* font-family: MS Shell Dlg 2;*/
+            /* μέγεθος γραμματοσειράς 1.6rem=1.6*16px ίδιο με το section #guess */
+            font-size: 1.6rem;
+            /* να παίρνει το 100% του πλάτους (width) του container */
+            width: 100%;
+        }
+
+        #embed {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            row-gap: 10px;
+        }
+
+        #audio-elem {
+            text-align: center;
+            /* border: none; */
+            border: 0;
+            width: 100%;
+        }
+
+        /* semantic data states! */
+        #audio-elem[data-state=active] {
+            display: block;
+            flex-grow: 1;
+        }
+
+        #audio-elem[data-state=inactive] {
+            display: none;
+        }
+
+        #iframe-elem {
+            text-align: center;
+            /* border: none; */
+            border: 0;
+            width: 100%;
+            /* height: 80px; */
+            height: 40px;
+        }
+
+        #iframe-elem[data-state=active] {
+            display: block;
+            flex-grow: 1;
+        }
+
+        #iframe-elem[data-state=inactive] {
+            display: none;
+        }
+
+        #select-station {
+            /* γραμματοσειρά της οικογένειας sans-serif */
+            font-family: Arial, Helvetica, sans-serif;
+            /* font-family: MS Shell Dlg 2*/
+            /* μέγεθος γραμματοσειράς 1.6rem=1.6*16px ίδιο με το section #guess */
+            font-size: 1.6rem;
+            /* να παίρνει το 100% του πλάτους (width) του container */
+            width: 100%;
+        }

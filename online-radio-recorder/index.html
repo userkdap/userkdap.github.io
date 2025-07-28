@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- <audio>: The Embed Audio element -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio -->
+<!-- HTMLAudioElement - Web APIs | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement -->
+<!-- Blob: Blob() constructor -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/Blob/Blob -->
+<!-- Blob -->
+<!-- https://javascript.info/blob -->
+<!-- <base>: The Document Base URL element - HTML | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/base -->
+<!-- <input type="range">- HTML | MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/range#adding_labels -->
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Ο συγγραφέας">
+        <meta name="description" content="Εμφάνιση συγκεκριμένων υποδιαιρέσεων του περιεχομένου">
+        <base target="_blank">
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="app.js" defer></script>
+        <title>Online Radio Recorder</title>
+    </head>
+
+    <body>
+        <h1>Online Radio Recorder</h1>
+        <section id="app-info">
+            <section>Enjoy your favorite radio stations</section>
+            <section>To record, turn switch On first</section>
+        </section>
+        <section class="recorders">
+            <button id="record-btn">🔴</button>
+            <button id="pause-btn">⏸</button>
+            <button id="stop-btn">⏹</button>
+            <button id="download-btn">📥</button>
+            <section class="rec-check">
+                <label for="rec-switch" class="switch" data-state="active">
+                    <input type="checkbox" id="rec-switch" list="checkmarks" value="off"><span class="slider"></span>
+                </label>
+                <datalist id="checkmarks">
+                    <option value="off" label="Off"></option>
+                    <option value="on" label="On"></option>
+                </datalist>
+            </section>
+        </section>
+        <section class="buttons">
+            <button id="clear-btn">Clear</button>
+        </section>
+        <section class="presets">
+            <select id="select-preset" size="6">
+                <option value="">Select preset stations</option>
+            </select>
+        </section>
+        <section id="output-info">
+            <section id="msg-area" name="msg-area" for="select-station"></section>
+            <label for="file-info">Now Playing:</label>
+            <output id="file-info" name="file-info" for="select-station"></output>
+            <span id="size-info"></span>
+        </section>
+        <section id="embed">
+            <audio id="audio-elem" data-state="active" controls="" preload="none" crossorigin="anonymous" src="about:blank"></audio>
+            <iframe id="iframe-elem" data-state="inactive" type="audio/mpeg" src=""></iframe>
+        </section>
+        <section class="stations">
+            <select id="select-station" size="8">
+                <option value="">Select a station</option>
+            </select>
+        </section>
+    </body>
+
+</html>
