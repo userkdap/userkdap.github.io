@@ -1,49 +1,49 @@
 {
     "ca932026-594e-11e9-a622-52543be04c81": {
         "name": "Αθήνα 9,84",
-        "stream": "http://athina984.live24.gr/athina984",
+        "stream": "https://athina984.live24.gr/athina984",
         "state": "Athens",
         "now_playing": "",
         "band": "FM"
     },
     "719803ed-2dc7-4c45-ae41-c29d3481e253": {
         "name": "Galaxy 92 FM",
-        "stream": "http://galaxy.live24.gr/galaxy9292",
+        "stream": "https://galaxy.live24.gr/galaxy9292",
         "state": "Athens",
         "now_playing": "",
         "band": "FM"
     },
     "6071697f-c477-4705-9133-bd15680ca118": {
         "name": "Minore",
-        "stream": "http://minorefm.live24.gr/minorefm",
+        "stream": "https://minorefm.live24.gr/minorefm",
         "state": "Athens",
         "now_playing": "",
         "band": "FM"
     },
     "962418d1-0601-11e8-ae97-52543be04c81": {
         "name": "Παραπολιτικά FM 90.1",
-        "stream": "http://netradio.live24.gr/athinaradio",
+        "stream": "https://netradio.live24.gr/athinaradio",
         "state": "Athens",
         "now_playing": "",
         "band": "FM"
     },
     "961f6001-0601-11e8-ae97-52543be04c81": {
         "name": "Best 92.6",
-        "stream": "http://netradio.live24.gr/best1222",
+        "stream": "https://netradio.live24.gr/best1222",
         "state": "Athens",
         "now_playing": "",
         "band": "FM"
     },
     "94ccfb6e-3d68-4ec0-a106-908ad7b85292": {
         "name": "Δρόμος 89,8 FM",
-        "stream": "http://netradio.live24.gr/dromos2",
+        "stream": "https://netradio.live24.gr/dromos2",
         "state": "Athens",
         "now_playing": "",
         "band": "FM"
     },
     "f0bbdd58-945a-4336-8ed6-7784f65946b5": {
         "name": "My Radio 104,6",
-        "stream": "http://streaming.myradio1046.fm/myradio1046",
+        "stream": "https://streaming.myradio1046.fm/myradio1046",
         "state": "Athens",
         "now_playing": "",
         "band": "FM"
@@ -351,7 +351,7 @@
     },
     "960c2c57-0601-11e8-ae97-52543be04c81": {
         "name": "Love Radio 97.5",
-        "stream": "http://netradio.live24.gr/loveradio-1000",
+        "stream": "https://netradio.live24.gr/loveradio-1000",
         "state": "Athens",
         "now_playing": "",
         "band": "FM"
@@ -421,7 +421,7 @@
     },
     "21838fd1-b14f-4ee5-b751-b28cf61600b2": {
         "name": "Happy 104",
-        "stream": "http://ath10400fm-radioplayer.live24.gr/ath10400fm",
+        "stream": "https://ath10400fm-radioplayer.live24.gr/ath10400fm",
         "state": "Athens",
         "now_playing": "",
         "band": "FM"
