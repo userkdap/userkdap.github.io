@@ -1,11 +1,4 @@
 {
-    "7a02ba38-997f-4a39-a15f-e3c38e8cd0c3": {
-        "name": "BARS Radio",
-        "stream": "https://stream.barsradio.com/stream1",
-        "state": "Thessaloniki",
-        "now_playing": "http://88.99.171.20:8020/currentsong",
-        "band": "Web"
-    },
     "5565917c-7b61-47b1-b1ff-bc38cd0a9b7f": {
         "name": "To Pikap",
         "stream": "https://radiopikap.radioca.st/stream",
@@ -38,7 +31,7 @@
         "name": "Studio3 Thessaloniki",
         "stream": "https://cast.tunzilla.com/http://stream3.468.gr:9994/stream",
         "state": "Thessaloniki",
-        "now_playing": "",
+        "now_playing": "https://cast.tunzilla.com/http://stream3.468.gr:9994/currentsong",
         "band": "Web"
     },
     "3f7bc647-57c6-440f-b844-8ec953fbe27c": {
@@ -67,6 +60,13 @@
         "stream": "https://cast.tunzilla.com/http://85.17.75.146/echoes",
         "state": "Thessaloniki",
         "now_playing": "",
+        "band": "Web"
+    },
+    "7a02ba38-997f-4a39-a15f-e3c38e8cd0c3": {
+        "name": "BARS Radio",
+        "stream": "https://cast.tunzilla.com/http://88.99.171.20:8020/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://cast.tunzilla.com/http://88.99.171.20:8020/currentsong",
         "band": "Web"
     },
     "3b2fb322-5ad8-4015-9a78-9e6805a67c3c": {
