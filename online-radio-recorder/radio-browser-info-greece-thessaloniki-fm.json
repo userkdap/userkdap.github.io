@@ -64,30 +64,30 @@
     },
     "0f5151ae-3d4a-459d-8aa5-674fb2c44351": {
         "name": "Plus Radio 102.6",
-        "stream": "https://eco.onestreaming.com:18814/stream",
+        "stream": "https://cast.tunzilla.com/http://eco.onestreaming.com:8814/stream",
         "state": "Thessaloniki",
         "now_playing": "https://cast.tunzilla.com/http://eco.onestreaming.com:8814/stream.xspf",
         "band": "FM"
     },
     "98acc30f-a0ed-4e0e-831a-a0b8360e871c": {
         "name": "Κοσμοράδιο 95.1",
-        "stream": "https://eco.onestreaming.com:18812/stream",
+        "stream": "https://cast.tunzilla.com/http://eco.onestreaming.com:8812/stream",
         "state": "Thessaloniki",
         "now_playing": "https://cast.tunzilla.com/http://eco.onestreaming.com:8812/stream.xspf",
         "band": "FM"
     },
     "e6ae1436-3d0b-465c-8448-2031b8e7ed35": {
         "name": "More 103",
-        "stream": "https://eco.onestreaming.com/proxy/moreradio/stream",
+        "stream": "https://cast.tunzilla.com/http://eco.onestreaming.com/proxy/moreradio/stream",
         "state": "Thessaloniki",
-        "now_playing": "https://eco.onestreaming.com/proxy/moreradio/currentsong",
+        "now_playing": "https://cast.tunzilla.com/http://eco.onestreaming.com/proxy/moreradio/currentsong",
         "band": "FM"
     },
     "6afaefec-15ae-4ede-97ad-25d5d88e8856": {
         "name": "Palmos 96.5",
-        "stream": "https://cast1.asurahosting.com/proxy/palmos965/stream",
+        "stream": "https://cast.tunzilla.com/http://cast1.asurahosting.com/proxy/palmos965/stream",
         "state": "Thessaloniki",
-        "now_playing": "https://cast1.asurahosting.com/proxy/palmos965/stream.xspf",
+        "now_playing": "https://cast.tunzilla.com/http://cast1.asurahosting.com/proxy/palmos965/stream.xspf",
         "band": "FM"
     },
     "be455527-dc36-425c-a946-302bf082dda2": {
@@ -162,7 +162,7 @@
     },
     "0ecbff4f-5b94-4924-a146-e5b2f26c342d": {
         "name": "Tivoli Radio",
-        "stream": "https://radio.streamings.gr/proxy/yellownewstream/stream",
+        "stream": "https://cast.tunzilla.com/http://radio.streamings.gr:8144/stream",
         "state": "Thessaloniki",
         "now_playing": "https://cast.tunzilla.com/http://radio.streamings.gr:8144/stream.xspf",
         "band": "FM"
@@ -171,7 +171,7 @@
         "name": "Ραδιόφωνο 90,4 FM ΘΕΣΣΑΛΟΝΙΚΗ",
         "stream": "https://icecast.902.gr:8001/904",
         "state": "Thessaloniki",
-        "now_playing": "https://icecast.902.gr:8001/904.xspf",
+        "now_playing": "https://cast.tunzilla.com/http://icecast.902.gr:8000/904.xspf",
         "band": "FM"
     },
     "aaed3352-f11f-4cae-812d-61aeba8e9df0": {
@@ -374,7 +374,7 @@
         "name": "Radio 88miso",
         "stream": "https://solid33.streamupsolutions.com/proxy/sxxaojkx/stream",
         "state": "Thessaloniki",
-        "now_playing": "https://solid33.streamupsolutions.com/proxy/sxxaojkx/currentsong",
+        "now_playing": "https://cast.tunzilla.com/http://solid33.streamupsolutions.com/proxy/sxxaojkx/currentsong",
         "band": "FM"
     },
     "e6545e9c-c670-4f92-8115-c7f2c117ceb6": {
