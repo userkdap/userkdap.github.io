@@ -203,8 +203,8 @@
     }
 
     function getResponseType(source) {
-        if (hasSubStr(source, "radiojar") || hasSubStr(source, "diesi") || hasSubStr(source, "melodic")) {
-            return "json";
+        if ( hasSubStr(source, "radiojar") || hasSubStr(source, "diesi") || hasSubStr(source, "melodic") || hasSubStr(source, "airtime") ) {
+                return "json";
         } else if (hasSubStr(source, "xspf")) {
             return "xml";
         } else if (hasSubStr(source, "currentsong") || hasSubStr(source, "ertecho")) {
@@ -289,6 +289,8 @@
                     currentTrack["artist"] = capitalize(responseData.artist);
                 } else if (responseData.data.artist !== undefined) {
                     currentTrack["artist"] = capitalize(responseData.data.artist);
+                } else if (responseData.tracks.current.name !== undefined) {
+                    currentTrack["title"] = capitalize(responseData.tracks.current.name);
                 }
                 if (responseData.title !== undefined) {
                     currentTrack["title"] = capitalize(responseData.title);
@@ -400,6 +402,8 @@
                     currentTrack["artist"] = capitalize(responseData.artist);
                 } else if (responseData.data.artist !== undefined) {
                     currentTrack["artist"] = capitalize(responseData.data.artist);
+                } else if (responseData.tracks.current.name !== undefined) {
+                    currentTrack["title"] = capitalize(responseData.tracks.current.name);
                 }
                 if (responseData.title !== undefined) {
                     currentTrack["title"] = capitalize(responseData.title);
