@@ -13,20 +13,6 @@
         "now_playing": "",
         "band": "FM"
     },
-    "0f5151ae-3d4a-459d-8aa5-674fb2c44351": {
-        "name": "Plus Radio 102.6",
-        "stream": "https://eco.onestreaming.com:18814/stream",
-        "state": "Thessaloniki",
-        "now_playing": "http://eco.onestreaming.com:8039/currentsong",
-        "band": "FM"
-    },
-    "98acc30f-a0ed-4e0e-831a-a0b8360e871c": {
-        "name": "Κοσμοράδιο 95.1",
-        "stream": "https://eco.onestreaming.com:18812/stream",
-        "state": "Thessaloniki",
-        "now_playing": "http://eco.onestreaming.com:8689/currentsong",
-        "band": "FM"
-    },
     "516a0830-1ed0-426b-8962-8c5192874b32": {
         "name": "Λυδία 94.2 FM",
         "stream": "https://tls-chrome.live24.gr/271",
@@ -34,11 +20,60 @@
         "now_playing": "http://eu1.radiolydia.com:1086/currentsong",
         "band": "FM"
     },
-    "6afaefec-15ae-4ede-97ad-25d5d88e8856": {
-        "name": "Palmos 96.5",
-        "stream": "https://cast1.asurahosting.com/proxy/palmos965/stream",
+    "5f695ae5-da9f-4366-a715-f4fa76b61bae": {
+        "name": "Χρώμα 105,8 - Θεσσαλονίκη",
+        "stream": "https://hroma1058thess.live24.gr/hroma1058thess",
         "state": "Thessaloniki",
-        "now_playing": "https://cast1.asurahosting.com/proxy/palmos965/stream.xspf",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "d460db94-e29f-44fb-81fe-ef52c663c3d0": {
+        "name": "Karamela 92.4",
+        "stream": "https://netradio.live24.gr/924fm-thess",
+        "state": "Thessaloniki",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "5e6e0255-1f34-4cf7-9aaa-5b191005a980": {
+        "name": "Flash Radio 99.4",
+        "stream": "https://netradio.live24.gr/flash994thes",
+        "state": "Thessaloniki",
+        "now_playing": "https://webradio.northbridge.gr/proxy/flash994/source.xspf",
+        "band": "FM"
+    },
+    "2c801102-3995-40a3-9557-13d84702b84e": {
+        "name": "Music 107.1 Thess",
+        "stream": "https://netradio.live24.gr/music1071thess",
+        "state": "Thessaloniki",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "408fe120-61e0-45ab-9b2c-f7d2b70c1d71": {
+        "name": "Μελωδία Θεσσαλονίκης 98",
+        "stream": "https://netradio.live24.gr/north98thess",
+        "state": "Thessaloniki",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "3d40e6ce-ea46-4553-a76d-c6e9f7aa4ff9": {
+        "name": "Πανόραμα 984",
+        "stream": "https://netradio.live24.gr/panorama984",
+        "state": "Thessaloniki",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "0f5151ae-3d4a-459d-8aa5-674fb2c44351": {
+        "name": "Plus Radio 102.6",
+        "stream": "https://eco.onestreaming.com:18814/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://eco.onestreaming.com:18814/stream.xspf",
+        "band": "FM"
+    },
+    "98acc30f-a0ed-4e0e-831a-a0b8360e871c": {
+        "name": "Κοσμοράδιο 95.1",
+        "stream": "https://eco.onestreaming.com:18812/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://eco.onestreaming.com:18812/stream.xspf",
         "band": "FM"
     },
     "e6ae1436-3d0b-465c-8448-2031b8e7ed35": {
@@ -46,6 +81,13 @@
         "stream": "https://eco.onestreaming.com/proxy/moreradio/stream",
         "state": "Thessaloniki",
         "now_playing": "https://eco.onestreaming.com/proxy/moreradio/currentsong",
+        "band": "FM"
+    },
+    "6afaefec-15ae-4ede-97ad-25d5d88e8856": {
+        "name": "Palmos 96.5",
+        "stream": "https://cast1.asurahosting.com/proxy/palmos965/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://cast1.asurahosting.com/proxy/palmos965/stream.xspf",
         "band": "FM"
     },
     "be455527-dc36-425c-a946-302bf082dda2": {
@@ -74,13 +116,6 @@
         "stream": "https://eu7.fastcast4u.com/proxy/sohosfm/stream",
         "state": "Thessaloniki",
         "now_playing": "https://eu7.fastcast4u.com/proxy/sohosfm/currentsong",
-        "band": "FM"
-    },
-    "5f695ae5-da9f-4366-a715-f4fa76b61bae": {
-        "name": "Χρώμα 105,8 - Θεσσαλονίκη",
-        "stream": "https://hroma1058thess.live24.gr/hroma1058thess",
-        "state": "Thessaloniki",
-        "now_playing": "",
         "band": "FM"
     },
     "0399e080-ae01-47e1-ac5a-20e859107877": {
@@ -244,41 +279,6 @@
         "now_playing": "",
         "band": "FM"
     },
-    "d460db94-e29f-44fb-81fe-ef52c663c3d0": {
-        "name": "Karamela 92.4",
-        "stream": "https://netradio.live24.gr/924fm-thess",
-        "state": "Thessaloniki",
-        "now_playing": "",
-        "band": "FM"
-    },
-    "5e6e0255-1f34-4cf7-9aaa-5b191005a980": {
-        "name": "Flash Radio 99.4",
-        "stream": "https://netradio.live24.gr/flash994thes",
-        "state": "Thessaloniki",
-        "now_playing": "https://webradio.northbridge.gr/proxy/flash994/source.xspf",
-        "band": "FM"
-    },
-    "2c801102-3995-40a3-9557-13d84702b84e": {
-        "name": "Music 107.1 Thess",
-        "stream": "https://netradio.live24.gr/music1071thess",
-        "state": "Thessaloniki",
-        "now_playing": "",
-        "band": "FM"
-    },
-    "408fe120-61e0-45ab-9b2c-f7d2b70c1d71": {
-        "name": "Μελωδία Θεσσαλονίκης 98",
-        "stream": "https://netradio.live24.gr/north98thess",
-        "state": "Thessaloniki",
-        "now_playing": "",
-        "band": "FM"
-    },
-    "3d40e6ce-ea46-4553-a76d-c6e9f7aa4ff9": {
-        "name": "Πανόραμα 984",
-        "stream": "https://netradio.live24.gr/panorama984",
-        "state": "Thessaloniki",
-        "now_playing": "",
-        "band": "FM"
-    },
     "a4baa137-819b-4bef-b556-ba75aa9a4c20": {
         "name": "FM100.6",
         "stream": "https://panel.gwebstream.com:2020/stream/fm1006skg",
@@ -351,9 +351,9 @@
     },
     "691c1061-fb6f-4790-b9b9-56df50fb1c22": {
         "name": "Μύθος στα FM 93.4",
-        "stream": "https://s2.free-shoutcast.com/stream/18560",
+        "stream": "https://stream.mythosradio.gr/listen/mythos/radio.mp3",
         "state": "Thessaloniki",
-        "now_playing": "http://s2.free-shoutcast.com:18560/currentsong",
+        "now_playing": "https://stream.mythosradio.gr/listen/mythos/radio.mp3.xspf",
         "band": "FM"
     },
     "11c41ae1-06f5-44a7-85ea-5ab142b508e7": {
