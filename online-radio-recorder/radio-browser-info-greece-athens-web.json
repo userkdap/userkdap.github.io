@@ -218,9 +218,9 @@
     },
     "1a930b0f-c8f5-40e8-b9e1-e7a329c03b6a": {
         "name": "Planet Web Radio",
-        "stream": "https://cast1.asurahosting.com/proxy/planet/stream",
+        "stream": "https://cast.tunzilla.com/http://cast1.asurahosting.com/proxy/planet/stream",
         "state": "Athens",
-        "now_playing": "https://cast1.asurahosting.com/proxy/planet/autodj.xspf",
+        "now_playing": "https://cast.tunzilla.com/http://cast1.asurahosting.com/proxy/planet/autodj.xspf",
         "band": "Web"
     },
     "1e68aa3b-071a-4989-aefe-3945c55f50e7": {
