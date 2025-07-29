@@ -292,10 +292,10 @@
                 }
                 if (responseData.title !== undefined) {
                     currentTrack["title"] = capitalize(responseData.title);
-                } else if (responseData.data.song !== undefined) {
-                    currentTrack["title"] = capitalize(responseData.data.song);
                 } else if (responseData.song !== undefined) {
                     currentTrack["title"] = capitalize(responseData.song);
+                } else if (responseData.data.song !== undefined) {
+                    currentTrack["title"] = capitalize(responseData.data.song);
                 } else if (responseData.tracks.current.name !== undefined) {
                     currentTrack["title"] = capitalize(responseData.tracks.current.name);
                 }
@@ -407,10 +407,10 @@
                 }
                 if (responseData.title !== undefined) {
                     currentTrack["title"] = capitalize(responseData.title);
-                } else if (responseData.data.song !== undefined) {
-                    currentTrack["title"] = capitalize(responseData.data.song);
                 } else if (responseData.song !== undefined) {
                     currentTrack["title"] = capitalize(responseData.song);
+                } else if (responseData.data.song !== undefined) {
+                    currentTrack["title"] = capitalize(responseData.data.song);
                 } else if (responseData.tracks.current.name !== undefined) {
                     currentTrack["title"] = capitalize(responseData.tracks.current.name);
                 }
