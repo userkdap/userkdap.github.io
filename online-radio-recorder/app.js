@@ -203,17 +203,17 @@
     }
 
     function getResponseType(source) {
-        if ( hasSubStr(source, "radiojar") || hasSubStr(source, "diesi") || hasSubStr(source, "melodic") || hasSubStr(source, "airtime") ) {
-                return "json";
+        if ( hasSubStr(source, "radiojar") || hasSubStr(source, "diesi") || hasSubStr(source, "melodic") || hasSubStr(source, "airtime") || hasSubStr(source, "atticaradios") ) {
+            return "json";
         } else if (hasSubStr(source, "xspf")) {
             return "xml";
-        } else if (hasSubStr(source, "currentsong") || hasSubStr(source, "ertecho")) {
+        } else if ( hasSubStr(source, "currentsong") || hasSubStr(source, "ertecho") ) {
             return "text";
         } else if (hasSubStr(source, "zeno")) {
             return "evtsrc";
         }
         return "";
-    }
+    }     
 
     function fetchTrackInfoEventSource(url) {
         eventSource = new EventSource(url); // global eventSource
@@ -289,13 +289,15 @@
                     currentTrack["artist"] = capitalize(responseData.artist);
                 } else if (responseData.data.artist !== undefined) {
                     currentTrack["artist"] = capitalize(responseData.data.artist);
-                } else if (responseData.tracks.current.name !== undefined) {
-                    currentTrack["title"] = capitalize(responseData.tracks.current.name);
                 }
                 if (responseData.title !== undefined) {
                     currentTrack["title"] = capitalize(responseData.title);
                 } else if (responseData.data.song !== undefined) {
                     currentTrack["title"] = capitalize(responseData.data.song);
+                } else if (responseData.song !== undefined) {
+                    currentTrack["title"] = capitalize(responseData.song);
+                } else if (responseData.tracks.current.name !== undefined) {
+                    currentTrack["title"] = capitalize(responseData.tracks.current.name);
                 }
                 if (responseData.duration !== undefined) {
                     currentTrack["duration"] = toMins(responseData.duration);
@@ -402,13 +404,15 @@
                     currentTrack["artist"] = capitalize(responseData.artist);
                 } else if (responseData.data.artist !== undefined) {
                     currentTrack["artist"] = capitalize(responseData.data.artist);
-                } else if (responseData.tracks.current.name !== undefined) {
-                    currentTrack["title"] = capitalize(responseData.tracks.current.name);
                 }
                 if (responseData.title !== undefined) {
                     currentTrack["title"] = capitalize(responseData.title);
                 } else if (responseData.data.song !== undefined) {
                     currentTrack["title"] = capitalize(responseData.data.song);
+                } else if (responseData.song !== undefined) {
+                    currentTrack["title"] = capitalize(responseData.song);
+                } else if (responseData.tracks.current.name !== undefined) {
+                    currentTrack["title"] = capitalize(responseData.tracks.current.name);
                 }
                 if (responseData.duration !== undefined) {
                     currentTrack["duration"] = toMins(responseData.duration);
