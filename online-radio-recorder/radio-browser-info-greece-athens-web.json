@@ -568,16 +568,9 @@
     },
     "7e698592-50bf-49f2-b610-b2784f226776": {
         "name": "Atlantis Radio GR",
-        "stream": "https://radio.streamings.gr/proxy/atlantisfm/stream",
+        "stream": "https://cast.tunzilla.com/http://radio.streamings.gr/proxy/atlantisfm/stream",
         "state": "Athens",
-        "now_playing": "https://radio.streamings.gr/proxy/atlantisfm/stream.xspf",
-        "band": "Web"
-    },
-    "88117284-ed92-48ee-92fc-bb74d2843f34": {
-        "name": "Music Society",
-        "stream": "https://radio.streamings.gr/proxy/musicsociety/stream",
-        "state": "Athens",
-        "now_playing": "https://radio.streamings.gr/proxy/musicsociety/stream.xspf",
+        "now_playing": "https://cast.tunzilla.com/http://radio.streamings.gr:8142/stream.xspf",
         "band": "Web"
     },
     "f990f085-1678-4bf1-852b-1131bde71c55": {
@@ -585,6 +578,13 @@
         "stream": "https://cast.tunzilla.com/http://radio.streamings.gr:8032/stream",
         "state": "Athens",
         "now_playing": "https://cast.tunzilla.com/http://radio.streamings.gr:8032/autodj.xspf",
+        "band": "Web"
+    },
+    "88117284-ed92-48ee-92fc-bb74d2843f34": {
+        "name": "Music Society",
+        "stream": "https://cast.tunzilla.com/http://radio.streamings.gr/proxy/musicsociety/stream",
+        "state": "Athens",
+        "now_playing": "https://cast.tunzilla.com/http://radio.streamings.gr:8162/stream.xspf",
         "band": "Web"
     },
     "18edeb90-d32a-4e19-8ffb-b8f005ee6c9b": {
@@ -913,7 +913,7 @@
         "name": "Rock & Blues Radio",
         "stream": "https://tls-chrome.live24.gr/3253",
         "state": "Athens",
-        "now_playing": "https://cast.tunzilla.com/http://78.129.132.7:35663/currentsong",
+        "now_playing": "",
         "band": "Web"
     },
     "1986484a-f525-42a7-9245-5c8d9353b5bc": {
