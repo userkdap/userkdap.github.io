@@ -1,170 +1,142 @@
 {
     "fb9b8072-fe8c-4e27-8961-4146364155e4": {
         "name": "A1812Radio ",
-        "stream": "http://108.59.11.81:10073/stream",
+        "stream": "https://cast.tunzilla.com/http://108.59.11.81:10073/stream",
         "state": "Athens",
-        "now_playing": "http://108.59.11.81:10073/autodj.xspf",
+        "now_playing": "https://cast.tunzilla.com/http://108.59.11.81:10073/autodj.xspf",
         "band": "Web"
     },
     "792cafd0-b0c9-466c-a254-0b6b1cfb8644": {
         "name": "Radio Must",
-        "stream": "http://176.58.122.60:8000/stream",
+        "stream": "https://cast.tunzilla.com/http://176.58.122.60:8000/stream",
         "state": "Athens",
         "now_playing": "",
         "band": "Web"
     },
     "dd775007-7a56-4531-82fe-61f61bef982b": {
         "name": "Radio Reboot",
-        "stream": "http://88.198.8.51:8471/autodj",
+        "stream": "https://cast.tunzilla.com/http://88.198.8.51:8471/stream",
         "state": "Athens",
-        "now_playing": "http://88.198.8.51:8471/autodj.xspf",
+        "now_playing": "https://cast.tunzilla.com/http://88.198.8.51:8471/autodj.xspf",
         "band": "Web"
     },
     "9af96394-7dd7-4680-bb11-481f543099d3": {
         "name": "Silibre Studio",
-        "stream": "http://89.163.217.252/8010/stream",
+        "stream": "https://cast.tunzilla.com/http://89.163.217.252/8010/stream",
         "state": "Athens",
-        "now_playing": "http://89.163.217.252:8010/currentsong",
-        "band": "Web"
-    },
-    "530a4d3c-b13d-4ebf-b1e2-883fe0fdd8ae": {
-        "name": "Kifissia Radio",
-        "stream": "http://cast.streams.ovh:12097/stream",
-        "state": "Athens",
-        "now_playing": "http://cast.streams.ovh:12097/currentsong",
-        "band": "Web"
-    },
-    "47f14c6e-741e-42fe-980b-98a6d1615225": {
-        "name": "Trance Athena Radio",
-        "stream": "http://cast.streams.ovh:8008/stream",
-        "state": "Athens",
-        "now_playing": "https://cast.streams.ovh:8008/currentsong",
+        "now_playing": "https://cast.tunzilla.com/http://89.163.217.252:8010/currentsong",
         "band": "Web"
     },
     "7cecbfae-9b67-4a68-8949-468ee7e4ca33": {
         "name": "OnarRadio",
-        "stream": "http://cast4.magicstreams.gr:10316/stream",
+        "stream": "https://cast.tunzilla.com/http://cast4.magicstreams.gr:10316/stream",
         "state": "Athens",
-        "now_playing": "http://cast4.magicstreams.gr:10316/currentsong",
+        "now_playing": "https://cast.tunzilla.com/http://cast4.magicstreams.gr:10316/currentsong",
         "band": "Web"
     },
     "82de2d37-3578-4dc9-8cf4-99c7e1963ea5": {
         "name": "Christianity Radio",
-        "stream": "http://eu1.fastcast4u.com:9326/stream",
+        "stream": "https://cast.tunzilla.com/http://eu1.fastcast4u.com:9326/stream",
         "state": "Athens",
-        "now_playing": "http://eu1.fastcast4u.com:9326/currentsong",
+        "now_playing": "https://cast.tunzilla.com/http://eu1.fastcast4u.com:9326/currentsong",
         "band": "Web"
     },
     "f792410d-25e5-44c8-97a7-0a44710fb582": {
         "name": "Radio Oi",
-        "stream": "http://eu4.fastcast4u.com/proxy/nikoud00/stream",
+        "stream": "https://eu4.fastcast4u.com/proxy/nikoud00/stream",
         "state": "Athens",
-        "now_playing": "",
+        "now_playing": "https://eu4.fastcast4u.com/proxy/nikoud00/currentsong",
         "band": "Web"
     },
     "09fdaca2-59f4-43af-b006-ea5f46acb2ef": {
         "name": "Μουσικοθεραπεία",
-        "stream": "http://everestcast.streams.ovh:1940/stream",
+        "stream": "https://everestcast.streams.ovh:1940/stream",
         "state": "Athens",
-        "now_playing": "http://everestcast.streams.ovh:1940/stream.xspf",
+        "now_playing": "https://everestcast.streams.ovh:1940/stream.xspf",
         "band": "Web"
     },
     "8bd18337-4a40-4025-897d-964191746547": {
         "name": "Διαχρονικό Ταξίδι",
-        "stream": "http://i3.streams.ovh:12110/autodj",
+        "stream": "https://i3.streams.ovh:12110/stream",
         "state": "Athens",
-        "now_playing": "http://i3.streams.ovh:12110/autodj.xspf",
-        "band": "Web"
-    },
-    "af7ba614-6f3b-11e9-af37-52543be04c81": {
-        "name": "Arion Laikos",
-        "stream": "http://ice.onestreaming.com/arionlaikos",
-        "state": "Athens",
-        "now_playing": "http://ice.onestreaming.com/arionlaikos.xspf",
-        "band": "Web"
-    },
-    "96109efb-0601-11e8-ae97-52543be04c81": {
-        "name": "Athens Party",
-        "stream": "http://ice.onestreaming.com/athensparty",
-        "state": "Athens",
-        "now_playing": "https://ice.onestreaming.com/athensparty.xspf",
+        "now_playing": "https://i3.streams.ovh:12110/autodj.xspf",
         "band": "Web"
     },
     "ed5de568-a062-4771-9963-f4b53502d887": {
-        "name": "Athens Jazz",
-        "stream": "http://music.wixstatic.com/mp3/6aa018_e43fa27d27c7437fb9306ff8dbb193c9.mp3",
+        "name": "Athens Jazz Radio",
+        "stream": "https://music.wixstatic.com/mp3/6aa018_e43fa27d27c7437fb9306ff8dbb193c9.mp3",
         "state": "Athens",
         "now_playing": "",
         "band": "Web"
     },
     "76e403ee-10b8-4ea7-9d38-8819458c218b": {
-        "name": "Hot Lips",
-        "stream": "http://netradio.live24.gr/radiohotlips",
+        "name": "Radio Hot Lips",
+        "stream": "https://netradio.live24.gr/radiohotlips",
         "state": "Athens",
         "now_playing": "",
         "band": "Web"
     },
     "89ed0444-7c1b-4956-962b-b6f0d230a1e8": {
         "name": "ERT Open",
-        "stream": "http://netradio.live24.gr/erasport",
+        "stream": "https://netradio.live24.gr/erasport",
         "state": "Athens",
         "now_playing": "",
         "band": "Web"
     },
     "2c0bd32f-12d4-11ea-a87e-52543be04c81": {
         "name": "Music Factory",
-        "stream": "http://radio.musicfactory.gr:9000/stream",
+        "stream": "https://cast.tunzilla.com/http://radio.musicfactory.gr:9000/stream",
         "state": "Athens",
-        "now_playing": "http://radio.musicfactory.gr:9000/currentsong",
+        "now_playing": "https://cast.tunzilla.com/http://radio.musicfactory.gr:9000/currentsong",
         "band": "Web"
     },
     "96294281-0601-11e8-ae97-52543be04c81": {
         "name": "RadioGold",
-        "stream": "http://radiogold.live24.gr/radiogold",
+        "stream": "https://radiogold.live24.gr/radiogold",
         "state": "Athens",
         "now_playing": "",
         "band": "Web"
     },
     "630e1ec3-42ed-457c-b3e5-d04de1f876c6": {
         "name": "RadioGoldies",
-        "stream": "http://radiogold.live24.gr/radiogoldies",
+        "stream": "https://radiogold.live24.gr/radiogoldies",
         "state": "Athens",
         "now_playing": "",
         "band": "Web"
     },
     "d286d583-aab7-11e8-a907-52543be04c81": {
         "name": "OFF Radio - Athens",
-        "stream": "http://s3.yesstreaming.net:7062/stream",
+        "stream": "https://s3.yesstreaming.net:7062/stream",
         "state": "Athens",
-        "now_playing": "http://s3.yesstreaming.net:7062/stream.xspf",
+        "now_playing": "https://s3.yesstreaming.net:7062/stream.xspf",
         "band": "Web"
     },
     "fdb17220-bdb4-4394-a747-e6cb81a0b663": {
         "name": "Mixalhs FBI",
-        "stream": "http://shoutcast.24radio.gr:8018/stream",
+        "stream": "https://cast.tunzilla.com/http://shoutcast.24radio.gr:8018/stream",
         "state": "Athens",
-        "now_playing": "http://shoutcast.24radio.gr:8018/currentsong",
+        "now_playing": "https://cast.tunzilla.com/http://shoutcast.24radio.gr:8018/currentsong",
         "band": "Web"
     },
     "beb41915-15a4-4585-9c7d-861ad5975f1f": {
-        "name": "MiniWatt 1125",
-        "stream": "http://solid1.streamupsolutions.com:11003/live",
+        "name": "Radio MiniWatt 1125",
+        "stream": "https://cast.tunzilla.com/http://solid1.streamupsolutions.com:11003/stream",
         "state": "Athens",
-        "now_playing": "http://solid1.streamupsolutions.com:11003/autodj.xspf",
+        "now_playing": "https://cast.tunzilla.com/http://solid1.streamupsolutions.com:11003/autodj.xspf",
         "band": "Web"
     },
     "ed0b0cf6-c59a-4fe5-9b32-dda8d7ab5cdd": {
         "name": "Street",
-        "stream": "http://streamyourdream.org:8104/stream",
+        "stream": "https://streamyourdream.org:8104/stream",
         "state": "Athens",
-        "now_playing": "http://streamyourdream.org:8104/stream.xspf",
+        "now_playing": "https://streamyourdream.org:8104/stream.xspf",
         "band": "Web"
     },
     "e8c8fffd-994d-4e2c-ac19-147a1d955408": {
         "name": "Radio In",
-        "stream": "http://www.radioin.link:8383/stream",
+        "stream": "https://cast.tunzilla.com/http://www.radioin.link:8383/stream",
         "state": "Athens",
-        "now_playing": "http://www.radioin.link:8383/stream.xspf",
+        "now_playing": "https://cast.tunzilla.com/http://www.radioin.link:8383/stream.xspf",
         "band": "Web"
     },
     "0d4c1bfa-a02b-4bfb-a9d7-d982445d4893": {
@@ -211,7 +183,7 @@
     },
     "ecbacdd9-c182-4b33-b010-3753d9e9c057": {
         "name": "TheDotRadio",
-        "stream": "https://c16.radioboss.fm:8026/autodj",
+        "stream": "https://c16.radioboss.fm:8026/stream",
         "state": "Athens",
         "now_playing": "https://c16.radioboss.fm:8026/autodj.xspf",
         "band": "Web"
@@ -244,32 +216,11 @@
         "now_playing": "",
         "band": "Web"
     },
-    "86d75a05-d919-456e-b99b-d9230e54f0c4": {
-        "name": "Scorpios Athens Radio",
-        "stream": "https://cast.streams.ovh:2200/ssl/scorpio1?mp=/stream",
-        "state": "Athens",
-        "now_playing": "",
-        "band": "Web"
-    },
-    "197dd80a-d027-4edc-8df9-c42b20b04f9b": {
-        "name": "Ti Amo Radio Greek",
-        "stream": "https://cast.streams.ovh/sc/tiamogreek/stream",
-        "state": "Athens",
-        "now_playing": "https://cast.streams.ovh/sc/tiamogreek/currentsong",
-        "band": "Web"
-    },
-    "2b5138e3-c271-47d4-9fd3-0928ffa63a60": {
-        "name": "Planet Web Radio GR",
-        "stream": "https://cast1.asurahosting.com/proxy/planet/autodj",
-        "state": "Athens",
-        "now_playing": "https://cast1.asurahosting.com/proxy/planet/autodj.xspf",
-        "band": "Web"
-    },
     "1a930b0f-c8f5-40e8-b9e1-e7a329c03b6a": {
         "name": "Planet Web Radio",
-        "stream": "https://cast1.asurahosting.com/proxy/planet/live",
+        "stream": "https://cast1.asurahosting.com/proxy/planet/stream",
         "state": "Athens",
-        "now_playing": "https://cast1.asurahosting.com/proxy/planet/live.xspf",
+        "now_playing": "https://cast1.asurahosting.com/proxy/planet/autodj.xspf",
         "band": "Web"
     },
     "1e68aa3b-071a-4989-aefe-3945c55f50e7": {
@@ -311,14 +262,49 @@
         "name": "Essential Mix Radio",
         "stream": "https://greeksonic.alphaserver.gr/8004/stream",
         "state": "Athens",
-        "now_playing": "http://greeksonic.alphaserver.gr:8004/currentsong",
+        "now_playing": "https://cast.tunzilla.com/http://greeksonic.alphaserver.gr:8004/currentsong",
         "band": "Web"
     },
     "573fdce0-d221-4873-b5af-90b35a0abb23": {
         "name": "Genesis FM",
         "stream": "https://greeksonic.alphaserver.gr/8018/stream",
         "state": "Athens",
-        "now_playing": "http://greeksonic.alphaserver.gr:8018/currentsong",
+        "now_playing": "https://cast.tunzilla.com/http://greeksonic.alphaserver.gr:8018/currentsong",
+        "band": "Web"
+    },
+    "530a4d3c-b13d-4ebf-b1e2-883fe0fdd8ae": {
+        "name": "Kifissia Radio",
+        "stream": "https://cast.tunzilla.com/http://cast.streams.ovh:12097/stream",
+        "state": "Athens",
+        "now_playing": "https://cast.tunzilla.com/http://cast.streams.ovh:12097/currentsong",
+        "band": "Web"
+    },
+    "47f14c6e-741e-42fe-980b-98a6d1615225": {
+        "name": "Trance Athena Radio",
+        "stream": "https://cast.streams.ovh:8008/stream",
+        "state": "Athens",
+        "now_playing": "https://cast.tunzilla.com/http://cast.streams.ovh:8008/currentsong",
+        "band": "Web"
+    },
+    "86d75a05-d919-456e-b99b-d9230e54f0c4": {
+        "name": "Scorpios Athens Radio",
+        "stream": "https://cast.streams.ovh:2200/ssl/scorpio1?mp=/stream",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "Web"
+    },
+    "197dd80a-d027-4edc-8df9-c42b20b04f9b": {
+        "name": "Ti Amo Radio Greek",
+        "stream": "https://cast.streams.ovh/sc/tiamogreek/stream",
+        "state": "Athens",
+        "now_playing": "https://cast.streams.ovh/sc/tiamogreek/currentsong",
+        "band": "Web"
+    },
+    "d339afa5-d9b5-43c7-80ce-3850fa48490a": {
+        "name": "Ti Amo Radio International",
+        "stream": "https://i5.streams.ovh/sc/tiamo/stream",
+        "state": "Athens",
+        "now_playing": "https://i5.streams.ovh/sc/tiamo/currentsong",
         "band": "Web"
     },
     "9ad063f8-a77f-4abf-916a-aa8175e29c30": {
@@ -351,16 +337,9 @@
     },
     "e60555c6-66c2-4f94-a16f-ed58300bd050": {
         "name": "Syzefxi Web Radio",
-        "stream": "https://i5.streams.ovh/ic/syzefxi/autodj",
+        "stream": "https://i5.streams.ovh/ic/syzefxi/stream",
         "state": "Athens",
         "now_playing": "https://i5.streams.ovh/ic/syzefxi/autodj.xspf",
-        "band": "Web"
-    },
-    "d339afa5-d9b5-43c7-80ce-3850fa48490a": {
-        "name": "Ti Amo Radio International",
-        "stream": "https://i5.streams.ovh/sc/tiamo/stream",
-        "state": "Athens",
-        "now_playing": "https://i5.streams.ovh/sc/tiamo/currentsong",
         "band": "Web"
     },
     "bcec6626-f767-452e-a138-f5809c9a6c65": {
@@ -377,25 +356,25 @@
         "now_playing": "",
         "band": "Web"
     },
-    "b255a734-e5d7-4bfa-81e5-8cae29f7ca5c": {
-        "name": "Arion Radio",
-        "stream": "https://ice.onestreaming.com/arion",
+    "cfe6fa09-e64e-45af-806f-f4a7745219fd": {
+        "name": "Ωμέγα FM",
+        "stream": "https://ice.streams.ovh/omegafm",
         "state": "Athens",
-        "now_playing": "https://ice.onestreaming.com/arion.xspf",
+        "now_playing": "",
         "band": "Web"
     },
-    "5cb96333-f400-42a0-8d4e-359679f10b92": {
-        "name": "Arion Christmas",
-        "stream": "https://ice.onestreaming.com/arionchristmas",
+    "96109efb-0601-11e8-ae97-52543be04c81": {
+        "name": "Athens Party",
+        "stream": "https://ice.onestreaming.com/athensparty",
         "state": "Athens",
-        "now_playing": "https://ice.onestreaming.com/arionchristmas.xspf",
+        "now_playing": "https://ice.onestreaming.com/athensparty.xspf",
         "band": "Web"
     },
-    "a93a8eea-1eed-4213-8366-0469066a89a0": {
-        "name": "Arion Στιγμές",
-        "stream": "https://ice.onestreaming.com/arionstigmes",
+    "35a46a81-0f92-4caf-8230-c11f3097ede4": {
+        "name": "Athens Party RnB",
+        "stream": "https://ice.onestreaming.com/athenspartyrnb",
         "state": "Athens",
-        "now_playing": "https://ice.onestreaming.com/arionstigmes.xspf",
+        "now_playing": "https://ice.onestreaming.com/athenspartyrnb.xspf",
         "band": "Web"
     },
     "b1594d48-1021-4ff9-b74c-c2116c6810b2": {
@@ -405,11 +384,46 @@
         "now_playing": "https://ice.onestreaming.com/velvetfm.xspf",
         "band": "Web"
     },
-    "cfe6fa09-e64e-45af-806f-f4a7745219fd": {
-        "name": "Ωμέγα FM",
-        "stream": "https://ice.streams.ovh/omegafm",
+    "2ee02d2c-6779-4063-b71b-f1890ff8b5f2": {
+        "name": "Wonder Radio",
+        "stream": "https://ice.onestreaming.com/wonder",
         "state": "Athens",
-        "now_playing": "",
+        "now_playing": "https://ice.onestreaming.com/wonder.xspf",
+        "band": "Web"
+    },
+    "b255a734-e5d7-4bfa-81e5-8cae29f7ca5c": {
+        "name": "Arion Radio",
+        "stream": "https://ice.onestreaming.com/arion",
+        "state": "Athens",
+        "now_playing": "https://ice.onestreaming.com/arion.xspf",
+        "band": "Web"
+    },
+    "af7ba614-6f3b-11e9-af37-52543be04c81": {
+        "name": "Arion Laikos",
+        "stream": "https://ice.onestreaming.com/arionlaikos",
+        "state": "Athens",
+        "now_playing": "https://ice.onestreaming.com/arionlaikos.xspf",
+        "band": "Web"
+    },
+    "a93a8eea-1eed-4213-8366-0469066a89a0": {
+        "name": "Arion Στιγμές",
+        "stream": "https://ice.onestreaming.com/arionstigmes",
+        "state": "Athens",
+        "now_playing": "https://ice.onestreaming.com/arionstigmes.xspf",
+        "band": "Web"
+    },
+    "19ca2fc7-a5c9-40a8-b8e0-31c73a2ac9c4": {
+        "name": "Arion Kids",
+        "stream": "https://ice.onestreaming.com/arionkids",
+        "state": "Athens",
+        "now_playing": "https://ice.onestreaming.com/arionkids.xspf",
+        "band": "Web"
+    },
+    "5cb96333-f400-42a0-8d4e-359679f10b92": {
+        "name": "Arion Christmas",
+        "stream": "https://ice.onestreaming.com/arionchristmas",
+        "state": "Athens",
+        "now_playing": "https://ice.onestreaming.com/arionchristmas.xspf",
         "band": "Web"
     },
     "f5468230-8945-4b21-954f-7e55f7868c69": {
@@ -468,32 +482,25 @@
         "now_playing": "https://media.streambrothers.com:8552/stream.xspf",
         "band": "Web"
     },
-    "a029e78b-67c0-4d09-9b35-206c7061c422": {
-        "name": "movement.radio 1",
-        "stream": "https://movementathens.out.airtime.pro/movementathens_a",
-        "state": "Athens",
-        "now_playing": "",
-        "band": "Web"
-    },
     "ae1868b9-94be-4820-a9c3-a9969c5f3c0e": {
         "name": "Stegi Radio 1",
         "stream": "https://movementathens.out.airtime.pro/movementathens_a",
         "state": "Athens",
-        "now_playing": "",
+        "now_playing": "https://movementathens.airtime.pro/api/live-info-v2",
         "band": "Web"
     },
-    "4d688959-d7e8-444b-acef-404d1cb623f9": {
-        "name": "movement.radio 2",
-        "stream": "https://movementathens2.out.airtime.pro/movementathens2_a",
+    "c0d85f86-9bf8-4149-9e0c-5a88145d2b11": {
+        "name": "Stegi Radio 2",
+        "stream": "https://stegiradio3.out.airtime.pro/stegiradio3_a",
         "state": "Athens",
-        "now_playing": "",
+        "now_playing": "https://stegiradio3.airtime.pro/api/live-info-v2",
         "band": "Web"
     },
     "fda6e44f-785b-4e42-b4c2-27461c5d149e": {
         "name": "Stegi Radio 3",
         "stream": "https://movementathens2.out.airtime.pro/movementathens2_a",
         "state": "Athens",
-        "now_playing": "",
+        "now_playing": "https://movementathens2.airtime.pro/api/live-info-v2",
         "band": "Web"
     },
     "d30ac0d6-671d-4533-ad9f-d7887aca0412": {
@@ -575,9 +582,9 @@
     },
     "f990f085-1678-4bf1-852b-1131bde71c55": {
         "name": "Hawaii Radio Athens",
-        "stream": "http://radio.streamings.gr:8032/autodj",
+        "stream": "https://cast.tunzilla.com/http://radio.streamings.gr:8032/stream",
         "state": "Athens",
-        "now_playing": "http://radio.streamings.gr:8032/autodj.xspf",
+        "now_playing": "https://cast.tunzilla.com/http://radio.streamings.gr:8032/autodj.xspf",
         "band": "Web"
     },
     "18edeb90-d32a-4e19-8ffb-b8f005ee6c9b": {
@@ -598,7 +605,7 @@
         "name": "Αρμονία Web Αθήνα",
         "stream": "https://sh.onweb.gr/8844/stream",
         "state": "Athens",
-        "now_playing": "http://sh.onweb.gr:8844/currentsong",
+        "now_playing": "https://cast.tunzilla.com/http://sh.onweb.gr:8844/currentsong",
         "band": "Web"
     },
     "a9c4edca-0b4a-4f99-af86-1ceb9da41165": {
@@ -640,14 +647,7 @@
         "name": "Athens Metro Mall Radio",
         "stream": "https://srv.radiocaster.gr/9300/stream",
         "state": "Athens",
-        "now_playing": "http://mmr.yourstreaming.gr:9300/currentsong",
-        "band": "Web"
-    },
-    "c0d85f86-9bf8-4149-9e0c-5a88145d2b11": {
-        "name": "Stegi Radio 2",
-        "stream": "https://stegiradio3.out.airtime.pro/stegiradio3_a",
-        "state": "Athens",
-        "now_playing": "",
+        "now_playing": "https://cast.tunzilla.com/http://mmr.yourstreaming.gr:9300/currentsong",
         "band": "Web"
     },
     "c63f9d52-1614-4275-8e11-2d58e07eb267": {
@@ -913,7 +913,7 @@
         "name": "Rock & Blues Radio",
         "stream": "https://tls-chrome.live24.gr/3253",
         "state": "Athens",
-        "now_playing": "http://78.129.132.7:35663/currentsong",
+        "now_playing": "https://cast.tunzilla.com/http://78.129.132.7:35663/currentsong",
         "band": "Web"
     },
     "1986484a-f525-42a7-9245-5c8d9353b5bc": {
