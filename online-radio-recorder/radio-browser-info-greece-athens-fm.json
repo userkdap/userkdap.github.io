@@ -76,6 +76,13 @@
         "now_playing": "",
         "band": "FM"
     },
+    "96b37cae-4795-4e9a-92be-178f16216ecf": {
+        "name": "Ρυθμός 94.9",
+        "stream": "https://rythmos.live24.gr/rythmos",
+        "state": "Athens",
+        "now_playing": "https://www.radiojar.com/api/stations/aw1w2xfx1vduv/now_playing/",
+        "band": "FM"
+    },
     "dec88d4d-39bc-4e53-8aca-3cb763536bab": {
         "name": "Sfera 102.2",
         "stream": "https://sfera.live24.gr/sfera4132",
@@ -108,7 +115,7 @@
         "name": "Κρήτη FM 87.5",
         "stream": "https://tls-chrome.live24.gr/1361",
         "state": "Athens",
-        "now_playing": "http://s3.onweb.gr:8878/currentsong",
+        "now_playing": "https://cast.tunzilla.com/http://s3.onweb.gr:8878/currentsong",
         "band": "FM"
     },
     "fffa0320-34a0-406e-b3d1-3e93dd2c630d": {
@@ -260,9 +267,9 @@
     },
     "964607f7-0601-11e8-ae97-52543be04c81": {
         "name": "Mad Radio 106.2",
-        "stream": "https://mediaserver.mad.tv/stream",
+        "stream": "https://cast.tunzilla.com/http://mediaserver.mad.tv:80/stream",
         "state": "Athens",
-        "now_playing": "https://mediaserver.mad.tv/stream.xspf",
+        "now_playing": "https://cast.tunzilla.com/http://mediaserver.mad.tv/stream.xspf",
         "band": "FM"
     },
     "761b40cb-4856-4bad-b7ea-ce83b5041789": {
@@ -274,9 +281,9 @@
     },
     "11455d09-ed8e-4f00-929e-6373ca349b1c": {
         "name": "Επικοινωνία 94",
-        "stream": "https://radio.streamings.gr/proxy/epikoinwnia94fm/live",
+        "stream": "https://cast.tunzilla.com/http://radio.streamings.gr:8110/live",
         "state": "Athens",
-        "now_playing": "https://radio.streamings.gr/proxy/epikoinwnia94fm/live.xspf",
+        "now_playing": "https://cast.tunzilla.com/http://radio.streamings.gr:8110/live.xspf",
         "band": "FM"
     },
     "1356620c-43f0-49bb-b0a8-444c5b4d45a4": {
@@ -374,7 +381,7 @@
         "name": "Πειρατικός FM 99.5",
         "stream": "https://shoutcast.k-planet.eu:9800/stream",
         "state": "Athens",
-        "now_playing": "https://shoutcast.k-planet.eu:9800/currentsong",
+        "now_playing": "https://cast.tunzilla.com/http://shoutcast.k-planet.eu:9800/currentsong",
         "band": "FM"
     },
     "80cc7186-2384-4e71-bed9-756108581acc": {
@@ -382,13 +389,6 @@
         "stream": "https://sp1.19cloudsnetwork.gr/8008/stream",
         "state": "Athens",
         "now_playing": "https://sp1.19cloudsnetwork.gr/8008/stream.xspf",
-        "band": "FM"
-    },
-    "96b37cae-4795-4e9a-92be-178f16216ecf": {
-        "name": "Ρυθμός 94.9",
-        "stream": "https://stream.radiojar.com/aw1w2xfx1vduv",
-        "state": "Athens",
-        "now_playing": "https://www.radiojar.com/api/stations/aw1w2xfx1vduv/now_playing/",
         "band": "FM"
     },
     "5f774691-05c7-48d6-89e0-26f39aacb3aa": {
