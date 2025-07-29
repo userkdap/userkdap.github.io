@@ -118,23 +118,9 @@
         "now_playing": "https://cast.tunzilla.com/http://s3.onweb.gr:8878/currentsong",
         "band": "FM"
     },
-    "fffa0320-34a0-406e-b3d1-3e93dd2c630d": {
-        "name": "Athens Radio DeeJay 95.2",
-        "stream": "https://netradio.live24.gr/athensdeejay",
-        "state": "Athens",
-        "now_playing": "",
-        "band": "FM"
-    },
     "962418d1-0601-11e8-ae97-52543be04c81": {
         "name": "Παραπολιτικά FM 90.1",
         "stream": "https://netradio.live24.gr/athinaradio",
-        "state": "Athens",
-        "now_playing": "",
-        "band": "FM"
-    },
-    "961f6001-0601-11e8-ae97-52543be04c81": {
-        "name": "Best 92.6",
-        "stream": "https://netradio.live24.gr/best1222",
         "state": "Athens",
         "now_playing": "",
         "band": "FM"
@@ -219,6 +205,20 @@
     "f0bbdd58-945a-4336-8ed6-7784f65946b5": {
         "name": "My Radio 104,6",
         "stream": "https://streaming.myradio1046.fm/myradio1046",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "fffa0320-34a0-406e-b3d1-3e93dd2c630d": {
+        "name": "Athens Radio DeeJay 95.2",
+        "stream": "https://netradio.live24.gr/athensdeejay",
+        "state": "Athens",
+        "now_playing": "https://playingnow.atticaradios.gr/nowplaying/athens_dee_jay",
+        "band": "FM"
+    },
+    "961f6001-0601-11e8-ae97-52543be04c81": {
+        "name": "Best 92.6",
+        "stream": "https://best.live24.gr/best1222",
         "state": "Athens",
         "now_playing": "",
         "band": "FM"
