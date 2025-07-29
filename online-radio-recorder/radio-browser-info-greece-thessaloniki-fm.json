@@ -13,18 +13,18 @@
         "now_playing": "",
         "band": "FM"
     },
-    "516a0830-1ed0-426b-8962-8c5192874b32": {
-        "name": "Λυδία 94.2 FM",
-        "stream": "https://tls-chrome.live24.gr/271",
-        "state": "Thessaloniki",
-        "now_playing": "http://eu1.radiolydia.com:1086/currentsong",
-        "band": "FM"
-    },
     "5f695ae5-da9f-4366-a715-f4fa76b61bae": {
         "name": "Χρώμα 105,8 - Θεσσαλονίκη",
         "stream": "https://hroma1058thess.live24.gr/hroma1058thess",
         "state": "Thessaloniki",
         "now_playing": "",
+        "band": "FM"
+    },
+    "516a0830-1ed0-426b-8962-8c5192874b32": {
+        "name": "Λυδία 94.2 FM",
+        "stream": "https://tls-chrome.live24.gr/271",
+        "state": "Thessaloniki",
+        "now_playing": "https://cast.tunzilla.com/http://eu1.radiolydia.com:1086/currentsong",
         "band": "FM"
     },
     "d460db94-e29f-44fb-81fe-ef52c663c3d0": {
@@ -38,7 +38,7 @@
         "name": "Flash Radio 99.4",
         "stream": "https://netradio.live24.gr/flash994thes",
         "state": "Thessaloniki",
-        "now_playing": "https://webradio.northbridge.gr/proxy/flash994/source.xspf",
+        "now_playing": "https://cast.tunzilla.com/http://webradio.northbridge.gr:8012/source.xspf",
         "band": "FM"
     },
     "2c801102-3995-40a3-9557-13d84702b84e": {
@@ -66,14 +66,14 @@
         "name": "Plus Radio 102.6",
         "stream": "https://eco.onestreaming.com:18814/stream",
         "state": "Thessaloniki",
-        "now_playing": "https://eco.onestreaming.com:18814/stream.xspf",
+        "now_playing": "https://cast.tunzilla.com/http://eco.onestreaming.com:8814/stream.xspf",
         "band": "FM"
     },
     "98acc30f-a0ed-4e0e-831a-a0b8360e871c": {
         "name": "Κοσμοράδιο 95.1",
         "stream": "https://eco.onestreaming.com:18812/stream",
         "state": "Thessaloniki",
-        "now_playing": "https://eco.onestreaming.com:18812/stream.xspf",
+        "now_playing": "https://cast.tunzilla.com/http://eco.onestreaming.com:8812/stream.xspf",
         "band": "FM"
     },
     "e6ae1436-3d0b-465c-8448-2031b8e7ed35": {
@@ -164,7 +164,7 @@
         "name": "Tivoli Radio",
         "stream": "https://radio.streamings.gr/proxy/yellownewstream/stream",
         "state": "Thessaloniki",
-        "now_playing": "https://radio.streamings.gr/proxy/yellownewstream/stream.xspf",
+        "now_playing": "https://cast.tunzilla.com/http://radio.streamings.gr:8144/stream.xspf",
         "band": "FM"
     },
     "e999e8bb-5767-4966-ada9-9b510888031f": {
@@ -220,7 +220,7 @@
         "name": "Republic Radio",
         "stream": "https://metromedia.live24.gr/republicthess",
         "state": "Thessaloniki",
-        "now_playing": "http://s10.voscast.com:9878/currentsong",
+        "now_playing": "https://cast.tunzilla.com/http://s10.voscast.com:9878/currentsong",
         "band": "FM"
     },
     "d788ab49-aa54-4edb-ba37-023c2c846161": {
@@ -234,7 +234,7 @@
         "name": "Velvet 96.8",
         "stream": "https://metromedia.live24.gr/velvet968thess",
         "state": "Thessaloniki",
-        "now_playing": "http://s10.voscast.com:9942/currentsong",
+        "now_playing": "https://cast.tunzilla.com/http://s10.voscast.com:9942/currentsong",
         "band": "FM"
     },
     "e35681de-deaf-4803-88a4-f6ad38da5006": {
@@ -367,7 +367,7 @@
         "name": "Shook Radio 104.4",
         "stream": "https://sh.onweb.gr/8812/stream",
         "state": "Thessaloniki",
-        "now_playing": "http://s1.onweb.gr:8812/currentsong",
+        "now_playing": "https://cast.tunzilla.com/http://s1.onweb.gr:8812/currentsong",
         "band": "FM"
     },
     "c2414fb3-8c43-4c48-9c9c-d569f359f343": {
