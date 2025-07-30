@@ -12,19 +12,19 @@
             --msg-text: floralwhite;
             /* χρώμα ιστορικού προσπαθειών */
             --low-high-color: gray;
-            --clear-btn-color: #5256ad;
+            --reset-btn-color: #5256ad;
             --sans-serif: "Plex", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
             --monospace: Consolas, monaco, monospace;
-            /*
-			--navy: #073a53;
-			--teal: #6bc4ce;
-			--turquoise: #47AFB4;
-			--steel-gray: #3f5667;
-			--dark-white: #d9dbe2;
-			--light-white: #edf0f4;
-			--near-white: #f7f8fa;
-			--radius: 4px;
-			*/
+            	/*
+		--navy: #073a53;
+		--teal: #6bc4ce;
+		--turquoise: #47AFB4;
+		--steel-gray: #3f5667;
+		--dark-white: #d9dbe2;
+		--light-white: #edf0f4;
+		--near-white: #f7f8fa;
+		--radius: 4px;
+		*/
         }
 
         * {
@@ -126,7 +126,7 @@
             border: none;
         }
 
-        #clear-btn {
+        #reset-btn {
             flex-grow: 1;
         }
 
@@ -222,7 +222,7 @@
             /* μέγεθος γραμματοσειράς 1.6rem=1.6*16px ίδιο με το section #guess */
             font-size: 1.6rem;
             /* να παίρνει το 100% του πλάτους (width) του container */
-            width: 100%;
+            width: 100 %;
         }
 
         #embed {
@@ -243,28 +243,6 @@
         #audio-elem[data-state=active] {
             display: block;
             flex-grow: 1;
-        }
-
-        #audio-elem[data-state=inactive] {
-            display: none;
-        }
-
-        #iframe-elem {
-            text-align: center;
-            /* border: none; */
-            border: 0;
-            width: 100%;
-            /* height: 80px; */
-            height: 40px;
-        }
-
-        #iframe-elem[data-state=active] {
-            display: block;
-            flex-grow: 1;
-        }
-
-        #iframe-elem[data-state=inactive] {
-            display: none;
         }
 
         #select-station {
