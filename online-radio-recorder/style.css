@@ -222,7 +222,7 @@
             /* μέγεθος γραμματοσειράς 1.6rem=1.6*16px ίδιο με το section #guess */
             font-size: 1.6rem;
             /* να παίρνει το 100% του πλάτους (width) του container */
-            width: 100 %;
+            width: 100%;
         }
 
         #embed {
