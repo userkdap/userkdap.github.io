@@ -94,28 +94,28 @@
         "name": "Ερωτικός FM 94.8",
         "stream": "https://eu1.fastcast4u.com/proxy/nmarog01/stream",
         "state": "Thessaloniki",
-        "now_playing": "https://eu1.fastcast4u.com/proxy/nmarog01/currentsong",
+        "now_playing": "https://cast.tunzilla.com/http://eu1.fastcast4u.com/proxy/nmarog01/currentsong",
         "band": "FM"
     },
     "ea46bae3-3e29-403d-a6e5-505a74bcc260": {
         "name": "Μινόρε 96.1",
         "stream": "https://eu3.fastcast4u.com/proxy/nmarog00/stream",
         "state": "Thessaloniki",
-        "now_playing": "https://eu3.fastcast4u.com/proxy/nmarog00/currentsong",
+        "now_playing": "https://cast.tunzilla.com/http://eu3.fastcast4u.com/proxy/nmarog00/currentsong",
         "band": "FM"
     },
     "bdb3a9d6-e2ec-4030-8b23-da3a4c35ba18": {
         "name": "Ράδιο Θεσσαλονίκη 94.5",
         "stream": "https://eu7.fastcast4u.com/proxy/nmarog02/stream",
         "state": "Thessaloniki",
-        "now_playing": "https://eu7.fastcast4u.com/proxy/nmarog02/currentsong",
+        "now_playing": "https://cast.tunzilla.com/http://eu7.fastcast4u.com/proxy/nmarog02/currentsong",
         "band": "FM"
     },
     "93934398-d62e-44de-9212-5e3d57784529": {
         "name": "Sohos FM 88.7",
         "stream": "https://eu7.fastcast4u.com/proxy/sohosfm/stream",
         "state": "Thessaloniki",
-        "now_playing": "https://eu7.fastcast4u.com/proxy/sohosfm/currentsong",
+        "now_playing": "https://cast.tunzilla.com/http://eu7.fastcast4u.com/proxy/sohosfm/currentsong",
         "band": "FM"
     },
     "0399e080-ae01-47e1-ac5a-20e859107877": {
@@ -356,11 +356,18 @@
         "now_playing": "https://stream.mythosradio.gr/listen/mythos/radio.mp3.xspf",
         "band": "FM"
     },
+    "c2414fb3-8c43-4c48-9c9c-d569f359f343": {
+        "name": "Radio 88miso",
+        "stream": "https://solid33.streamupsolutions.com/proxy/sxxaojkx/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://cast.tunzilla.com/http://solid33.streamupsolutions.com/proxy/sxxaojkx/currentsong",
+        "band": "FM"
+    },
     "11c41ae1-06f5-44a7-85ea-5ab142b508e7": {
         "name": "Rock Radio 104.7",
         "stream": "https://s9.yesstreaming.net:2199/proxy/anyhowmo/stream",
         "state": "Thessaloniki",
-        "now_playing": "https://s9.yesstreaming.net:2199/proxy/anyhowmo/currentsong",
+        "now_playing": "https://cast.tunzilla.com/http://s9.yesstreaming.net:2199/proxy/anyhowmo/currentsong",
         "band": "FM"
     },
     "6b3bf78d-51f6-4132-b7ed-8c8e324b50c1": {
@@ -368,13 +375,6 @@
         "stream": "https://sh.onweb.gr/8812/stream",
         "state": "Thessaloniki",
         "now_playing": "https://cast.tunzilla.com/http://s1.onweb.gr:8812/currentsong",
-        "band": "FM"
-    },
-    "c2414fb3-8c43-4c48-9c9c-d569f359f343": {
-        "name": "Radio 88miso",
-        "stream": "https://solid33.streamupsolutions.com/proxy/sxxaojkx/stream",
-        "state": "Thessaloniki",
-        "now_playing": "https://cast.tunzilla.com/http://solid33.streamupsolutions.com/proxy/sxxaojkx/currentsong",
         "band": "FM"
     },
     "e6545e9c-c670-4f92-8115-c7f2c117ceb6": {
