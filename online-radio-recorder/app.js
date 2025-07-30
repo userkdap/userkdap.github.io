@@ -5,7 +5,7 @@
     const downloadBtn = document.getElementById("download-btn");
     const recSwitch = document.getElementById("rec-switch");
 
-    const clearBtn = document.getElementById("clear-btn");
+    const resetBtn = document.getElementById("reset-btn");
 
     const selectPreset = document.getElementById("select-preset");
 
@@ -14,7 +14,6 @@
     const sizeInfo = document.getElementById("size-info");
 
     const audioElem = document.getElementById("audio-elem");
-    const iframeElem = document.getElementById("iframe-elem");
     //https://diesi.gr/player/js/player_new.js
     const resetAudio = "about:blank";
 
@@ -68,33 +67,11 @@
             //audioElem.pause();
             audioElem.src = source;
             //audioElem.load();
-            if (iframeElem.dataState = "active") {
-                //https://diesi.gr/player/js/player_new.js
-                iframeElem.src = resetAudio;
-                toggleDataState(iframeElem, dataState = "inactive");
-                toggleDataState(audioElem, dataState = "active");
-            }
             //audioElem.play();
         } else {
-            iframeElem.src = source;
-            if (audioElem.dataState = "active") {
-                //audioElem.pause();
-                //https://diesi.gr/player/js/player_new.js
-                audioElem.src = resetAudio;
-                toggleDataState(audioElem, dataState = "inactive");
-                toggleDataState(iframeElem, dataState = "active");
-            }
+            audioElem.src = resetAudio;
+            setMsg(msgArea, "revert", "Can't load stream!");
         }
-        return;
-    }
-
-    function toggleDataState(element, dataState) {
-        element.setAttribute("data-state", dataState);
-        return;
-    }
-
-    function toggleControlElements(displayState) {
-        sizeInfo.textContent = (displayState === "none") ? "" : sizeInfo.textContent;
         return;
     }
 
@@ -214,38 +191,6 @@
         }
         return "";
     }     
-
-    function fetchTrackInfoEventSource(url) {
-        eventSource = new EventSource(url); // global eventSource
-        let stationTag = `<a href="${streamURL}" target="_blank">${allCodes[stationCode]["name"]}</a>`; // global streamURL
-        setStationTag(msgArea, "revert", stationTag);
-        eventSource.addEventListener("message", function (event) {
-            let parsedData = JSON.parse(event.data);
-            console.log(`parsedData: ${JSON.stringify(parsedData)}`);
-            let streamTitle = parsedData.streamTitle;
-            console.log(`streamTitle: ${streamTitle}`);
-            let currentTrack = capitalize(streamTitle);
-            if (previousTrack !== currentTrack) { // global previousTrack
-                resetDuration();
-                console.log(`previousTrack: ${previousTrack}\ncurrentTrack: ${currentTrack}`);
-                previousTrack = currentTrack; // global previousTrack
-                let trackTag = `<a href="${streamURL}" target="_blank">${currentTrack}</a>`; // global streamURL
-                fileInfo.innerHTML = trackTag; // global fileInfo
-                sizeInfo.textContent = showDuration(""); // global sizeInfo
-                intervalID = setInterval(function () { // global intervalID
-                    advanceDuration();
-                    sizeInfo.textContent = showDuration(""); // global sizeInfo
-                }, INTERVAL);
-            }
-        });
-        eventSource.addEventListener("error", function (event) {
-            console.log(`readyState: ${this.readyState}`);
-            if (this.readyState === EventSource.CLOSED) {
-                console.log("Connection closed"); // Connection was closed.
-            }
-        });
-        return;
-    }
 
     async function subscribe(url, type = "json") {
         try {
@@ -469,6 +414,38 @@
         return;
     }
 
+    function fetchTrackInfoEventSource(url) {
+        eventSource = new EventSource(url); // global eventSource
+        let stationTag = `<a href="${streamURL}" target="_blank">${allCodes[stationCode]["name"]}</a>`; // global streamURL
+        setStationTag(msgArea, "revert", stationTag);
+        eventSource.addEventListener("message", function (event) {
+            let parsedData = JSON.parse(event.data);
+            console.log(`parsedData: ${JSON.stringify(parsedData)}`);
+            let streamTitle = parsedData.streamTitle;
+            console.log(`streamTitle: ${streamTitle}`);
+            let currentTrack = capitalize(streamTitle);
+            if (previousTrack !== currentTrack) { // global previousTrack
+                resetDuration();
+                console.log(`previousTrack: ${previousTrack}\ncurrentTrack: ${currentTrack}`);
+                previousTrack = currentTrack; // global previousTrack
+                let trackTag = `<a href="${streamURL}" target="_blank">${currentTrack}</a>`; // global streamURL
+                fileInfo.innerHTML = trackTag; // global fileInfo
+                sizeInfo.textContent = showDuration(""); // global sizeInfo
+                intervalID = setInterval(function () { // global intervalID
+                    advanceDuration();
+                    sizeInfo.textContent = showDuration(""); // global sizeInfo
+                }, INTERVAL);
+            }
+        });
+        eventSource.addEventListener("error", function (event) {
+            console.log(`readyState: ${this.readyState}`);
+            if (this.readyState === EventSource.CLOSED) {
+                console.log("Connection closed"); // Connection was closed.
+            }
+        });
+        return;
+    }
+
     function setAudioRecorder(audioElem) {
         /*
         let userAgent = navigator.userAgent;
@@ -480,7 +457,7 @@
         let recorder = new MediaRecorder(captureStream);
         */
 
-        // recorder = audioElem.captureStream ? setMediaRecorder(audioElem) : setMediaRecorderAlter(audioElem); // global recorder
+        // recorder = audioElem.captureStream ? setMediaRecorder(audioElem) : setMediaRecorderAlt(audioElem); // global recorder
 
         return setMediaRecorder(audioElem);
     }
@@ -545,7 +522,7 @@
         //if (audioElem.attributes.src === undefined || recSwitch.value === "off" || recorder.state === "recording" || recorder.state === "paused") {
         //if (audioElem.attributes.src.value === "" || recSwitch.value === "off" || recorder.state === "recording" || recorder.state === "paused") {
         if (audioElem.attributes.src.value === resetAudio || recSwitch.value === "off" || recorder.state === "recording" || recorder.state === "paused") {
-            setMsg(msgArea, "revert", "Record deactivated…");
+            setMsg(msgArea, "revert", "Record button deactivated…");
             console.log(`Cannot record…`);
         } else if (recorder.state === "inactive") {
             data = []; // global data
@@ -562,7 +539,7 @@
 
     pauseBtn.addEventListener("click", function () {
         if (recSwitch.value === "off" || recorder.state === "inactive") {
-            setMsg(msgArea, "revert", "Pause deactivated…");
+            setMsg(msgArea, "revert", "Pause button deactivated…");
             console.log(`Cannot pause…`);
         } else if (recorder.state === "recording") {
             recorder.pause();
@@ -581,7 +558,7 @@
 
     stopBtn.addEventListener("click", function () {
         if (recSwitch.value === "off" || recorder.state === "inactive") {
-            setMsg(msgArea, "revert", "Stop deactivated…");
+            setMsg(msgArea, "revert", "Stop button deactivated…");
             console.log(`Cannot stop…`);;
         } else if (recorder.state === "recording" || recorder.state === "paused") {
             // Stopping the recorder will eventually trigger the `dataavailable` event and we can complete the recording process
@@ -594,7 +571,7 @@
 
     downloadBtn.addEventListener("click", function () {
         if (recSwitch.value === "off" || !data || !data.length || recorder.state === "recording" || recorder.state === "paused") {
-            setMsg(msgArea, "revert", "Download deactivated…");
+            setMsg(msgArea, "revert", "Download button deactivated…");
             console.log(`Cannot download…`);
         } else if (data && data.length && recorder.state === "inactive") {
             setMsg(msgArea, "revert", "Downloading…");
@@ -628,16 +605,15 @@
         return;
     }
 
-    clearBtn.addEventListener("click", clearAll);
+    resetBtn.addEventListener("click", resetAll);
 
-    function clearAll() {
-        //if (audioElem.attributes.src === undefined) {
-        if (audioElem.attributes.src.value === resetAudio) {
-            setMsg(msgArea, "none", "");
-            showFileInfo();
-        }
+    function resetAll() {
+        setMsg(msgArea, "none", "");
+        showFileInfo();
         switchRecorder("off");
         recSwitch.checked = false; // global recSwitch
+        pauseBtn.textContent = "⏸"; // global pauseBtn
+        audioElem.src = resetAudio; // global audioElem
         resetParams();
         resetRequest();
         resetResponse();
@@ -684,6 +660,7 @@
         secs = 0; // global secs
         return;
     }
+    
     function advanceDuration() {
         secs += 1; // global secs
         if (secs > 59) {
@@ -692,9 +669,11 @@
         }
         return;
     }
+    
     function setDuration() {
         return `${mins}:${doubleDigits(secs)}`; // global mins, secs
     }
+    
     function showDuration(durationText = durationInfo) {
         return (durationText !== "") ? `(${setDuration()}/${durationText})` : `(${setDuration()})`;
     }
@@ -866,6 +845,16 @@ function replaceInvalid(str, char = '-') {
     return str.replace(set, char);
 }
 
+function toggleDataState(element, dataState) {
+    element.setAttribute("data-state", dataState);
+    return;
+}
+
+function toggleControlElements(displayState) {
+    sizeInfo.textContent = (displayState === "none") ? "" : sizeInfo.textContent; // global sizeInfo
+    return;
+}
+
 /* Blob: text() method - Web APIs | MDN */
 /* https://developer.mozilla.org/en-US/docs/Web/API/Blob/text */
 async function readJsonFileBlob(jsonFile) {
@@ -923,6 +912,7 @@ function readJsonFileReader(jsonFile) {
         }, false);
     });
 }
+
 function readJson(jsonFile) {
     let reader = new FileReader();
     // useCapture: false - The handler is executed in the bubbling phase, inner first, to outer
