@@ -180,7 +180,8 @@
     }
 
     function getResponseType(source) {
-        if ( hasSubStr(source, "radiojar") || hasSubStr(source, "diesi") || hasSubStr(source, "melodic") || hasSubStr(source, "airtime") || hasSubStr(source, "atticaradios") ) {
+        let jsonSource = ["radiojar", "melodic", "atticaradios", "diesi", "airtime", "offradio", "radiomustathens"];
+        if (hasSubStr(source, jsonSource)) {
             return "json";
         } else if (hasSubStr(source, "xspf")) {
             return "xml";
@@ -190,7 +191,7 @@
             return "evtsrc";
         }
         return "";
-    }     
+    }
 
     async function subscribe(url, type = "json") {
         try {
@@ -221,6 +222,57 @@
         }
     }
 
+        function radioMustTrackInfo(responseData) {
+            const mustRadios = { "mustcafe": 0, "musthero": 1, "mustx": 2, "radiomust": 3 };
+            let code = "";
+            if (hasSubStr(streamURL, "cafe")) { // global streamURL
+                code = "mustcafe";
+            } else if (hasSubStr(streamURL, "hero")) { // global streamURL
+                code = "musthero";
+            } else if (hasSubStr(streamURL, "x")) { // global streamURL
+                code = "mustx";
+            } else if (hasSubStr(streamURL, "mpeg")) { // global streamURL
+                code = "radiomust";
+            }
+            return {
+                "artist": capitalize(responseData[mustRadios[code]].current.artist),
+                "title": capitalize(responseData[mustRadios[code]].current.title),
+                "duration": toMins(Math.ceil(responseData[mustRadios[code]].current.duration))
+            };
+        }
+
+        function stegiRadioTrackInfo(responseData) {
+           return {
+               "artist": "",
+               "title": capitalize(responseData.tracks.current.name),
+               "duration": ""
+           };
+        } 
+
+        function offRadioTrackInfo(responseData) {
+           return {
+               "artist": capitalize(responseData.track.artist),
+               "title": capitalize(responseData.track.name),
+               "duration": ""
+           };
+        } 
+
+        function diesiTrackInfo(responseData) {
+           return {
+               "artist": capitalize(responseData.data.artist),
+               "title": capitalize(responseData.data.song),
+               "duration": ""
+           };
+        } 
+
+        function atticaRadiosTrackInfo(responseData) {
+           return {
+               "artist": capitalize(responseData.artist),
+               "title": capitalize(responseData.song),
+               "duration": ""
+           };
+        }
+
     /* Long polling */
     /* https://javascript.info/long-polling */
     async function fetchTrackInfo(url, type = "json") {
@@ -230,23 +282,27 @@
         setStationTag(msgArea, "revert", stationTag);
         if (responseData !== "") {
             if (type === "json") {
-                if (responseData.artist !== undefined) {
-                    currentTrack["artist"] = capitalize(responseData.artist);
-                } else if (responseData.data.artist !== undefined) {
-                    currentTrack["artist"] = capitalize(responseData.data.artist);
-                }
-                if (responseData.title !== undefined) {
-                    currentTrack["title"] = capitalize(responseData.title);
-                } else if (responseData.song !== undefined) {
-                    currentTrack["title"] = capitalize(responseData.song);
-                } else if (responseData.data.song !== undefined) {
-                    currentTrack["title"] = capitalize(responseData.data.song);
-                } else if (responseData.tracks.current.name !== undefined) {
-                    currentTrack["title"] = capitalize(responseData.tracks.current.name);
-                }
-                if (responseData.duration !== undefined) {
-                    currentTrack["duration"] = toMins(responseData.duration);
-                }
+                if (hasSubStr(url, "radiomustathens")) {
+                        currentTrack = radioMustTrackInfo(responseData);
+                    } else if (hasSubStr(url, "airtime")) {
+                        currentTrack = stegiRadioTrackInfo(responseData);
+                    } else if (hasSubStr(url, "offradio")) {
+                        currentTrack = offRadioTrackInfo(responseData);
+                    } else if (hasSubStr(url, "diesi")) {
+                        currentTrack = diesiTrackInfo(responseData);
+                    } else if (hasSubStr(url, "atticaradios")) {
+                        currentTrack = atticaRadiosTrackInfo(responseData);
+                    } else {
+                        if (responseData.artist !== undefined) {
+                            currentTrack["artist"] = capitalize(responseData.artist);
+                        }
+                        if (responseData.title !== undefined) {
+                            currentTrack["title"] = capitalize(responseData.title);
+                        }
+                        if (responseData.duration !== undefined) {
+                            currentTrack["duration"] = toMins(responseData.duration);
+                        }
+                    }
             } else if (type === "xml") {
                 currentTrack["artist"] = capitalize(getTagContent(source = responseData, tagName = "creator"));
                 currentTrack["title"] = capitalize(getTagContent(source = responseData, tagName = "title"));
@@ -345,23 +401,27 @@
             let artistContent = "";
             let titleContent = "";
             if (type === "json") {
-                if (responseData.artist !== undefined) {
-                    currentTrack["artist"] = capitalize(responseData.artist);
-                } else if (responseData.data.artist !== undefined) {
-                    currentTrack["artist"] = capitalize(responseData.data.artist);
-                }
-                if (responseData.title !== undefined) {
-                    currentTrack["title"] = capitalize(responseData.title);
-                } else if (responseData.song !== undefined) {
-                    currentTrack["title"] = capitalize(responseData.song);
-                } else if (responseData.data.song !== undefined) {
-                    currentTrack["title"] = capitalize(responseData.data.song);
-                } else if (responseData.tracks.current.name !== undefined) {
-                    currentTrack["title"] = capitalize(responseData.tracks.current.name);
-                }
-                if (responseData.duration !== undefined) {
-                    currentTrack["duration"] = toMins(responseData.duration);
-                }
+                if (hasSubStr(url, "radiomustathens")) {
+                        currentTrack = radioMustTrackInfo(responseData);
+                    } else if (hasSubStr(url, "airtime")) {
+                        currentTrack = stegiRadioTrackInfo(responseData);
+                    } else if (hasSubStr(url, "offradio")) {
+                        currentTrack = offRadioTrackInfo(responseData);
+                    } else if (hasSubStr(url, "diesi")) {
+                        currentTrack = diesiTrackInfo(responseData);
+                    } else if (hasSubStr(url, "atticaradios")) {
+                        currentTrack = atticaRadiosTrackInfo(responseData);
+                    } else {
+                        if (responseData.artist !== undefined) {
+                            currentTrack["artist"] = capitalize(responseData.artist);
+                        }
+                        if (responseData.title !== undefined) {
+                            currentTrack["title"] = capitalize(responseData.title);
+                        }
+                        if (responseData.duration !== undefined) {
+                            currentTrack["duration"] = toMins(responseData.duration);
+                        }
+                    }
             } else if (type === "xml") {
                 if (responseData.getElementsByTagName("creator")[1] !== undefined) {
                     artistContent = responseData.getElementsByTagName("creator")[1].childNodes[0].nodeValue;
