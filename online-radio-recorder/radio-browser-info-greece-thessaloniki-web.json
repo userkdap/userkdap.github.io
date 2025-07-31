@@ -24,7 +24,7 @@
         "name": "GRD Terra Radio",
         "stream": "https://play.streams.gr:22072/stream",
         "state": "Thessaloniki",
-        "now_playing": "https://play.streams.gr:22072/currentsong",
+        "now_playing": "https://cast.tunzilla.com/http://play.streams.gr:22072/currentsong",
         "band": "Web"
     },
     "960de1a4-0601-11e8-ae97-52543be04c81": {
@@ -108,47 +108,47 @@
         "name": "Εntropia Radio",
         "stream": "https://radio.hostchefs.net/proxy/entropiaradio/stream",
         "state": "Thessaloniki",
-        "now_playing": "https://radio.hostchefs.net/proxy/entropiaradio/currentsong",
+        "now_playing": "https://cast.tunzilla.com/http://radio.hostchefs.net/proxy/entropiaradio/currentsong",
         "band": "Web"
     },
     "fc15b96c-c649-422e-b4ab-1e48c34e18f0": {
         "name": "Arty Radio",
-        "stream": "https://radio.streamings.gr/proxy/artyradio/stream",
+        "stream": "https://cast.tunzilla.com/http://radio.streamings.gr/proxy/artyradio/stream",
         "state": "Thessaloniki",
-        "now_playing": "https://radio.streamings.gr/proxy/artyradio/autodj.xspf",
+        "now_playing": "https://cast.tunzilla.com/http://radio.streamings.gr/proxy/artyradio/autodj.xspf",
         "band": "Web"
     },
     "e6d259fd-1e75-402e-ae73-c8a9c1625fd6": {
         "name": "Ianos Radio",
-        "stream": "https://radio.streamings.gr/proxy/feelmusic2021/stream",
+        "stream": "https://cast.tunzilla.com/http://radio.streamings.gr/proxy/feelmusic2021/stream",
         "state": "Thessaloniki",
-        "now_playing": "https://radio.streamings.gr/proxy/feelmusic2021/autodj.xspf",
+        "now_playing": "https://cast.tunzilla.com/http://radio.streamings.gr/proxy/feelmusic2021/autodj.xspf",
         "band": "Web"
     },
     "a7e7a235-47ae-4637-88e1-8f4fbe434df6": {
         "name": "Point-Radio",
-        "stream": "https://radio.streamings.gr/proxy/radioepafi/stream",
+        "stream": "https://cast.tunzilla.com/http://radio.streamings.gr/proxy/radioepafi/stream",
         "state": "Thessaloniki",
-        "now_playing": "https://radio.streamings.gr/proxy/radioepafi/autodj.xspf",
+        "now_playing": "https://cast.tunzilla.com/http://radio.streamings.gr/proxy/radioepafi/autodj.xspf",
         "band": "Web"
     },
     "9754dd31-a04a-444a-b95e-353b02196bc6": {
         "name": "Point-Radio Pop",
-        "stream": "https://radio.streamings.gr/proxy/radioepafi/stream2",
+        "stream": "https://cast.tunzilla.com/http://radio.streamings.gr/proxy/radioepafi/stream2",
         "state": "Thessaloniki",
-        "now_playing": "https://radio.streamings.gr/proxy/radioepafi/stream2.xspf",
+        "now_playing": "https://cast.tunzilla.com/http://radio.streamings.gr/proxy/radioepafi/stream2.xspf",
         "band": "Web"
     },
     "314b8d5b-b23b-48c2-af00-868f9a6be938": {
         "name": "Radio Roben",
-        "stream": "https://radio.streamings.gr/proxy/radioepafi/stream3",
+        "stream": "https://cast.tunzilla.com/http://radio.streamings.gr/proxy/radioepafi/stream3",
         "state": "Thessaloniki",
-        "now_playing": "https://radio.streamings.gr/proxy/radioepafi/stream3_autodj.xspf",
+        "now_playing": "https://cast.tunzilla.com/http://radio.streamings.gr/proxy/radioepafi/stream3_autodj.xspf",
         "band": "Web"
     },
     "c2ed0d69-8ade-4d68-a94c-813784cb1068": {
         "name": "Ράδιο Σάρωθρον",
-        "stream": "https://radios.studio110.eu/radio/8010/stream",
+        "stream": "https://radios.studio110.eu/radio/8010/radio.mp3",
         "state": "Thessaloniki",
         "now_playing": "https://radios.studio110.eu/radio/8010/currentsong",
         "band": "Web"
@@ -171,42 +171,42 @@
         "name": "OFF Radio",
         "stream": "https://s3.yesstreaming.net:17062/stream",
         "state": "Thessaloniki",
-        "now_playing": "https://s3.yesstreaming.net:17062/currentsong",
+        "now_playing": "https://www.offradio.gr/wp-json/offradio/v1/now_playing_get",
         "band": "Web"
     },
     "4806292f-ab24-4c55-b93b-ba192f95ac87": {
         "name": "Radio 9 Θεσσαλονίκη",
-        "stream": "https://solid55.streamupsolutions.com/proxy/gygasbfj/stream",
+        "stream": "https://cast.tunzilla.com/http://solid55.streamupsolutions.com/proxy/gygasbfj/stream",
         "state": "Thessaloniki",
-        "now_playing": "https://solid55.streamupsolutions.com/proxy/gygasbfj/autodj.xspf",
+        "now_playing": "https://cast.tunzilla.com/http://solid55.streamupsolutions.com/proxy/gygasbfj/autodj.xspf",
         "band": "Web"
     },
     "12e589c5-9482-431f-a786-50abad4a793e": {
         "name": "Radio Fantasy GR",
-        "stream": "https://solid55.streamupsolutions.com/proxy/radiofantasy/stream",
+        "stream": "https://cast.tunzilla.com/http://solid55.streamupsolutions.com/proxy/radiofantasy/stream",
         "state": "Thessaloniki",
-        "now_playing": "https://solid55.streamupsolutions.com/proxy/radiofantasy/live.xspf",
+        "now_playing": "https://cast.tunzilla.com/http://solid55.streamupsolutions.com/proxy/radiofantasy/live.xspf",
         "band": "Web"
     },
     "5a163884-ea3c-48c5-ba69-a9c5425d033b": {
         "name": "Smooth Radio Thessaloniki",
-        "stream": "https://solid9.streamupsolutions.com/proxy/lrazisyb/stream",
+        "stream": "https://cast.tunzilla.com/http://solid9.streamupsolutions.com/proxy/lrazisyb/stream",
         "state": "Thessaloniki",
-        "now_playing": "https://solid9.streamupsolutions.com/proxy/lrazisyb/autodj.xspf",
+        "now_playing": "https://cast.tunzilla.com/http://solid9.streamupsolutions.com/proxy/lrazisyb/autodj.xspf",
         "band": "Web"
     },
     "b8af9479-a6bb-42b6-9d44-e4da6bab0c1d": {
         "name": "Psyland.live",
         "stream": "https://sp.streams.ovh:8020/stream",
         "state": "Thessaloniki",
-        "now_playing": "https://sp.streams.ovh:8020/currentsong",
+        "now_playing": "https://cast.tunzilla.com/http://sp.streams.ovh:8020/currentsong",
         "band": "Web"
     },
     "ab2753d6-e5aa-43e9-acba-38a5e5062cb3": {
         "name": "My Radio - Shmera.gr",
         "stream": "https://sp3.streams.ovh/8058/stream",
         "state": "Thessaloniki",
-        "now_playing": "https://sp3.streams.ovh:8058/currentsong",
+        "now_playing": "https://cast.tunzilla.com/http://sp3.streams.ovh:8058/currentsong",
         "band": "Web"
     },
     "6312550a-609b-4c74-981c-01bbb204a61a": {
@@ -228,6 +228,13 @@
         "stream": "https://stream.radiojar.com/5tyqrwpgpfeuv",
         "state": "Thessaloniki",
         "now_playing": "https://www.radiojar.com/api/stations/5tyqrwpgpfeuv/now_playing/",
+        "band": "Web"
+    },
+    "43d164bc-589c-4429-b5c4-0bc7e7c5c5f0": {
+        "name": "Radio Apopsi",
+        "stream": "https://stream.radiojar.com/radio-apopsi",
+        "state": "Thessaloniki",
+        "now_playing": "https://www.radiojar.com/api/stations/radio-apopsi/now_playing/",
         "band": "Web"
     },
     "8036628f-99eb-404f-8b63-0c90c250f95b": {
