@@ -220,21 +220,21 @@
         "name": "Best 92.6",
         "stream": "https://best.live24.gr/best1222",
         "state": "Athens",
-        "now_playing": "",
+        "now_playing": "https://playingnow.atticaradios.gr/nowplaying/best",
         "band": "FM"
     },
     "df716345-217b-4c1e-9f0a-8f58dce692aa": {
         "name": "Athens Rock 96.9",
         "stream": "https://az10.yesstreaming.net/radio/8060/radio.mp3",
         "state": "Athens",
-        "now_playing": "https://az10.yesstreaming.net/radio/8060/radio.mp3.xspf",
+        "now_playing": "https://playingnow.atticaradios.gr/nowplaying/rockfm",
         "band": "FM"
     },
     "d2055784-6625-4de0-ba48-c4077e804464": {
         "name": "Λάμψη 92,3",
         "stream": "https://az11.yesstreaming.net/radio/8140/radio.mp3",
         "state": "Athens",
-        "now_playing": "https://az11.yesstreaming.net/radio/8140/radio.mp3.xspf",
+        "now_playing": "https://playingnow.atticaradios.gr/nowplaying/lampsi",
         "band": "FM"
     },
     "f1a5857f-9825-4eba-b48e-e345e82e9f5f": {
