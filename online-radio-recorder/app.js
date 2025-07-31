@@ -774,11 +774,21 @@
         return tagContent;
     }
 
-    function hasSubStr(str, subStr = "radiojar") {
-        const subStrRegex = new RegExp(`${subStr}`);
-        return subStrRegex.test(str);
-        //return str.includes(subStr);
-    }
+    function hasSubStr(str, obj) {
+        if (typeof(obj) === "string") {
+            let subStrRegex = new RegExp(`${obj}`);
+            return subStrRegex.test(str);
+            //return str.includes(obj);
+        } else if (Array.isArray(obj)) {
+            for (let elem of obj) {
+                let subStrRegex = new RegExp(`${elem}`);
+                if (subStrRegex.test(str)) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    }            
 
     /* How to Capitalize the First Letter of a String in JavaScript */
     /* https://www.freecodecamp.org/news/how-to-capitalize-the-first-letter-of-a-string-in-javascript/ */
