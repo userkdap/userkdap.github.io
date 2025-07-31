@@ -788,7 +788,7 @@
             }
             return false;
         }
-    }            
+    }
 
     /* How to Capitalize the First Letter of a String in JavaScript */
     /* https://www.freecodecamp.org/news/how-to-capitalize-the-first-letter-of-a-string-in-javascript/ */
