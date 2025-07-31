@@ -251,6 +251,13 @@
         "now_playing": "",
         "band": "FM"
     },
+    "6efe0ad3-0ca7-4da8-a55e-866adfdaad21": {
+        "name": "Velvet 96.8 Xmas",
+        "stream": "https://securestreams5.autopo.st:1919/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://securestreams5.autopo.st:1919/currentsong",
+        "band": "FM"
+    },
     "de186e01-d7a8-4930-9a1d-acece19960b5": {
         "name": "Zoo 90.8",
         "stream": "https://metromedia.live24.gr/zoo908thess",
@@ -277,6 +284,13 @@
         "stream": "https://metromedia.live24.gr/zoornbthess",
         "state": "Thessaloniki",
         "now_playing": "",
+        "band": "FM"
+    },
+    "27b34bf7-f8e1-45a0-ac01-ca89537dc48e": {
+        "name": "Zoo 90.8 GR Trap",
+        "stream": "https://securestreams5.autopo.st:1919/stream",
+        "state": "Thessaloniki",
+        "now_playing": "https://securestreams5.autopo.st:1919/currentsong",
         "band": "FM"
     },
     "a4baa137-819b-4bef-b556-ba75aa9a4c20": {
