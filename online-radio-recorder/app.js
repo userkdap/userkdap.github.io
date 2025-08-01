@@ -76,7 +76,7 @@
     }
 
     async function loadData(source, type = "json") {
-        let responseData = await subscribe(source, type = "json");
+        let responseData = await subscribe(source, type);
         return responseData;
     }
 
@@ -183,11 +183,11 @@
         let jsonSource = ["radiojar", "melodic", "atticaradios", "diesi", "airtime", "offradio", "radiomustathens"];
         if (hasSubStr(source, jsonSource)) {
             return "json";
-        } else if (hasSubStr(source, "xspf")) {
+        } else if (hasSubStr(source, ["xspf"])) {
             return "xml";
-        } else if ( hasSubStr(source, "currentsong") || hasSubStr(source, "ertecho") ) {
+        } else if ( hasSubStr(source, ["currentsong", "ertecho"]) ) {
             return "text";
-        } else if (hasSubStr(source, "zeno")) {
+        } else if (hasSubStr(source, ["zeno"])) {
             return "evtsrc";
         }
         return "";
@@ -225,13 +225,13 @@
         function radioMustTrackInfo(responseData) {
             const mustRadios = { "mustcafe": 0, "musthero": 1, "mustx": 2, "radiomust": 3 };
             let code = "";
-            if (hasSubStr(streamURL, "cafe")) { // global streamURL
+            if (hasSubStr(streamURL, ["cafe"])) { // global streamURL
                 code = "mustcafe";
-            } else if (hasSubStr(streamURL, "hero")) { // global streamURL
+            } else if (hasSubStr(streamURL, ["hero"])) { // global streamURL
                 code = "musthero";
-            } else if (hasSubStr(streamURL, "x")) { // global streamURL
+            } else if (hasSubStr(streamURL, ["x"])) { // global streamURL
                 code = "mustx";
-            } else if (hasSubStr(streamURL, "mpeg")) { // global streamURL
+            } else if (hasSubStr(streamURL, ["mpeg"])) { // global streamURL
                 code = "radiomust";
             }
             return {
@@ -282,15 +282,15 @@
         setStationTag(msgArea, "revert", stationTag);
         if (responseData !== "") {
             if (type === "json") {
-                if (hasSubStr(url, "radiomustathens")) {
+                if (hasSubStr(url, ["radiomustathens"])) {
                         currentTrack = radioMustTrackInfo(responseData);
-                    } else if (hasSubStr(url, "airtime")) {
+                    } else if (hasSubStr(url, ["airtime"])) {
                         currentTrack = stegiRadioTrackInfo(responseData);
-                    } else if (hasSubStr(url, "offradio")) {
+                    } else if (hasSubStr(url, ["offradio"])) {
                         currentTrack = offRadioTrackInfo(responseData);
-                    } else if (hasSubStr(url, "diesi")) {
+                    } else if (hasSubStr(url, ["diesi"])) {
                         currentTrack = diesiTrackInfo(responseData);
-                    } else if (hasSubStr(url, "atticaradios")) {
+                    } else if (hasSubStr(url, ["atticaradios"])) {
                         currentTrack = atticaRadiosTrackInfo(responseData);
                     } else {
                         if (responseData.artist !== undefined) {
@@ -401,15 +401,15 @@
             let artistContent = "";
             let titleContent = "";
             if (type === "json") {
-                if (hasSubStr(url, "radiomustathens")) {
+                if (hasSubStr(url, ["radiomustathens"])) {
                         currentTrack = radioMustTrackInfo(responseData);
-                    } else if (hasSubStr(url, "airtime")) {
+                    } else if (hasSubStr(url, ["airtime"])) {
                         currentTrack = stegiRadioTrackInfo(responseData);
-                    } else if (hasSubStr(url, "offradio")) {
+                    } else if (hasSubStr(url, ["offradio"])) {
                         currentTrack = offRadioTrackInfo(responseData);
-                    } else if (hasSubStr(url, "diesi")) {
+                    } else if (hasSubStr(url, ["diesi"])) {
                         currentTrack = diesiTrackInfo(responseData);
-                    } else if (hasSubStr(url, "atticaradios")) {
+                    } else if (hasSubStr(url, ["atticaradios"])) {
                         currentTrack = atticaRadiosTrackInfo(responseData);
                     } else {
                         if (responseData.artist !== undefined) {
@@ -661,7 +661,7 @@
 
     function switchRecorder(state = "on") {
         recSwitch.value = state; // global recSwitch
-        recorder = (state === "on") ? setAudioRecorder(audioElem) : undefined; // global recorder,audioElem
+        recorder = (state === "on") ? setAudioRecorder(audioElem) : undefined; // global recorder, audioElem
         return;
     }
 
@@ -689,21 +689,6 @@
         return;
     }
 
-    function resetResponse() {
-        clearTimeout(timeoutID); // global timeoutID
-        timeoutID = 0; // global timeoutID
-        console.log("Timeout cleared");
-        return;
-    }
-
-    function resetEventSource() {
-        if (eventSource) { // global eventSource
-            eventSource.close(); // global eventSource
-            console.log("Event source closed");
-        }
-        return;
-    }
-
     function resetRequest() {
         if (request) { // global request
             request.abort(); // global request
@@ -712,9 +697,24 @@
         return;
     }
 
+    function resetResponse() {
+        clearTimeout(timeoutID); // global timeoutID
+        timeoutID = 0; // global timeoutID
+        console.log("Timeout cleared");
+        return;
+    }
+    
+    function resetEventSource() {
+        if (eventSource) { // global eventSource
+            eventSource.close(); // global eventSource
+            console.log("Event source closed");
+        }
+        return;
+    }
+
     function resetDuration() {
         clearInterval(intervalID);
-        intervalID = 0; // global intervalID
+        //intervalID = 0; // global intervalID
         console.log("Interval cleared");
         mins = 0; // global mins
         secs = 0; // global secs
@@ -775,19 +775,18 @@
     }
 
     function hasSubStr(str, obj) {
-        if (typeof(obj) === "string") {
-            let subStrRegex = new RegExp(`${obj}`);
-            return subStrRegex.test(str);
-            //return str.includes(obj);
-        } else if (Array.isArray(obj)) {
+        if (Array.isArray(obj)) {
             for (let elem of obj) {
-                let subStrRegex = new RegExp(`${elem}`);
-                if (subStrRegex.test(str)) {
-                    return true;
+                if (typeof (elem) === "string") {
+                    let subStrRegex = new RegExp(`${elem}`);
+                    if (subStrRegex.test(str)) {
+                        return true;
+                    }
                 }
             }
             return false;
         }
+        return false;
     }
 
     /* How to Capitalize the First Letter of a String in JavaScript */
