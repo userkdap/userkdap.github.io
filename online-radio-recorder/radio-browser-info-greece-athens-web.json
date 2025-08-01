@@ -398,6 +398,13 @@
         "now_playing": "",
         "band": "Web"
     },
+    "2b5138e3-c271-47d4-9fd3-0928ffa63a60": {
+        "name": "Xryses Notes",
+        "stream": "https://cast.radiohost.ovh:9031/stream",
+        "state": "Athens",
+        "now_playing": "https://cast.radiohost.ovh:9031/autodj.xspf",
+        "band": "Web"
+    },
     "96109efb-0601-11e8-ae97-52543be04c81": {
         "name": "Athens Party",
         "stream": "https://ice.onestreaming.com/athensparty",
