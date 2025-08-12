@@ -35,7 +35,9 @@
     let eventSource = null;
     let recorder = undefined;
     let data = [];
-
+    let currentTrack = { "artist": "", "title": "", "duration": "" };
+    let trackChange = false;
+    
     let mins = 0;
     let secs = 0;
     let intervalID = 0;
@@ -43,7 +45,8 @@
     window.onload = async function () {
         //allPresets = await loadData(source = "../stations-json-files.json", type = "json"); // global allPresets
         allPresets = await loadData(source = "stations-json-files.json", type = "json"); // global allPresets
-        loadPresetsFromJSON(source = allPresets)
+        loadPresetsFromJSON(source = allPresets);
+        return;
     };
 
     async function fetchHeaders(url) {
@@ -70,7 +73,7 @@
             //audioElem.play();
         } else {
             audioElem.src = resetAudio;
-            setMsg(msgArea, "revert", "Can't load stream!");
+            setMsg(msgArea, "revert", "Cannot load stream!");
         }
         return;
     }
@@ -150,9 +153,9 @@
             stationInfoURL = allCodes[stationCode]["now_playing"]; // global stationInfoURL, allCodes, stationCode
             showFileInfo();
             resetResponse();
-            resetDuration();
             resetEventSource();
             resetRequest();
+            resetDuration();
             if (recorder && recorder.state === "recording") { // global recorder
                 recorder.pause();
                 setMsg(msgArea, "revert", `${capitalize(recorder.state)}…`);
@@ -161,22 +164,48 @@
             }
             playAudioStream(streamURL);
             if (stationInfoURL === "") {
+                console.log(`stationInfoURL: empty string`);
                 let stationTag = `<a href="${streamURL}" target="_blank">${allCodes[stationCode]["name"]}</a>`; // global streamURL
                 setStationTag(msgArea, "revert", stationTag);
                 fileInfo.innerHTML = stationTag; // global fileInfo
                 sizeInfo.textContent = showDuration(""); // global sizeInfo
-                intervalID = setInterval(function () {
-                    advanceDuration();
-                    sizeInfo.textContent = showDuration(""); // global sizeInfo
-                }, INTERVAL);
             } else if (getResponseType(stationInfoURL) === "evtsrc") {
                 fetchTrackInfoEventSource(stationInfoURL);
             } else if (getResponseType(stationInfoURL) !== "evtsrc") {
                 //fetchTrackInfoXHR(stationInfoURL, type = getResponseType(stationInfoURL));
                 fetchTrackInfo(stationInfoURL, type = getResponseType(stationInfoURL));
             }
+            //intervalID = handleDuration(); // global intervalID
+            intervalID = handleDurationEvent(); // global intervalID
         }
         return;
+    }
+
+    /* Scheduling: setTimeout and setInterval */
+    /* https://javascript.info/settimeout-setinterval */
+    function handleDuration() {
+        return setTimeout(function tick() {
+            if (trackChange === true) { // global trackChange
+                changeDuration();
+            }
+            sizeInfo.textContent = showDuration(currentTrack["duration"]); // global sizeInfo, currentTrack
+            advanceDuration();
+            intervalID = setTimeout(tick, INTERVAL); // (*)
+        }, INTERVAL);
+    }
+
+    /* DOM events - Web APIs | MDN */
+    /* https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Events#creating_and_dispatching_events */
+    function handleDurationEvent() {
+        return setTimeout(function tick() {
+            // Listen for the event.
+            sizeInfo.addEventListener("trackChange", function reset() {
+                changeDuration();
+            });
+            sizeInfo.textContent = showDuration(currentTrack["duration"]); // global sizeInfo, currentTrack
+            advanceDuration();
+            intervalID = setTimeout(tick, INTERVAL); // (*)
+        }, INTERVAL);
     }
 
     function getResponseType(source) {
@@ -243,8 +272,8 @@
 
         function stegiRadioTrackInfo(responseData) {
            return {
-               "artist": "",
-               "title": capitalize(responseData.tracks.current.name),
+               "artist": capitalize(responseData.tracks.current.metadata.artist_name),
+               "title": capitalize(responseData.tracks.current.metadata.track_title),
                "duration": ""
            };
         } 
@@ -277,32 +306,32 @@
     /* https://javascript.info/long-polling */
     async function fetchTrackInfo(url, type = "json") {
         let responseData = await subscribe(url, type);
-        let currentTrack = { "artist": "", "title": "", "duration": "" };
+        currentTrack = { "artist": "", "title": "", "duration": "" }; // global currentTrack
         let stationTag = `<a href="${streamURL}" target="_blank">${allCodes[stationCode]["name"]}</a>`; // global streamURL
         setStationTag(msgArea, "revert", stationTag);
         if (responseData !== "") {
             if (type === "json") {
                 if (hasSubStr(url, ["radiomustathens"])) {
-                        currentTrack = radioMustTrackInfo(responseData);
-                    } else if (hasSubStr(url, ["airtime"])) {
-                        currentTrack = stegiRadioTrackInfo(responseData);
-                    } else if (hasSubStr(url, ["offradio"])) {
-                        currentTrack = offRadioTrackInfo(responseData);
-                    } else if (hasSubStr(url, ["diesi"])) {
-                        currentTrack = diesiTrackInfo(responseData);
-                    } else if (hasSubStr(url, ["atticaradios"])) {
-                        currentTrack = atticaRadiosTrackInfo(responseData);
-                    } else {
-                        if (responseData.artist !== undefined) {
-                            currentTrack["artist"] = capitalize(responseData.artist);
-                        }
-                        if (responseData.title !== undefined) {
-                            currentTrack["title"] = capitalize(responseData.title);
-                        }
-                        if (responseData.duration !== undefined) {
-                            currentTrack["duration"] = toMins(responseData.duration);
-                        }
+                    currentTrack = radioMustTrackInfo(responseData);
+                } else if (hasSubStr(url, ["airtime"])) {
+                    currentTrack = stegiRadioTrackInfo(responseData);
+                } else if (hasSubStr(url, ["offradio"])) {
+                    currentTrack = offRadioTrackInfo(responseData);
+                } else if (hasSubStr(url, ["diesi"])) {
+                    currentTrack = diesiTrackInfo(responseData);
+                } else if (hasSubStr(url, ["atticaradios"])) {
+                    currentTrack = atticaRadiosTrackInfo(responseData);
+                } else {
+                    if (responseData.artist !== undefined) {
+                        currentTrack["artist"] = capitalize(responseData.artist);
                     }
+                    if (responseData.title !== undefined) {
+                        currentTrack["title"] = capitalize(responseData.title);
+                    }
+                    if (responseData.duration !== undefined) {
+                        currentTrack["duration"] = toMins(responseData.duration);
+                    }
+                }                        
             } else if (type === "xml") {
                 currentTrack["artist"] = capitalize(getTagContent(source = responseData, tagName = "creator"));
                 currentTrack["title"] = capitalize(getTagContent(source = responseData, tagName = "title"));
@@ -313,24 +342,34 @@
                     currentTrack["title"] = capitalize(JSON.parse(responseData));
                 }
             }
-            if (!objectsAreEqual(previousTrack, currentTrack)) { // global previousTrack
-                resetDuration();
+            let trackInfo = "";
+            if (currentTrack["artist"] !== "") {
+                trackInfo = `${currentTrack["artist"]} - ${currentTrack["title"]}`;
+            } else if (currentTrack["artist"] === "" && currentTrack["title"] !== "") {
+                trackInfo = `${currentTrack["title"]}`;
+            } else if (currentTrack["title"] === "") {
+                trackInfo = `${allCodes[stationCode]["name"]}`;
+            }
+            //console.log(`trackInfo: ${trackInfo}`);
+            let trackHref = "";
+            if (hasSubStr(trackInfo, [" - ", " # "])) {
+                //let searchStr = setSearchStr(decodeHTMLEntities(trackInfo));
+                let searchStr = setSearchStr(decodeUnicodeDecimal(trackInfo));
+                //console.log(`searchStr: ${searchStr}`);
+                trackHref = `https://www.youtube.com/results?search_query=${searchStr}`;
+            } else {
+                trackHref = streamURL;
+            }
+            let trackTag = `<a href="${trackHref}" target="_blank">${trackInfo}</a>`; // global streamURL
+            let durationInfo = `${currentTrack["duration"]}`;
+            fileInfo.innerHTML = trackTag; // global fileInfo
+            sizeInfo.textContent = showDuration(durationInfo); // global sizeInfo
+            if (!areEqual(previousTrack, currentTrack)) { // global previousTrack
+                // Dispatch the event.
+                sizeInfo.dispatchEvent(new CustomEvent("trackChange", { cancelable: true }));
+                trackChange = true; // global trackChange
                 console.log(`previousTrack: ${JSON.stringify(previousTrack)}\ncurrentTrack: ${JSON.stringify(currentTrack)}`);
                 previousTrack = currentTrack; // global previousTrack
-                let trackInfo = "";
-                if (currentTrack["artist"]) {
-                    trackInfo = `${currentTrack["artist"]} - ${currentTrack["title"]}`;
-                } else if (currentTrack["title"]) {
-                    trackInfo = `${currentTrack["title"]}`;
-                }
-                let trackTag = `<a href="${streamURL}" target="_blank">${trackInfo}</a>`; // global streamURL
-                let durationInfo = `${currentTrack["duration"]}`;
-                fileInfo.innerHTML = trackTag; // global fileInfo
-                sizeInfo.textContent = showDuration(durationInfo); // global sizeInfo
-                intervalID = setInterval(function () {
-                    advanceDuration();
-                    sizeInfo.textContent = showDuration(durationInfo); // global sizeInfo
-                }, INTERVAL);
             }
             // Call fetchTrackInfo() again to get the next message
             timeoutID = setTimeout(function () {
@@ -341,10 +380,6 @@
         } else if (responseData === "") {
             fileInfo.innerHTML = stationTag; // global fileInfo
             sizeInfo.textContent = showDuration(""); // global sizeInfo
-            intervalID = setInterval(function () {
-                advanceDuration();
-                sizeInfo.textContent = showDuration(""); // global sizeInfo
-            }, INTERVAL);
         }
         return;
     }
@@ -394,41 +429,39 @@
     /* https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest */
     async function fetchTrackInfoXHR(url, type = "json") {
         let responseData = await subscribeXHR(url, type);
-        let currentTrack = { "artist": "", "title": "", "duration": "" };
+        currentTrack = { "artist": "", "title": "", "duration": "" }; // global currentTrack
         let stationTag = `<a href="${streamURL}" target="_blank">${allCodes[stationCode]["name"]}</a>`; // global streamURL
         setStationTag(msgArea, "revert", stationTag);
         if (responseData !== "") {
-            let artistContent = "";
-            let titleContent = "";
             if (type === "json") {
                 if (hasSubStr(url, ["radiomustathens"])) {
-                        currentTrack = radioMustTrackInfo(responseData);
-                    } else if (hasSubStr(url, ["airtime"])) {
-                        currentTrack = stegiRadioTrackInfo(responseData);
-                    } else if (hasSubStr(url, ["offradio"])) {
-                        currentTrack = offRadioTrackInfo(responseData);
-                    } else if (hasSubStr(url, ["diesi"])) {
-                        currentTrack = diesiTrackInfo(responseData);
-                    } else if (hasSubStr(url, ["atticaradios"])) {
-                        currentTrack = atticaRadiosTrackInfo(responseData);
-                    } else {
-                        if (responseData.artist !== undefined) {
-                            currentTrack["artist"] = capitalize(responseData.artist);
-                        }
-                        if (responseData.title !== undefined) {
-                            currentTrack["title"] = capitalize(responseData.title);
-                        }
-                        if (responseData.duration !== undefined) {
-                            currentTrack["duration"] = toMins(responseData.duration);
-                        }
+                    currentTrack = radioMustTrackInfo(responseData);
+                } else if (hasSubStr(url, ["airtime"])) {
+                    currentTrack = stegiRadioTrackInfo(responseData);
+                } else if (hasSubStr(url, ["offradio"])) {
+                    currentTrack = offRadioTrackInfo(responseData);
+                } else if (hasSubStr(url, ["diesi"])) {
+                    currentTrack = diesiTrackInfo(responseData);
+                } else if (hasSubStr(url, ["atticaradios"])) {
+                    currentTrack = atticaRadiosTrackInfo(responseData);
+                } else {
+                    if (responseData.artist !== undefined) {
+                        currentTrack["artist"] = capitalize(responseData.artist);
                     }
+                    if (responseData.title !== undefined) {
+                        currentTrack["title"] = capitalize(responseData.title);
+                    }
+                    if (responseData.duration !== undefined) {
+                        currentTrack["duration"] = toMins(responseData.duration);
+                    }
+                }                        
             } else if (type === "xml") {
                 if (responseData.getElementsByTagName("creator")[1] !== undefined) {
-                    artistContent = responseData.getElementsByTagName("creator")[1].childNodes[0].nodeValue;
+                    let artistContent = responseData.getElementsByTagName("creator")[1].childNodes[0].nodeValue;
                     currentTrack["artist"] = capitalize(artistContent);
                 }
                 if (responseData.getElementsByTagName("title")[1].childNodes[0] !== undefined) {
-                    titleContent = responseData.getElementsByTagName("title")[1].childNodes[0].nodeValue;
+                    let titleContent = responseData.getElementsByTagName("title")[1].childNodes[0].nodeValue;
                     currentTrack["title"] = capitalize(titleContent);
                 }
             } else if (type === "text") {
@@ -438,24 +471,34 @@
                     currentTrack["title"] = capitalize(JSON.parse(responseData));
                 }
             }
-            if (!objectsAreEqual(previousTrack, currentTrack)) { // global previousTrack
-                resetDuration();
+            let trackInfo = "";
+            if (currentTrack["artist"] !== "") {
+                trackInfo = `${currentTrack["artist"]} - ${currentTrack["title"]}`;
+            } else if (currentTrack["artist"] === "" && currentTrack["title"] !== "") {
+                trackInfo = `${currentTrack["title"]}`;
+            } else if (currentTrack["title"] === "") {
+                trackInfo = `${allCodes[stationCode]["name"]}`;
+            }
+            //console.log(`trackInfo: ${trackInfo}`);
+            let trackHref = "";
+            if (hasSubStr(trackInfo, [" - ", " # "])) {
+                //let searchStr = setSearchStr(decodeHTMLEntities(trackInfo));
+                let searchStr = setSearchStr(decodeUnicodeDecimal(trackInfo));
+                //console.log(`searchStr: ${searchStr}`);
+                trackHref = `https://www.youtube.com/results?search_query=${searchStr}`;
+            } else {
+                trackHref = streamURL;
+            }
+            let trackTag = `<a href="${trackHref}" target="_blank">${trackInfo}</a>`; // global streamURL
+            let durationInfo = `${currentTrack["duration"]}`;
+            fileInfo.innerHTML = trackTag; // global fileInfo
+            sizeInfo.textContent = showDuration(durationInfo); // global sizeInfo
+            if (!areEqual(previousTrack, currentTrack)) { // global previousTrack
+                // Dispatch the event.
+                sizeInfo.dispatchEvent(new CustomEvent("trackChange", { cancelable: true }));
+                trackChange = true; // global trackChange
                 console.log(`previousTrack: ${JSON.stringify(previousTrack)}\ncurrentTrack: ${JSON.stringify(currentTrack)}`);
                 previousTrack = currentTrack; // global previousTrack
-                let trackInfo = "";
-                if (currentTrack["artist"]) {
-                    trackInfo = `${currentTrack["artist"]} - ${currentTrack["title"]}`;
-                } else if (currentTrack["title"]) {
-                    trackInfo = `${currentTrack["title"]}`;
-                }
-                let trackTag = `<a href="${streamURL}" target="_blank">${trackInfo}</a>`; // global streamURL
-                let durationInfo = `${currentTrack["duration"]}`;
-                fileInfo.innerHTML = trackTag; // global fileInfo
-                sizeInfo.textContent = showDuration(durationInfo); // global sizeInfo
-                intervalID = setInterval(function () {
-                    advanceDuration();
-                    sizeInfo.textContent = showDuration(durationInfo); // global sizeInfo
-                }, INTERVAL);
             }
             // Call fetchTrackInfoXHR() again to get the next message
             timeoutID = setTimeout(function () {
@@ -466,10 +509,6 @@
         } else if (responseData === "") {
             fileInfo.innerHTML = stationTag; // global fileInfo
             sizeInfo.textContent = showDuration(""); // global sizeInfo
-            intervalID = setInterval(function () {
-                advanceDuration();
-                sizeInfo.textContent = showDuration(""); // global sizeInfo
-            }, INTERVAL);
         }
         return;
     }
@@ -481,20 +520,28 @@
         eventSource.addEventListener("message", function (event) {
             let parsedData = JSON.parse(event.data);
             console.log(`parsedData: ${JSON.stringify(parsedData)}`);
-            let streamTitle = parsedData.streamTitle;
-            console.log(`streamTitle: ${streamTitle}`);
-            let currentTrack = capitalize(streamTitle);
-            if (previousTrack !== currentTrack) { // global previousTrack
-                resetDuration();
+            let stationID = parsedData.mount;
+            currentTrack = parsedData.streamTitle; // global currentTrack
+            let trackInfo = capitalize(currentTrack);
+            //console.log(`trackInfo: ${trackInfo}`);
+            let trackHref = "";
+            if (hasSubStr(trackInfo, [" - ", " # "])) {
+                //let searchStr = setSearchStr(decodeHTMLEntities(trackInfo));
+                let searchStr = setSearchStr(decodeUnicodeDecimal(trackInfo));
+                //console.log(`searchStr: ${searchStr}`);
+                trackHref = `https://www.youtube.com/results?search_query=${searchStr}`;
+            } else {
+                trackHref = streamURL;
+            }
+            let trackTag = `<a href="${trackHref}" target="_blank">${trackInfo}</a>`; // global streamURL
+            fileInfo.innerHTML = trackTag; // global fileInfo
+            sizeInfo.textContent = showDuration(""); // global sizeInfo
+            if (!areEqual(previousTrack, currentTrack)) { // global previousTrack
+                // Dispatch the event.
+                sizeInfo.dispatchEvent(new CustomEvent("trackChange", { cancelable: true }));
+                trackChange = true; // global trackChange
                 console.log(`previousTrack: ${previousTrack}\ncurrentTrack: ${currentTrack}`);
                 previousTrack = currentTrack; // global previousTrack
-                let trackTag = `<a href="${streamURL}" target="_blank">${currentTrack}</a>`; // global streamURL
-                fileInfo.innerHTML = trackTag; // global fileInfo
-                sizeInfo.textContent = showDuration(""); // global sizeInfo
-                intervalID = setInterval(function () { // global intervalID
-                    advanceDuration();
-                    sizeInfo.textContent = showDuration(""); // global sizeInfo
-                }, INTERVAL);
             }
         });
         eventSource.addEventListener("error", function (event) {
@@ -504,22 +551,6 @@
             }
         });
         return;
-    }
-
-    function setAudioRecorder(audioElem) {
-        /*
-        let userAgent = navigator.userAgent;
-        console.log(`userAgent: ${userAgent}`);
-        //let captureStream = userAgent.indexOf("Firefox") === -1 ?  audioElem.captureStream() : audioElem.mozCaptureStream();
-        //A MediaStream object which can be used as a source for audio data by other media processing code
-        let captureStream = audioElem.captureStream ? audioElem.captureStream() : audioElem.mozCaptureStream();
-        console.log(captureStream); // give this to MediaRecorder
-        let recorder = new MediaRecorder(captureStream);
-        */
-
-        // recorder = audioElem.captureStream ? setMediaRecorder(audioElem) : setMediaRecorderAlt(audioElem); // global recorder
-
-        return setMediaRecorder(audioElem);
     }
 
     //1573031 - starting video recording of video html element with MediaRecorder mutes its sound
@@ -661,7 +692,7 @@
 
     function switchRecorder(state = "on") {
         recSwitch.value = state; // global recSwitch
-        recorder = (state === "on") ? setAudioRecorder(audioElem) : undefined; // global recorder, audioElem
+        recorder = (state === "on") ? setMediaRecorder(audioElem) : undefined; // global recorder, audioElem
         return;
     }
 
@@ -674,10 +705,10 @@
         recSwitch.checked = false; // global recSwitch
         pauseBtn.textContent = "⏸"; // global pauseBtn
         audioElem.src = resetAudio; // global audioElem
+        resetDuration();
         resetParams();
         resetRequest();
         resetResponse();
-        resetDuration();
         resetEventSource();
         return;
     }
@@ -713,11 +744,19 @@
     }
 
     function resetDuration() {
-        clearInterval(intervalID);
-        //intervalID = 0; // global intervalID
+        //clearInterval(intervalID);
+        clearTimeout(intervalID);
+        intervalID = 0; // global intervalID
         console.log("Interval cleared");
         mins = 0; // global mins
         secs = 0; // global secs
+        return;
+    }
+
+    function changeDuration() {
+        mins = 0; // global mins
+        secs = 0; // global secs
+        trackChange = false; // global trackChange
         return;
     }
     
@@ -734,8 +773,44 @@
         return `${mins}:${doubleDigits(secs)}`; // global mins, secs
     }
     
-    function showDuration(durationText = durationInfo) {
-        return (durationText !== "") ? `(${setDuration()}/${durationText})` : `(${setDuration()})`;
+    function showDuration(durationText) {
+        return (durationText === "" || durationText === undefined) ? `(${setDuration()})` : `(${setDuration()}/${durationText})`;
+    }
+
+    function setSearchStr(trackInfo) {
+        //return trackInfo.split("&amp; ").join("").split("& ").join("").split("+ ").join("").split("- ").join("").split("# ").join("").replaceAll(" ", "+");
+        return trackInfo.split("& ").join("").split("+ ").join("").split("- ").join("").split("# ").join("").replaceAll(" ", "+");
+    }
+
+    function setSearchStrAlt(trackInfo) {
+        const set = /[#&+-]/g;
+        return trackInfo.replace(set, "").replaceAll(" ", "+");
+    }
+
+    /* how to convert a decimal unicode into string using Javascript/Node */
+    /* https://stackoverflow.com/questions/62368140/how-to-convert-a-decimal-unicode-into-string-using-javascript-node */
+    function decodeUnicodeDecimal(str) {
+        let textarea = document.createElement("textarea");
+        textarea.innerHTML = str;
+        return textarea.value;
+    }
+
+    /* Unescape HTML entities in JavaScript? */
+    /* https://stackoverflow.com/questions/1912501/unescape-html-entities-in-javascript */
+    function decodeHTMLEntities(str) {
+        //return new DOMParser().parseFromString(str, "text/html").documentElement.innerHTML;
+        return new DOMParser().parseFromString(str, "text/html").documentElement.textContent;
+    }
+
+    function areEqual(objA, objB) {
+        if (typeof (objA) === typeof (objB)) {
+            if (typeof (objA) === "object") {
+                return objectsAreEqual(objA, objB);
+            } else if (typeof (objA) === "string") {
+                return isEquivStr(objA, objB);
+            }
+        }
+        return false;
     }
 
     /* Object.is() - JavaScript | MDN */
@@ -878,124 +953,140 @@
     }
 })();
 
-/* Sort an Object by Value in JavaScript (How To Guide) | by ryan | Medium */
-/* https://archive.is/2025.07.22-120505/https://medium.com/@ryan_forrester_/sort-an-object-by-value-in-javascript-how-to-guide-3ef492e630af */
-function sortObjectByPropertyValueStr(obj, prop) {
-    return Object.fromEntries(
-        //Object.entries(obj).sort(([, a], [, b]) => a.prop.localeCompare(b.prop))
-        Object.entries(obj).sort(([, a], [, b]) => a[prop].localeCompare(b[prop]))
-    );
-}
-function sortObjectByPropertyValueNum(obj, prop) {
-    return Object.fromEntries(
-        Object.entries(obj).sort(([, a], [, b]) => a.prop - b.prop)
-    );
-}
+    function setAudioRecorder(audioElem) {
+        /*
+        let userAgent = navigator.userAgent;
+        console.log(`userAgent: ${userAgent}`);
+        //let captureStream = userAgent.indexOf("Firefox") === -1 ?  audioElem.captureStream() : audioElem.mozCaptureStream();
+        //A MediaStream object which can be used as a source for audio data by other media processing code
+        let captureStream = audioElem.captureStream ? audioElem.captureStream() : audioElem.mozCaptureStream();
+        console.log(captureStream); // give this to MediaRecorder
+        let recorder = new MediaRecorder(captureStream);
+        */
 
-function isObject(obj) {
-    return typeof (obj) === 'object' && !Array.isArray(obj) && obj !== null;
-}
+        // recorder = audioElem.captureStream ? setMediaRecorder(audioElem) : setMediaRecorderAlt(audioElem); // global recorder
 
-/* What is the correct way to check for string equality in JavaScript? */
-/* https://stackoverflow.com/questions/3586775/what-is-the-correct-way-to-check-for-string-equality-in-javascript */
-/* String.prototype.localeCompare() - JavaScript | MDN */
-/* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare */
-function isEquivStr(aStr = "", bStr = "") {
-    if (aStr.length !== bStr.length) {
-        return false;
+        return setMediaRecorder(audioElem);
     }
-    return aStr.localeCompare(bStr) === 0;
-}
 
-/* javascript - Regex replace a set of characters */
-/* https://stackoverflow.com/questions/31355327/regex-replace-a-set-of-characters */
-function replaceInvalid(str, char = '-') {
-    const set = /[\/*?:"<>|]/g;
-    return str.replace(set, char);
-}
-
-function toggleDataState(element, dataState) {
-    element.setAttribute("data-state", dataState);
-    return;
-}
-
-function toggleControlElements(displayState) {
-    sizeInfo.textContent = (displayState === "none") ? "" : sizeInfo.textContent; // global sizeInfo
-    return;
-}
-
-/* Blob: text() method - Web APIs | MDN */
-/* https://developer.mozilla.org/en-US/docs/Web/API/Blob/text */
-async function readJsonFileBlob(jsonFile) {
-    try {
-        let fileBlob = new Blob([jsonFile], { type: "text/plain" });
-        let fileContent = await fileBlob.text();
-        return JSON.parse(fileContent);
-    } catch (error) {
-        return JSON.parse("{}");
+    /* Sort an Object by Value in JavaScript (How To Guide) | by ryan | Medium */
+    /* https://archive.is/2025.07.22-120505/https://medium.com/@ryan_forrester_/sort-an-object-by-value-in-javascript-how-to-guide-3ef492e630af */
+    function sortObjectByPropertyValueStr(obj, prop) {
+        return Object.fromEntries(
+            //Object.entries(obj).sort(([, a], [, b]) => a.prop.localeCompare(b.prop))
+            Object.entries(obj).sort(([, a], [, b]) => a[prop].localeCompare(b[prop]))
+        );
     }
-}
-
-/* Blob: text() method - Web APIs | MDN */
-/* https://developer.mozilla.org/en-US/docs/Web/API/Blob/text */
-async function readJsonFile(jsonFile) {
-    try {
-        let fileContent = await jsonFile.text();
-        return JSON.parse(fileContent);
-    } catch (error) {
-        return JSON.parse("{}");
+    function sortObjectByPropertyValueNum(obj, prop) {
+        return Object.fromEntries(
+            Object.entries(obj).sort(([, a], [, b]) => a.prop - b.prop)
+        );
     }
-}
 
-/* Response: json() method - Web APIs | MDN */
-/* https://developer.mozilla.org/en-US/docs/Web/API/Response/json */
-async function readJsonFileResponse(jsonFile) {
-    try {
-        let response = await new Response(jsonFile);
-        if (response.ok) {
-            let fileContent = await response.json();
-            return fileContent;
+    function isObject(obj) {
+        return typeof (obj) === 'object' && !Array.isArray(obj) && obj !== null;
+    }
+
+    /* What is the correct way to check for string equality in JavaScript? */
+    /* https://stackoverflow.com/questions/3586775/what-is-the-correct-way-to-check-for-string-equality-in-javascript */
+    /* String.prototype.localeCompare() - JavaScript | MDN */
+    /* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare */
+    function isEquivStr(aStr = "", bStr = "") {
+        if (aStr.length !== bStr.length) {
+            return false;
         }
-    } catch (error) {
-        return JSON.parse("{}");
+        return aStr.localeCompare(bStr) === 0;
     }
-}
 
-/* FileReader: FileReader() constructor - Web APIs | MDN */
-/* https://developer.mozilla.org/en-US/docs/Web/API/FileReader/FileReader */
-/* FileReader: readAsText() method - Web APIs | MDN */
-/* https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsText */
-/* Promise() constructor - JavaScript | MDN */
-/* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#turning_a_callback-based_api_into_a_promise-based_one */
-function readJsonFileReader(jsonFile) {
-    return new Promise((resolve, reject) => {
+    /* javascript - Regex replace a set of characters */
+    /* https://stackoverflow.com/questions/31355327/regex-replace-a-set-of-characters */
+    function replaceInvalid(str, char = '-') {
+        const set = /[\/*?:"<>|]/g;
+        return str.replace(set, char);
+    }
+
+    function toggleDataState(element, dataState) {
+        element.setAttribute("data-state", dataState);
+        return;
+    }
+
+    function toggleControlElements(displayState) {
+        sizeInfo.textContent = (displayState === "none") ? "" : sizeInfo.textContent; // global sizeInfo
+        return;
+    }
+
+    /* Blob: text() method - Web APIs | MDN */
+    /* https://developer.mozilla.org/en-US/docs/Web/API/Blob/text */
+    async function readJsonFileBlob(jsonFile) {
+        try {
+            let fileBlob = new Blob([jsonFile], { type: "text/plain" });
+            let fileContent = await fileBlob.text();
+            return JSON.parse(fileContent);
+        } catch (error) {
+            return JSON.parse("{}");
+        }
+    }
+
+    /* Blob: text() method - Web APIs | MDN */
+    /* https://developer.mozilla.org/en-US/docs/Web/API/Blob/text */
+    async function readJsonFile(jsonFile) {
+        try {
+            let fileContent = await jsonFile.text();
+            return JSON.parse(fileContent);
+        } catch (error) {
+            return JSON.parse("{}");
+        }
+    }
+
+    /* Response: json() method - Web APIs | MDN */
+    /* https://developer.mozilla.org/en-US/docs/Web/API/Response/json */
+    async function readJsonFileResponse(jsonFile) {
+        try {
+            let response = await new Response(jsonFile);
+            if (response.ok) {
+                let fileContent = await response.json();
+                return fileContent;
+            }
+        } catch (error) {
+            return JSON.parse("{}");
+        }
+    }
+
+    /* FileReader: FileReader() constructor - Web APIs | MDN */
+    /* https://developer.mozilla.org/en-US/docs/Web/API/FileReader/FileReader */
+    /* FileReader: readAsText() method - Web APIs | MDN */
+    /* https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsText */
+    /* Promise() constructor - JavaScript | MDN */
+    /* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#turning_a_callback-based_api_into_a_promise-based_one */
+    function readJsonFileReader(jsonFile) {
+        return new Promise((resolve, reject) => {
+            let reader = new FileReader();
+            reader.readAsText(jsonFile);
+            // useCapture: false - The handler is executed in the bubbling phase, inner first, to outer
+            reader.addEventListener("load", function (event) {
+                try {
+                    resolve(JSON.parse(event.target.result));
+                } catch (error) {
+                    resolve(JSON.parse("{}"));
+                }
+            }, false);
+        });
+    }
+
+    function readJson(jsonFile) {
         let reader = new FileReader();
-        reader.readAsText(jsonFile);
         // useCapture: false - The handler is executed in the bubbling phase, inner first, to outer
         reader.addEventListener("load", function (event) {
             try {
-                resolve(JSON.parse(event.target.result));
+                allCodes = JSON.parse(event.target.result); // global allCodes
+                //allCodes = JSON.parse(reader.result); // global allCodes
+                loadStationsFromJSON(source = allCodes);
+                return;
             } catch (error) {
-                resolve(JSON.parse("{}"));
+                allCodes = JSON.parse("{}"); // global allCodes
+                return;
             }
         }, false);
-    });
-}
-
-function readJson(jsonFile) {
-    let reader = new FileReader();
-    // useCapture: false - The handler is executed in the bubbling phase, inner first, to outer
-    reader.addEventListener("load", function (event) {
-        try {
-            allCodes = JSON.parse(event.target.result); // global allCodes
-            //allCodes = JSON.parse(reader.result); // global allCodes
-            loadStationsFromJSON(source = allCodes);
-            return;
-        } catch (error) {
-            allCodes = JSON.parse("{}"); // global allCodes
-            return;
-        }
-    }, false);
-    reader.readAsText(jsonFile);
-    return;
-}
+        reader.readAsText(jsonFile);
+        return;
+    }
