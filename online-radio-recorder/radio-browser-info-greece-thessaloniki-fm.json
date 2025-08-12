@@ -14,7 +14,7 @@
         "band": "FM"
     },
     "5f695ae5-da9f-4366-a715-f4fa76b61bae": {
-        "name": "Χρώμα 105,8 - Θεσσαλονίκη",
+        "name": "Χρώμα 105,8 Θεσσαλονίκη",
         "stream": "https://hroma1058thess.live24.gr/hroma1058thess",
         "state": "Thessaloniki",
         "now_playing": "",
@@ -80,7 +80,7 @@
         "name": "More 103",
         "stream": "https://cast.tunzilla.com/http://eco.onestreaming.com/proxy/moreradio/stream",
         "state": "Thessaloniki",
-        "now_playing": "https://cast.tunzilla.com/http://eco.onestreaming.com/proxy/moreradio/currentsong",
+        "now_playing": "https://cast.tunzilla.com/http://eco.onestreaming.com:8041/currentsong",
         "band": "FM"
     },
     "6afaefec-15ae-4ede-97ad-25d5d88e8856": {
@@ -168,7 +168,7 @@
         "band": "FM"
     },
     "e999e8bb-5767-4966-ada9-9b510888031f": {
-        "name": "Ραδιόφωνο 90,4 FM ΘΕΣΣΑΛΟΝΙΚΗ",
+        "name": "Ραδιόφωνο 90,4 FM Θεσσαλονίκη",
         "stream": "https://icecast.902.gr:8001/904",
         "state": "Thessaloniki",
         "now_playing": "https://cast.tunzilla.com/http://icecast.902.gr:8000/904.xspf",
@@ -293,16 +293,16 @@
         "now_playing": "https://securestreams5.autopo.st:1919/currentsong",
         "band": "FM"
     },
-    "a4baa137-819b-4bef-b556-ba75aa9a4c20": {
-        "name": "FM100.6",
-        "stream": "https://panel.gwebstream.com:2020/stream/fm1006skg",
+    "fafa833d-7974-11e8-83fa-52543be04c81": {
+        "name": "FM100",
+        "stream": "https://panel.gwebstream.com:2020/stream/fm100skg",
         "state": "Thessaloniki",
         "now_playing": "",
         "band": "FM"
     },
-    "fafa833d-7974-11e8-83fa-52543be04c81": {
-        "name": "FM100",
-        "stream": "https://panel.gwebstream.com:2020/stream/fm100skg",
+    "a4baa137-819b-4bef-b556-ba75aa9a4c20": {
+        "name": "FM100.6",
+        "stream": "https://panel.gwebstream.com:2020/stream/fm1006skg",
         "state": "Thessaloniki",
         "now_playing": "",
         "band": "FM"
@@ -381,7 +381,7 @@
         "name": "Rock Radio 104.7",
         "stream": "https://s9.yesstreaming.net:2199/proxy/anyhowmo/stream",
         "state": "Thessaloniki",
-        "now_playing": "https://cast.tunzilla.com/http://s9.yesstreaming.net:2199/proxy/anyhowmo/currentsong",
+        "now_playing": "https://cast.tunzilla.com/http://s9.yesstreaming.net:9037/currentsong",
         "band": "FM"
     },
     "6b3bf78d-51f6-4132-b7ed-8c8e324b50c1": {
@@ -434,7 +434,7 @@
         "band": "FM"
     },
     "8deb34aa-3e1a-4229-bb41-9d282cdf0740": {
-        "name": "Στο Κόκκινο 91,4 - Θεσσαλονίκη",
+        "name": "Στο Κόκκινο 91,4 Θεσσαλονίκη",
         "stream": "https://stream.radiojar.com/275p8ssmb",
         "state": "Thessaloniki",
         "now_playing": "https://www.radiojar.com/api/stations/275p8ssmb/now_playing/",
