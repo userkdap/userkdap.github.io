@@ -385,10 +385,10 @@
         "band": "Web"
     },
     "152a2367-331b-489c-917b-7dec9daf4592": {
-        "name": "Rock Radio Station RRS",
+        "name": "Rock Radio Station",
         "stream": "https://i8.streams.ovh/sc/rockrad1/stream",
         "state": "Athens",
-        "now_playing": "",
+        "now_playing": "https://cast.tunzilla.com/http://51.159.103.217:18075/currentsong",
         "band": "Web"
     },
     "cfe6fa09-e64e-45af-806f-f4a7745219fd": {
@@ -403,6 +403,13 @@
         "stream": "https://cast.radiohost.ovh:9031/stream",
         "state": "Athens",
         "now_playing": "https://cast.radiohost.ovh:9031/autodj.xspf",
+        "band": "Web"
+    },
+    "6f616c84-bd8d-4b47-8126-932544b6ae9b": {
+        "name": "Rock On",
+        "stream": "https://ice.onestreaming.com/rockon",
+        "state": "Athens",
+        "now_playing": "https://ice.onestreaming.com/rockon.xspf",
         "band": "Web"
     },
     "96109efb-0601-11e8-ae97-52543be04c81": {
