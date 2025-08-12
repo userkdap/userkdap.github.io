@@ -363,11 +363,11 @@
         "now_playing": "https://api.zeno.fm/mounts/metadata/subscribe/7qebzd7uhrhvv",
         "band": "Web"
     },
-    "0983e39c-ba91-494b-9149-acf3c8b2275d": {
-        "name": "Rock Lab Radio Ballads",
-        "stream": "https://stream.zeno.fm/a47236vzmg8uv",
+    "63569691-972b-41ad-81c4-e45a83d927c8": {
+        "name": "Metal Lab Radio",
+        "stream": "https://stream.zeno.fm/1q8a1u23dm8uv",
         "state": "Thessaloniki",
-        "now_playing": "https://api.zeno.fm/mounts/metadata/subscribe/a47236vzmg8uv",
+        "now_playing": "https://api.zeno.fm/mounts/metadata/subscribe/1q8a1u23dm8uv",
         "band": "Web"
     },
     "13de0d78-5056-4157-9021-5e5528b6f339": {
@@ -377,11 +377,11 @@
         "now_playing": "https://api.zeno.fm/mounts/metadata/subscribe/n9kkufkbqtzuv",
         "band": "Web"
     },
-    "63569691-972b-41ad-81c4-e45a83d927c8": {
-        "name": "Metal Lab Radio",
-        "stream": "https://stream.zeno.fm/1q8a1u23dm8uv",
+    "0983e39c-ba91-494b-9149-acf3c8b2275d": {
+        "name": "Rock Lab Radio Ballads",
+        "stream": "https://stream.zeno.fm/a47236vzmg8uv",
         "state": "Thessaloniki",
-        "now_playing": "https://api.zeno.fm/mounts/metadata/subscribe/1q8a1u23dm8uv",
+        "now_playing": "https://api.zeno.fm/mounts/metadata/subscribe/a47236vzmg8uv",
         "band": "Web"
     },
     "7d0ddbf4-5867-4f7f-ace5-0ca915c0ad8d": {
