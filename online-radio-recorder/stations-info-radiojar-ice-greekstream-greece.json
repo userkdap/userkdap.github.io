@@ -354,6 +354,11 @@
         "stream": "http://n07.radiojar.com/s5sa2z0mtceuv?rj-ttl=5&rj-tok=AAABmFLYh-YAfbZrwxfeUBxAQg",
         "name": "Στο Κόκκινο Πάτρα 107.7"
     },
+    "kk01hepkb": {
+        "now_playing": "https://www.radiojar.com/api/stations/kk01hepkb/now_playing/",
+        "stream": "https://stream.radiojar.com/kk01hepkb",
+        "name": "Στο Μωβ 91.4"
+    },
     "gnomi": {
         "now_playing": "https://ice.greekstream.net/gnomi.xspf",
         "stream": "https://ice.greekstream.net/gnomi",
