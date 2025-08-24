@@ -6,13 +6,6 @@
         "now_playing": "",
         "band": "FM"
     },
-    "912ed691-5054-4316-a7af-3c5ec7cbc120": {
-        "name": "Easy 97.2",
-        "stream": "https://easy972.live24.gr/easy972",
-        "state": "Athens",
-        "now_playing": "",
-        "band": "FM"
-    },
     "719803ed-2dc7-4c45-ae41-c29d3481e253": {
         "name": "Galaxy 92 FM",
         "stream": "https://galaxy.live24.gr/galaxy9292",
@@ -55,6 +48,20 @@
         "now_playing": "",
         "band": "FM"
     },
+    "912ed691-5054-4316-a7af-3c5ec7cbc120": {
+        "name": "Easy 97.2",
+        "stream": "https://easy972.live24.gr/easy972",
+        "state": "Athens",
+        "now_playing": "https://www.radiojar.com/api/stations/cthtwxk5yvduv/now_playing/",
+        "band": "FM"
+    },
+    "96b37cae-4795-4e9a-92be-178f16216ecf": {
+        "name": "Ρυθμός 94.9",
+        "stream": "https://rythmos.live24.gr/rythmos",
+        "state": "Athens",
+        "now_playing": "https://www.radiojar.com/api/stations/aw1w2xfx1vduv/now_playing/",
+        "band": "FM"
+    },
     "961f9a79-0601-11e8-ae97-52543be04c81": {
         "name": "Real FM 97.8",
         "stream": "https://realfm.live24.gr/realfm",
@@ -69,25 +76,11 @@
         "now_playing": "",
         "band": "FM"
     },
-    "96b37cae-4795-4e9a-92be-178f16216ecf": {
-        "name": "Ρυθμός 94.9",
-        "stream": "https://rythmos.live24.gr/rythmos",
-        "state": "Athens",
-        "now_playing": "https://www.radiojar.com/api/stations/aw1w2xfx1vduv/now_playing/",
-        "band": "FM"
-    },
     "190431c7-246f-44ad-bcef-8c0316c060bb": {
         "name": "Κρήτη FM 87.5",
         "stream": "https://tls-chrome.live24.gr/1361",
         "state": "Athens",
         "now_playing": "https://cast.tunzilla.com/http://s3.onweb.gr:8878/currentsong",
-        "band": "FM"
-    },
-    "962418d1-0601-11e8-ae97-52543be04c81": {
-        "name": "Παραπολιτικά FM 90.1",
-        "stream": "https://netradio.live24.gr/athinaradio",
-        "state": "Athens",
-        "now_playing": "",
         "band": "FM"
     },
     "94ccfb6e-3d68-4ec0-a106-908ad7b85292": {
@@ -114,6 +107,13 @@
     "7c00ed76-3c33-4947-a636-0d74d63bf597": {
         "name": "Νότες 96",
         "stream": "https://netradio.live24.gr/stylfmathens",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "962418d1-0601-11e8-ae97-52543be04c81": {
+        "name": "Παραπολιτικά FM 90.1",
+        "stream": "https://netradio.live24.gr/athinaradio",
         "state": "Athens",
         "now_playing": "",
         "band": "FM"
