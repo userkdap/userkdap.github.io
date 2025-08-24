@@ -55,13 +55,6 @@
         "now_playing": "",
         "band": "FM"
     },
-    "98ddb392-f89e-4a15-beaf-87e06c0e3573": {
-        "name": "Ελληνικός 93.2",
-        "stream": "https://orange.live24.gr/orange9320",
-        "state": "Athens",
-        "now_playing": "",
-        "band": "FM"
-    },
     "961f9a79-0601-11e8-ae97-52543be04c81": {
         "name": "Real FM 97.8",
         "stream": "https://realfm.live24.gr/realfm",
@@ -81,34 +74,6 @@
         "stream": "https://rythmos.live24.gr/rythmos",
         "state": "Athens",
         "now_playing": "https://www.radiojar.com/api/stations/aw1w2xfx1vduv/now_playing/",
-        "band": "FM"
-    },
-    "dec88d4d-39bc-4e53-8aca-3cb763536bab": {
-        "name": "Sfera 102.2",
-        "stream": "https://sfera.live24.gr/sfera4132",
-        "state": "Athens",
-        "now_playing": "",
-        "band": "FM"
-    },
-    "52fe7ea5-50dc-4c63-b5ff-b27f55da0972": {
-        "name": "Sfera 102.2 Λαϊκά",
-        "stream": "https://politismedia-sec3.live24.gr/sfera1022laika",
-        "state": "Athens",
-        "now_playing": "",
-        "band": "FM"
-    },
-    "df231d5e-42c7-4761-ac50-39c698a3c5cc": {
-        "name": "Sfera 102.2 Kids",
-        "stream": "https://politismedia-sec3.live24.gr/sfera1022kids",
-        "state": "Athens",
-        "now_playing": "",
-        "band": "FM"
-    },
-    "38a3e837-16ff-49fd-b931-85ec09a8bc54": {
-        "name": "Sfera 102.2 Trap",
-        "stream": "https://politismedia-sec3.live24.gr/sfera1022trap",
-        "state": "Athens",
-        "now_playing": "",
         "band": "FM"
     },
     "190431c7-246f-44ad-bcef-8c0316c060bb": {
@@ -139,20 +104,6 @@
         "now_playing": "",
         "band": "FM"
     },
-    "4451b8c9-c73c-482a-8d9f-df43ba1254fc": {
-        "name": "Mousikos 98.6",
-        "stream": "https://netradio.live24.gr/mousikos986",
-        "state": "Athens",
-        "now_playing": "",
-        "band": "FM"
-    },
-    "d13972f9-95c6-4320-a132-ada4898220f1": {
-        "name": "Music 89.2",
-        "stream": "https://netradio.live24.gr/music892",
-        "state": "Athens",
-        "now_playing": "",
-        "band": "FM"
-    },
     "795cbab5-7a10-413e-ab0a-2b8f4daa064e": {
         "name": "Over FM 104,9",
         "stream": "https://netradio.live24.gr/overfm-internet",
@@ -163,6 +114,13 @@
     "7c00ed76-3c33-4947-a636-0d74d63bf597": {
         "name": "Νότες 96",
         "stream": "https://netradio.live24.gr/stylfmathens",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "f0bbdd58-945a-4336-8ed6-7784f65946b5": {
+        "name": "My Radio 104,6",
+        "stream": "https://streaming.myradio1046.fm/myradio1046",
         "state": "Athens",
         "now_playing": "",
         "band": "FM"
@@ -202,11 +160,130 @@
         "now_playing": "https://www.radiojar.com/api/stations/tkeve70hqd0uv/now_playing/",
         "band": "FM"
     },
-    "f0bbdd58-945a-4336-8ed6-7784f65946b5": {
-        "name": "My Radio 104,6",
-        "stream": "https://streaming.myradio1046.fm/myradio1046",
+    "dec88d4d-39bc-4e53-8aca-3cb763536bab": {
+        "name": "Sfera 102.2",
+        "stream": "https://sfera.live24.gr/sfera4132",
         "state": "Athens",
         "now_playing": "",
+        "band": "FM"
+    },
+    "52fe7ea5-50dc-4c63-b5ff-b27f55da0972": {
+        "name": "Sfera 102.2 Λαϊκά",
+        "stream": "https://politismedia-sec3.live24.gr/sfera1022laika",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "9611d448-0601-11e8-ae97-52543be04c81": {
+        "name": "Sfera 102.2 Non Stop",
+        "stream": "https://politismedia-sec3.live24.gr/sfera1022nonstop",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "7974667c-c625-45ac-a0c5-9d1615ae1c54": {
+        "name": "Sfera 102.2 Παρέα στον Sfera",
+        "stream": "https://politismedia-sec3.live24.gr/sfera1022global",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "3d504cbf-1ffc-4337-9a2c-f534a7c6047e": {
+        "name": "Sfera 102.2 Mix",
+        "stream": "https://politismedia-sec3.live24.gr/sfera1022mix",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "d94038a5-3001-4d8c-8508-39ca116853c2": {
+        "name": "Sfera 102.2 Vista Λίστα",
+        "stream": "https://politismedia-sec3.live24.gr/pm-bouzoukia",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "df231d5e-42c7-4761-ac50-39c698a3c5cc": {
+        "name": "Sfera 102.2 Kids",
+        "stream": "https://politismedia-sec3.live24.gr/sfera1022kids",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "38a3e837-16ff-49fd-b931-85ec09a8bc54": {
+        "name": "Sfera 102.2 Trap",
+        "stream": "https://politismedia-sec3.live24.gr/sfera1022trap",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "6998e7a1-6683-413a-a919-a8703d662285": {
+        "name": "Sfera 102.2 Hall Of Fame",
+        "stream": "https://politismedia-sec3.live24.gr/sfera1022hof",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "d13972f9-95c6-4320-a132-ada4898220f1": {
+        "name": "Music 89.2",
+        "stream": "https://netradio.live24.gr/music892",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "961180ce-0601-11e8-ae97-52543be04c81": {
+        "name": "Music 89.2 Christmas",
+        "stream": "https://politismedia-sec3.live24.gr/music892-christmas",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "54eec2ef-54a2-4190-af4d-762f2b5001ec": {
+        "name": "Music 89.2 Rock",
+        "stream": "https://politismedia-sec3.live24.gr/music892-rock",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "5a2ab5ea-ee5d-45d4-b3a8-0a6f48077157": {
+        "name": "Music 89.2 Retro",
+        "stream": "https://politismedia-sec3.live24.gr/music892-retro",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "961ddf4b-0601-11e8-ae97-52543be04c81": {
+        "name": "Music 89.2 NonStop",
+        "stream": "https://politismedia-sec3.live24.gr/music892-nonstop",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "FM"
+    },
+    "98ddb392-f89e-4a15-beaf-87e06c0e3573": {
+        "name": "Ελληνικός 93.2",
+        "stream": "https://orange.live24.gr/orange9320",
+        "state": "Athens",
+        "now_playing": "https://corsproxy.io/?url=https://ellinikos932.gr/app/now-playing.php",
+        "band": "FM"
+    },
+    "41a4c385-b453-41d1-9269-329589ded18a": {
+        "name": "Pride 98.6",
+        "stream": "https://politismedia-sec.live24.gr/streameepride",
+        "state": "Athens",
+        "now_playing": "https://corsproxy.io/?url=https://radio.pride.gr/app/now-playing.php",
+        "band": "FM"
+    },
+    "4451b8c9-c73c-482a-8d9f-df43ba1254fc": {
+        "name": "Mousikos",
+        "stream": "https://netradio.live24.gr/mousikos986",
+        "state": "Athens",
+        "now_playing": "https://corsproxy.io/?url=https://mousikosradio.gr/app/now-playing.php",
+        "band": "FM"
+    },
+    "fe95987a-fdfc-4d4d-9ee2-0efa4625f74b": {
+        "name": "Derti Radio",
+        "stream": "https://derti.live24.gr/derty1000",
+        "state": "Athens",
+        "now_playing": "https://corsproxy.io/?url=https://derti.gr/app/now-playing.php",
         "band": "FM"
     },
     "fffa0320-34a0-406e-b3d1-3e93dd2c630d": {
