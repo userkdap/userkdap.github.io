@@ -913,6 +913,7 @@
         element.innerHTML = fileText;
         //span.innerHTML = sizeText;
         span.textContent = sizeText;
+        currentTrack = { "artist": "", "title": "", "duration": "" }; // global currentTrack
         return;
     }
 
