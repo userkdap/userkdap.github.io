@@ -21,7 +21,6 @@
 
     const INTERVAL = 1000;
 
-    let timeoutID = 0;
     let stationInfoURL = "";
     let stationCode = "";
     let streamURL = "";
@@ -30,13 +29,16 @@
     let presetFile = "";
     let headers = null;
     let contentType = "";
+    let timeoutID = 0;
     let previousTrack = { "artist": "", "title": "", "duration": "" };
-    let request = null;
+    let currentTrack = { "artist": "", "title": "", "duration": "" };
+    let stationChange = false;
+    let info = "";
+    let trackChange = false;
     let eventSource = null;
+    let request = null;
     let recorder = undefined;
     let data = [];
-    let currentTrack = { "artist": "", "title": "", "duration": "" };
-    let trackChange = false;
     
     let mins = 0;
     let secs = 0;
@@ -147,6 +149,7 @@
         if (event.target.value) {
             stationCode = event.target.value; // global stationCode
             console.log(stationCode);
+            stationChange = true;
         }
         if (!isEmptyObject(allCodes) && stationCode) { // global allCodes, stationCode
             streamURL = allCodes[stationCode]["stream"]; // global streamURL, allCodes, stationCode
@@ -164,17 +167,18 @@
             }
             playAudioStream(streamURL);
             if (stationInfoURL === "") {
-                console.log(`stationInfoURL: empty string`);
                 let stationTag = `<a href="${streamURL}" target="_blank">${allCodes[stationCode]["name"]}</a>`; // global streamURL
                 setStationTag(msgArea, "revert", stationTag);
                 fileInfo.innerHTML = stationTag; // global fileInfo
                 sizeInfo.textContent = showDuration(""); // global sizeInfo
+                resetResponse(msg="stationInfoURL: Empty");
             } else if (getResponseType(stationInfoURL) === "evtsrc") {
-                fetchTrackInfoEventSource(stationInfoURL);
+                showTrackInfoEventSource(stationInfoURL);
             } else if (getResponseType(stationInfoURL) !== "evtsrc") {
-                //fetchTrackInfoXHR(stationInfoURL, type = getResponseType(stationInfoURL));
-                fetchTrackInfo(stationInfoURL, type = getResponseType(stationInfoURL));
+                //showTrackInfo(url = stationInfoURL, type = getResponseType(stationInfoURL), method = "xhr");
+                showTrackInfo(url = stationInfoURL, type = getResponseType(stationInfoURL), method = "fetch");
             }
+            //intervalID = requestAnimationFrame(handleDurationRAF); // global intervalID
             //intervalID = handleDuration(); // global intervalID
             intervalID = handleDurationEvent(); // global intervalID
         }
@@ -208,15 +212,32 @@
         }, INTERVAL);
     }
 
+    /* A simple example of a timer using requestAnimationFrame */
+    /* https://gist.github.com/palmerj3/8249237 */
+    let last = (new Date()).getTime();
+    function handleDurationRAF() {// Listen for the event.
+        // Listen for the event.
+        sizeInfo.addEventListener("trackChange", function reset() {
+            changeDuration();
+        });
+        let current = (new Date()).getTime();
+        if (current - last >= 1000) { // global last
+            last = current;
+            sizeInfo.textContent = showDuration(currentTrack["duration"]); // global sizeInfo, currentTrack
+            advanceDuration();  
+        }
+        requestAnimationFrame(handleDurationRAF);
+    }
+
     function getResponseType(source) {
-        let jsonSource = ["radiojar", "melodic", "atticaradios", "diesi", "airtime", "offradio", "radiomustathens"];
+        let jsonSource = ["radiojar", "atticaradios", "diesi", "airtime", "offradio", "radiomustathens", "php"];
         if (hasSubStr(source, jsonSource)) {
             return "json";
-        } else if (hasSubStr(source, ["xspf"])) {
-            return "xml";
-        } else if ( hasSubStr(source, ["currentsong", "ertecho"]) ) {
+        } else if (hasSubStr(source, ["currentsong", "ertecho"])) {
             return "text";
-        } else if (hasSubStr(source, ["zeno"])) {
+        }  else if (hasSubStr(source, ["xspf"])) {
+            return "xml";
+        }else if (hasSubStr(source, ["zeno"])) {
             return "evtsrc";
         }
         return "";
@@ -241,9 +262,7 @@
             }
         } catch (error) {
             if (error.name === "AbortError") {
-                clearTimeout(timeoutID);
-                timeoutID = 0;
-                console.log("Request cancelled!");
+                resetResponse(msg="Request cancelled!");
             } else if (error.name !== "AbortError") {
                 console.log("Info not available");
             }
@@ -251,141 +270,10 @@
         }
     }
 
-        function radioMustTrackInfo(responseData) {
-            const mustRadios = { "mustcafe": 0, "musthero": 1, "mustx": 2, "radiomust": 3 };
-            let code = "";
-            if (hasSubStr(streamURL, ["cafe"])) { // global streamURL
-                code = "mustcafe";
-            } else if (hasSubStr(streamURL, ["hero"])) { // global streamURL
-                code = "musthero";
-            } else if (hasSubStr(streamURL, ["x"])) { // global streamURL
-                code = "mustx";
-            } else if (hasSubStr(streamURL, ["mpeg"])) { // global streamURL
-                code = "radiomust";
-            }
-            return {
-                "artist": capitalize(responseData[mustRadios[code]].current.artist),
-                "title": capitalize(responseData[mustRadios[code]].current.title),
-                "duration": toMins(Math.ceil(responseData[mustRadios[code]].current.duration))
-            };
-        }
-
-        function stegiRadioTrackInfo(responseData) {
-           return {
-               "artist": capitalize(responseData.tracks.current.metadata.artist_name),
-               "title": capitalize(responseData.tracks.current.metadata.track_title),
-               "duration": ""
-           };
-        } 
-
-        function offRadioTrackInfo(responseData) {
-           return {
-               "artist": capitalize(responseData.track.artist),
-               "title": capitalize(responseData.track.name),
-               "duration": ""
-           };
-        } 
-
-        function diesiTrackInfo(responseData) {
-           return {
-               "artist": capitalize(responseData.data.artist),
-               "title": capitalize(responseData.data.song),
-               "duration": ""
-           };
-        } 
-
-        function atticaRadiosTrackInfo(responseData) {
-           return {
-               "artist": capitalize(responseData.artist),
-               "title": capitalize(responseData.song),
-               "duration": ""
-           };
-        }
-
-    /* Long polling */
-    /* https://javascript.info/long-polling */
-    async function fetchTrackInfo(url, type = "json") {
-        let responseData = await subscribe(url, type);
-        currentTrack = { "artist": "", "title": "", "duration": "" }; // global currentTrack
-        let stationTag = `<a href="${streamURL}" target="_blank">${allCodes[stationCode]["name"]}</a>`; // global streamURL
-        setStationTag(msgArea, "revert", stationTag);
-        if (responseData !== "") {
-            if (type === "json") {
-                if (hasSubStr(url, ["radiomustathens"])) {
-                    currentTrack = radioMustTrackInfo(responseData);
-                } else if (hasSubStr(url, ["airtime"])) {
-                    currentTrack = stegiRadioTrackInfo(responseData);
-                } else if (hasSubStr(url, ["offradio"])) {
-                    currentTrack = offRadioTrackInfo(responseData);
-                } else if (hasSubStr(url, ["diesi"])) {
-                    currentTrack = diesiTrackInfo(responseData);
-                } else if (hasSubStr(url, ["atticaradios"])) {
-                    currentTrack = atticaRadiosTrackInfo(responseData);
-                } else {
-                    if (responseData.artist !== undefined) {
-                        currentTrack["artist"] = capitalize(responseData.artist);
-                    }
-                    if (responseData.title !== undefined) {
-                        currentTrack["title"] = capitalize(responseData.title);
-                    }
-                    if (responseData.duration !== undefined) {
-                        currentTrack["duration"] = toMins(responseData.duration);
-                    }
-                }                        
-            } else if (type === "xml") {
-                currentTrack["artist"] = capitalize(getTagContent(source = responseData, tagName = "creator"));
-                currentTrack["title"] = capitalize(getTagContent(source = responseData, tagName = "title"));
-            } else if (type === "text") {
-                if (!responseData.includes(`"`)) {
-                    currentTrack["title"] = capitalize(responseData);
-                } else {
-                    currentTrack["title"] = capitalize(JSON.parse(responseData));
-                }
-            }
-            let trackInfo = "";
-            if (currentTrack["artist"] !== "") {
-                trackInfo = `${currentTrack["artist"]} - ${currentTrack["title"]}`;
-            } else if (currentTrack["artist"] === "" && currentTrack["title"] !== "") {
-                trackInfo = `${currentTrack["title"]}`;
-            } else if (currentTrack["title"] === "") {
-                trackInfo = `${allCodes[stationCode]["name"]}`;
-            }
-            //console.log(`trackInfo: ${trackInfo}`);
-            let trackHref = "";
-            if (hasSubStr(trackInfo, [" - ", " # "])) {
-                //let searchStr = setSearchStr(decodeHTMLEntities(trackInfo));
-                let searchStr = setSearchStr(decodeUnicodeDecimal(trackInfo));
-                //console.log(`searchStr: ${searchStr}`);
-                trackHref = `https://www.youtube.com/results?search_query=${searchStr}`;
-            } else {
-                trackHref = streamURL;
-            }
-            let trackTag = `<a href="${trackHref}" target="_blank">${trackInfo}</a>`; // global streamURL
-            let durationInfo = `${currentTrack["duration"]}`;
-            fileInfo.innerHTML = trackTag; // global fileInfo
-            sizeInfo.textContent = showDuration(durationInfo); // global sizeInfo
-            if (!areEqual(previousTrack, currentTrack)) { // global previousTrack
-                // Dispatch the event.
-                sizeInfo.dispatchEvent(new CustomEvent("trackChange", { cancelable: true }));
-                trackChange = true; // global trackChange
-                console.log(`previousTrack: ${JSON.stringify(previousTrack)}\ncurrentTrack: ${JSON.stringify(currentTrack)}`);
-                previousTrack = currentTrack; // global previousTrack
-            }
-            // Call fetchTrackInfo() again to get the next message
-            timeoutID = setTimeout(function () {
-                clearTimeout(timeoutID);
-                timeoutID = 0;
-                fetchTrackInfo(url, type);
-            }, INTERVAL);
-        } else if (responseData === "") {
-            fileInfo.innerHTML = stationTag; // global fileInfo
-            sizeInfo.textContent = showDuration(""); // global sizeInfo
-        }
-        return;
-    }
-
     /* Promise() constructor - JavaScript | MDN */
     /* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#turning_a_callback-based_api_into_a_promise-based_one */
+    /* HTML in XMLHttpRequest - Web APIs | MDN */
+    /* https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest */
     function subscribeXHR(url, type = "json") {
         return new Promise((resolve, reject) => {
             let xhr = new XMLHttpRequest();
@@ -412,72 +300,152 @@
             });
             xhr.addEventListener("error", (event) => {
                 console.log("Info not available");
-                resolve(null);
+                resolve("");
             });
             xhr.addEventListener("abort", function (event) {
-                clearTimeout(timeoutID);
-                timeoutID = 0;
-                console.log("Request cancelled!");
-                resolve(null);
+                resetResponse(msg = "Request cancelled!");
+                resolve("");
             });
             xhr.send();
             request = xhr; // global request
         });
     }
 
-    /* HTML in XMLHttpRequest - Web APIs | MDN */
-    /* https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest */
-    async function fetchTrackInfoXHR(url, type = "json") {
-        let responseData = await subscribeXHR(url, type);
-        currentTrack = { "artist": "", "title": "", "duration": "" }; // global currentTrack
-        let stationTag = `<a href="${streamURL}" target="_blank">${allCodes[stationCode]["name"]}</a>`; // global streamURL
-        setStationTag(msgArea, "revert", stationTag);
-        if (responseData !== "") {
-            if (type === "json") {
-                if (hasSubStr(url, ["radiomustathens"])) {
-                    currentTrack = radioMustTrackInfo(responseData);
-                } else if (hasSubStr(url, ["airtime"])) {
-                    currentTrack = stegiRadioTrackInfo(responseData);
-                } else if (hasSubStr(url, ["offradio"])) {
-                    currentTrack = offRadioTrackInfo(responseData);
-                } else if (hasSubStr(url, ["diesi"])) {
-                    currentTrack = diesiTrackInfo(responseData);
-                } else if (hasSubStr(url, ["atticaradios"])) {
-                    currentTrack = atticaRadiosTrackInfo(responseData);
-                } else {
-                    if (responseData.artist !== undefined) {
-                        currentTrack["artist"] = capitalize(responseData.artist);
-                    }
-                    if (responseData.title !== undefined) {
-                        currentTrack["title"] = capitalize(responseData.title);
-                    }
-                    if (responseData.duration !== undefined) {
-                        currentTrack["duration"] = toMins(responseData.duration);
-                    }
-                }                        
-            } else if (type === "xml") {
-                if (responseData.getElementsByTagName("creator")[1] !== undefined) {
-                    let artistContent = responseData.getElementsByTagName("creator")[1].childNodes[0].nodeValue;
-                    currentTrack["artist"] = capitalize(artistContent);
+    function radioMustTrackInfo(responseData) {
+        const mustRadios = { "mustcafe": 0, "musthero": 1, "mustx": 2, "radiomust": 3 };
+        let code = "";
+        if (hasSubStr(streamURL, ["cafe"])) { // global streamURL
+            code = "mustcafe";
+        } else if (hasSubStr(streamURL, ["hero"])) { // global streamURL
+            code = "musthero";
+        } else if (hasSubStr(streamURL, ["x"])) { // global streamURL
+            code = "mustx";
+        } else if (hasSubStr(streamURL, ["mpeg"])) { // global streamURL
+            code = "radiomust";
+        }
+        return {
+            "artist": capitalize(responseData[mustRadios[code]].current.artist),
+            "title": capitalize(responseData[mustRadios[code]].current.title),
+            "duration": toMins(Math.ceil(responseData[mustRadios[code]].current.duration))
+        };
+    }        
+
+    function stegiRadioTrackInfo(responseData) {
+        return {
+            "artist": capitalize(responseData.tracks.current.metadata.artist_name),
+            "title": capitalize(responseData.tracks.current.metadata.track_title),
+            "duration": ""
+        };
+    }         
+
+    function offRadioTrackInfo(responseData) {
+        return {
+            "artist": capitalize(responseData.track.artist),
+            "title": capitalize(responseData.track.name),
+            "duration": ""
+        };
+    }         
+
+    function diesiTrackInfo(responseData) {
+        return {
+            "artist": capitalize(responseData.data.artist),
+            "title": capitalize(responseData.data.song),
+            "duration": ""
+        };
+    }         
+
+    function atticaRadiosTrackInfo(responseData) {
+        return {
+            "artist": capitalize(responseData.artist),
+            "title": capitalize(responseData.song),
+            "duration": ""
+        };
+    }
+
+    function politisGroupTrackInfo(responseData) {
+        return {
+            "artist": capitalize(responseData.content[2].artist),
+            "title": capitalize(responseData.content[2].title),
+            "duration": ""
+        };
+    }
+
+    function getCurrentTrack(responseData, type = "json", method = "fetch") {
+        let currentTrack = { "artist": "", "title": "", "duration": "" };
+        if (type === "json") {
+            if (hasSubStr(url=stationInfoURL, ["radiomustathens"])) { // global stationInfoURL
+                currentTrack = radioMustTrackInfo(responseData);
+            } else if (hasSubStr(url=stationInfoURL, ["airtime"])) {
+                currentTrack = stegiRadioTrackInfo(responseData);
+            } else if (hasSubStr(url=stationInfoURL, ["offradio"])) {
+                currentTrack = offRadioTrackInfo(responseData);
+            } else if (hasSubStr(url=stationInfoURL, ["diesi"])) {
+                currentTrack = diesiTrackInfo(responseData);
+            } else if (hasSubStr(url=stationInfoURL, ["atticaradios"])) {
+                currentTrack = atticaRadiosTrackInfo(responseData);
+            } else if (hasSubStr(url=stationInfoURL, ["now-playing"])) {
+                currentTrack = politisGroupTrackInfo(responseData);
+            } else {
+                if (responseData.artist !== undefined) {
+                    currentTrack["artist"] = capitalize(responseData.artist);
                 }
-                if (responseData.getElementsByTagName("title")[1].childNodes[0] !== undefined) {
-                    let titleContent = responseData.getElementsByTagName("title")[1].childNodes[0].nodeValue;
-                    currentTrack["title"] = capitalize(titleContent);
+                if (responseData.title !== undefined) {
+                    currentTrack["title"] = capitalize(responseData.title);
                 }
-            } else if (type === "text") {
-                if (!responseData.includes(`"`)) {
-                    currentTrack["title"] = capitalize(responseData);
-                } else {
-                    currentTrack["title"] = capitalize(JSON.parse(responseData));
+                if (responseData.duration !== undefined) {
+                    currentTrack["duration"] = toMins(responseData.duration);
                 }
             }
+        } else if (type === "text") {
+            if (!responseData.includes(`"`)) {
+                currentTrack["title"] = capitalize(responseData);
+            } else {
+                currentTrack["title"] = capitalize(JSON.parse(responseData));
+            }
+        } else if (type === "xml" && method === "fetch") {
+            currentTrack["artist"] = capitalize(getTagContent(source = responseData, tagName = "creator"));
+            currentTrack["title"] = capitalize(getTagContent(source = responseData, tagName = "title"));
+        } else if (type === "xml" && method === "xhr") {
+            if (responseData.getElementsByTagName("creator")[1] !== undefined) {
+                let artistContent = responseData.getElementsByTagName("creator")[1].childNodes[0].nodeValue;
+                currentTrack["artist"] = capitalize(artistContent);
+            }
+            if (responseData.getElementsByTagName("title")[1].childNodes[0] !== undefined) {
+                let titleContent = responseData.getElementsByTagName("title")[1].childNodes[0].nodeValue;
+                currentTrack["title"] = capitalize(titleContent);
+            }
+        }
+        return currentTrack;
+    }
+
+    /* Long polling */
+    /* https://javascript.info/long-polling */
+    async function showTrackInfo(url, type = "json", method="fetch") {
+        let responseData = "";
+        if (method === "fetch") {
+            responseData = await subscribe(url, type);
+        } else if (method === "xhr") {
+            responseData = await subscribeXHR(url, type);
+        }
+        let stationTag = `<a href="${streamURL}" target="_blank">${allCodes[stationCode]["name"]}</a>`; // global streamURL
+        setStationTag(msgArea, "revert", stationTag);
+        if (responseData === "" && stationChange) {
+            info = "empty"; // global info
+        } else if (responseData !== "" || previousTrack["title"] !== "") {
+            currentTrack = getCurrentTrack(responseData, type, method); // global currentTrack
+            info = (currentTrack["title"] === "") ? "empty" : "not empty"; // global info, currentTrack
+        }
+        stationChange = false; // global stationChange
+        if (info === "empty") {
+            fileInfo.innerHTML = stationTag; // global fileInfo
+            sizeInfo.textContent = showDuration(""); // global sizeInfo
+            resetResponse(msg = "Info response empty");
+        } else if (info === "not empty") {
             let trackInfo = "";
             if (currentTrack["artist"] !== "") {
                 trackInfo = `${currentTrack["artist"]} - ${currentTrack["title"]}`;
             } else if (currentTrack["artist"] === "" && currentTrack["title"] !== "") {
                 trackInfo = `${currentTrack["title"]}`;
-            } else if (currentTrack["title"] === "") {
-                trackInfo = `${allCodes[stationCode]["name"]}`;
             }
             //console.log(`trackInfo: ${trackInfo}`);
             let trackHref = "";
@@ -487,33 +455,29 @@
                 //console.log(`searchStr: ${searchStr}`);
                 trackHref = `https://www.youtube.com/results?search_query=${searchStr}`;
             } else {
-                trackHref = streamURL;
+                trackHref = streamURL; // global streamURL
             }
             let trackTag = `<a href="${trackHref}" target="_blank">${trackInfo}</a>`; // global streamURL
             let durationInfo = `${currentTrack["duration"]}`;
             fileInfo.innerHTML = trackTag; // global fileInfo
             sizeInfo.textContent = showDuration(durationInfo); // global sizeInfo
-            if (!areEqual(previousTrack, currentTrack)) { // global previousTrack
+            if (!areEqual(previousTrack, currentTrack) && currentTrack["title"] !== "") { // global previousTrack
                 // Dispatch the event.
                 sizeInfo.dispatchEvent(new CustomEvent("trackChange", { cancelable: true }));
                 trackChange = true; // global trackChange
                 console.log(`previousTrack: ${JSON.stringify(previousTrack)}\ncurrentTrack: ${JSON.stringify(currentTrack)}`);
-                previousTrack = currentTrack; // global previousTrack
+                previousTrack = currentTrack; // global previousTrack, currentTrack
             }
-            // Call fetchTrackInfoXHR() again to get the next message
+            // Call showTrackInfo() again to get the next message
             timeoutID = setTimeout(function () {
-                clearTimeout(timeoutID);
-                timeoutID = 0;
-                fetchTrackInfoXHR(url, type);
+                resetResponse(msg = "");
+                showTrackInfo(url, type, method);
             }, INTERVAL);
-        } else if (responseData === "") {
-            fileInfo.innerHTML = stationTag; // global fileInfo
-            sizeInfo.textContent = showDuration(""); // global sizeInfo
         }
         return;
     }
 
-    function fetchTrackInfoEventSource(url) {
+    function showTrackInfoEventSource(url) {
         eventSource = new EventSource(url); // global eventSource
         let stationTag = `<a href="${streamURL}" target="_blank">${allCodes[stationCode]["name"]}</a>`; // global streamURL
         setStationTag(msgArea, "revert", stationTag);
@@ -536,12 +500,12 @@
             let trackTag = `<a href="${trackHref}" target="_blank">${trackInfo}</a>`; // global streamURL
             fileInfo.innerHTML = trackTag; // global fileInfo
             sizeInfo.textContent = showDuration(""); // global sizeInfo
-            if (!areEqual(previousTrack, currentTrack)) { // global previousTrack
+            if (!areEqual(previousTrack, currentTrack) && currentTrack["title"] !== "") { // global previousTrack
                 // Dispatch the event.
                 sizeInfo.dispatchEvent(new CustomEvent("trackChange", { cancelable: true }));
                 trackChange = true; // global trackChange
                 console.log(`previousTrack: ${previousTrack}\ncurrentTrack: ${currentTrack}`);
-                previousTrack = currentTrack; // global previousTrack
+                previousTrack = currentTrack; // global previousTrack, currentTrack
             }
         });
         eventSource.addEventListener("error", function (event) {
@@ -552,6 +516,11 @@
         });
         return;
     }
+
+    /*
+    async function fetchTrackInfoXHR(url, type = "json") {
+    }
+    */
 
     //1573031 - starting video recording of video html element with MediaRecorder mutes its sound
     //https://bugzilla.mozilla.org/show_bug.cgi?id=1573031#c4
@@ -576,7 +545,7 @@
         mediaElementSource.connect(gainNode);
         gainNode.connect(audioCtx.destination);
         //adjust volume to 0.5 gain by the GainNode.gain parameter
-        gainNode.gain.setValueAtTime(0.5, audioCtx.currentTime);
+        //gainNode.gain.setValueAtTime(0.5, audioCtx.currentTime);
 
         return new MediaRecorder(mediaStreamDestination.stream);
     }
@@ -604,14 +573,12 @@
         audioSource.connect(gainNode);
         gainNode.connect(audioCtx.destination);
         //adjust volume to 0.5 gain by the GainNode.gain parameter
-        gainNode.gain.setValueAtTime(0.5, audioCtx.currentTime);
+        //gainNode.gain.setValueAtTime(0.5, audioCtx.currentTime);
 
         return new MediaRecorder(destination.stream);
     }
 
     recordBtn.addEventListener("click", function () {
-        //if (audioElem.attributes.src === undefined || recSwitch.value === "off" || recorder.state === "recording" || recorder.state === "paused") {
-        //if (audioElem.attributes.src.value === "" || recSwitch.value === "off" || recorder.state === "recording" || recorder.state === "paused") {
         if (audioElem.attributes.src.value === resetAudio || recSwitch.value === "off" || recorder.state === "recording" || recorder.state === "paused") {
             setMsg(msgArea, "revert", "Record button deactivated…");
             console.log(`Cannot record…`);
@@ -634,15 +601,15 @@
             console.log(`Cannot pause…`);
         } else if (recorder.state === "recording") {
             recorder.pause();
+            this.textContent = "▶";
             setMsg(msgArea, "revert", `${capitalize(recorder.state)}…`);
             console.log(`recorder.state: ${recorder.state}…`);
-            this.textContent = "▶";
         } else if (recorder.state === "paused") {
             recorder.resume();
+            this.textContent = "⏸";
             console.log("resume recording");
             setMsg(msgArea, "revert", `${capitalize(recorder.state)}…`);
             console.log(`recorder.state: ${recorder.state}…`);
-            this.textContent = "⏸";
         }
         return;
     }, false);
@@ -670,9 +637,12 @@
             let recordedBlob = new Blob(data, { type: contentType }); // global data, contentType
             let stationName = allCodes[stationCode]["name"] // global allCodes, stationCode
             //let extension = contentType.split('/')[1]; // global contentType
+            let date = new Date();
+            let dateStr = date.toISOString().split('T')[0];
+            let timeStr = date.toString().split(' ')[4].replaceAll(':', '');
             let aTag = document.createElement("a");
             aTag.href = URL.createObjectURL(recordedBlob);
-            aTag.setAttribute("download", `${replaceSpaces(stationName.toLowerCase())}.mp3`);
+            aTag.setAttribute("download", `${replaceSpaces(stationName.toLowerCase())}_${dateStr}_${timeStr}.mp3`);
             aTag.click();
             console.log(`Successfully recorded ${formatFileSize(recordedBlob.size)} of ${recordedBlob.type} media.`);
         }
@@ -692,7 +662,12 @@
 
     function switchRecorder(state = "on") {
         recSwitch.value = state; // global recSwitch
-        recorder = (state === "on") ? setMediaRecorder(audioElem) : undefined; // global recorder, audioElem
+        if (state === "on") {
+            //recorder = setMediaRecorderAlter(audioElem); // global recorder, audioElem
+            recorder = setMediaRecorder(audioElem); // global recorder, audioElem
+        } else if (state === "off") {
+            recorder = undefined; // global recorder
+        }
         return;
     }
 
@@ -705,6 +680,7 @@
         recSwitch.checked = false; // global recSwitch
         pauseBtn.textContent = "⏸"; // global pauseBtn
         audioElem.src = resetAudio; // global audioElem
+        stationChange = false;
         resetDuration();
         resetParams();
         resetRequest();
@@ -717,6 +693,7 @@
         stationCode = "";
         stationInfoURL = "";
         streamURL = "";
+        info = "";
         return;
     }
 
@@ -728,10 +705,12 @@
         return;
     }
 
-    function resetResponse() {
+    function resetResponse(msg="Timeout cleared") {
         clearTimeout(timeoutID); // global timeoutID
         timeoutID = 0; // global timeoutID
-        console.log("Timeout cleared");
+        if (msg !== "") {
+            console.log(msg);
+        }
         return;
     }
     
@@ -744,6 +723,7 @@
     }
 
     function resetDuration() {
+        //cancelAnimationFrame(intervalID);
         //clearInterval(intervalID);
         clearTimeout(intervalID);
         intervalID = 0; // global intervalID
