@@ -1,4 +1,4 @@
-       :root {
+        :root {
             /* χρώμα πλήκτρων */
             --btn-color: teal;
             --navy: #073a53;
@@ -88,6 +88,12 @@
             outline-color: dodgerblue;
         }
 
+        #rec-info {
+            display: flex;
+            justify-content: space-between;
+            column-gap: 10px;
+        }
+
         .recorders {
             display: flex;
             justify-content: space-between;
@@ -136,7 +142,7 @@
         .switch {
             position: relative;
             display: inline-block;
-            /* width: 60px; */
+            /* width: 60px;*/
             /* height: 34px; */
             width: 80px;
             height: 32px;
@@ -191,7 +197,7 @@
 
         input:checked+.slider:before {
             /* -webkit-transform: translateX(26px); */
-            /* -ms-transform: translateX(26px); */
+            /* -ms-transform: translateX(26px);*/
             /* transform: translateX(26px); */
             -webkit-transform: translateX(48px);
             -ms-transform: translateX(48px);
