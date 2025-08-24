@@ -76,13 +76,6 @@
         "now_playing": "",
         "band": "Web"
     },
-    "fe95987a-fdfc-4d4d-9ee2-0efa4625f74b": {
-        "name": "Derti Web Radio",
-        "stream": "https://derti.live24.gr/derty1000",
-        "state": "Athens",
-        "now_playing": "",
-        "band": "Web"
-    },
     "96294281-0601-11e8-ae97-52543be04c81": {
         "name": "RadioGold",
         "stream": "https://radiogold.live24.gr/radiogold",
@@ -111,23 +104,16 @@
         "now_playing": "",
         "band": "Web"
     },
-    "bd78ca13-a5ed-4a0d-ad43-5408434e18d6": {
-        "name": "Streamee Salt",
-        "stream": "https://politismedia-sec.live24.gr/streameesalt",
-        "state": "Athens",
-        "now_playing": "",
-        "band": "Web"
-    },
-    "6998e7a1-6683-413a-a919-a8703d662285": {
-        "name": "Streamee Bouzoukia",
-        "stream": "https://politismedia-sec3.live24.gr/pm-bouzoukia",
-        "state": "Athens",
-        "now_playing": "",
-        "band": "Web"
-    },
     "ce0f507c-4b90-4814-ace9-7ec944898800": {
         "name": "Nitro Radio",
         "stream": "https://politisradios.live24.gr/streameenitro",
+        "state": "Athens",
+        "now_playing": "",
+        "band": "Web"
+    },
+    "bd78ca13-a5ed-4a0d-ad43-5408434e18d6": {
+        "name": "Salt Radio",
+        "stream": "https://politismedia-sec.live24.gr/streameesalt",
         "state": "Athens",
         "now_playing": "",
         "band": "Web"
@@ -311,7 +297,7 @@
         "name": "Rock Melodic Radio",
         "stream": "https://i4.streams.ovh:2200/ssl/rockmelo?mp=/stream",
         "state": "Athens",
-        "now_playing": "https://cast.tunzilla.com/http://rockmelodic-radio.com/rockmelodic/index.php?c=Rock%20Melodic",
+        "now_playing": "https://corsproxy.io/?url=https://rockmelodic-radio.com/rockmelodic/index.php?c=Rock%20Melodic",
         "band": "Web"
     },
     "530a4d3c-b13d-4ebf-b1e2-883fe0fdd8ae": {
