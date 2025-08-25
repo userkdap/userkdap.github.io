@@ -48,20 +48,6 @@
         "now_playing": "",
         "band": "FM"
     },
-    "912ed691-5054-4316-a7af-3c5ec7cbc120": {
-        "name": "Easy 97.2",
-        "stream": "https://easy972.live24.gr/easy972",
-        "state": "Athens",
-        "now_playing": "https://www.radiojar.com/api/stations/cthtwxk5yvduv/now_playing/",
-        "band": "FM"
-    },
-    "96b37cae-4795-4e9a-92be-178f16216ecf": {
-        "name": "Ρυθμός 94.9",
-        "stream": "https://rythmos.live24.gr/rythmos",
-        "state": "Athens",
-        "now_playing": "https://www.radiojar.com/api/stations/aw1w2xfx1vduv/now_playing/",
-        "band": "FM"
-    },
     "961f9a79-0601-11e8-ae97-52543be04c81": {
         "name": "Real FM 97.8",
         "stream": "https://realfm.live24.gr/realfm",
@@ -158,6 +144,104 @@
         "stream": "https://stream.radiojar.com/tkeve70hqd0uv",
         "state": "Athens",
         "now_playing": "https://www.radiojar.com/api/stations/tkeve70hqd0uv/now_playing/",
+        "band": "FM"
+    },
+    "a029e78b-67c0-4d09-9b35-206c7061c422": {
+        "name": "Ρυθμός 94.9",
+        "stream": "https://stream.rcs.revma.com/0btynq5r4a0uv",
+        "state": "Athens",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/rythmos949?stream_id=2",
+        "band": "FM"
+    },
+    "20a3f907-2e82-4255-9f99-7fa11a08c92b": {
+        "name": "Ρυθμός 94.9 Ballads",
+        "stream": "https://stream.rcs.revma.com/dm9td34r4a0uv",
+        "state": "Athens",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/rythmosballads?stream_id=19",
+        "band": "FM"
+    },
+    "8f174c53-5547-44d2-bb92-75a985cdb5ef": {
+        "name": "Ρυθμός 94.9 Dalika",
+        "stream": "https://stream.rcs.revma.com/m2r3yy4r4a0uv",
+        "state": "Athens",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/rythmosdalika?stream_id=20",
+        "band": "FM"
+    },
+    "209df387-2e94-471f-bb79-f3421be6ffdf": {
+        "name": "Ρυθμός 94.9 Dirrty",
+        "stream": "https://stream.rcs.revma.com/v0c13e5r4a0uv",
+        "state": "Athens",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/rythmosdirrty?stream_id=21",
+        "band": "FM"
+    },
+    "2d35016c-59d8-11e9-a622-52543be04c81": {
+        "name": "Ρυθμός 94.9 Non Stop Mix",
+        "stream": "https://stream.rcs.revma.com/pg5mvxz71k8uv",
+        "state": "Athens",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/rythmosnonstopmix?stream_id=22",
+        "band": "FM"
+    },
+    "9d857acf-fc89-4bc6-8746-c54d3bb40067": {
+        "name": "Ρυθμός 94.9 Νύχτα Στο Ρυθμό",
+        "stream": "https://stream.rcs.revma.com/rr2cqm5r4a0uv",
+        "state": "Athens",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/rythmosnyhta?stream_id=23",
+        "band": "FM"
+    },
+    "998ae199-61a0-4495-9391-07a82aa46150": {
+        "name": "Ρυθμός 94.9 Ρυθμός Στο Κασετόφωνο",
+        "stream": "https://stream.rcs.revma.com/ff4abx8q4a0uv",
+        "state": "Athens",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/rythmoskasetofono?stream_id=24",
+        "band": "FM"
+    },
+    "4d688959-d7e8-444b-acef-404d1cb623f9": {
+        "name": "Easy 97.2",
+        "stream": "https://n21a-eu.rcs.revma.com:443/4vr91u5r4a0uv",
+        "state": "Athens",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/easy972?stream_id=3",
+        "band": "FM"
+    },
+    "691ea696-2671-4d9c-b59a-716d09d245fd": {
+        "name": "Easy 97.2 Christmas",
+        "stream": "https://stream.rcs.revma.com/639zdnusfg0uv",
+        "state": "Athens",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/easychristmas?stream_id=37",
+        "band": "FM"
+    },
+    "7ffc5fad-14f0-4a02-8610-daac4ef3c212": {
+        "name": "Easy 97.2 80s",
+        "stream": "https://stream.rcs.revma.com/wvt5ty5r4a0uv",
+        "state": "Athens",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/easy80s?stream_id=14",
+        "band": "FM"
+    },
+    "3219b33d-2416-4207-b1cc-b78958be026a": {
+        "name": "Easy 97.2 90s",
+        "stream": "https://stream.rcs.revma.com/qhx9z05r4a0uv",
+        "state": "Athens",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/easy90s?stream_id=15",
+        "band": "FM"
+    },
+    "94ab0296-5b88-49e6-b33a-a1823a3f6b2d": {
+        "name": "Easy 97.2 Chill",
+        "stream": "https://stream.rcs.revma.com/qzzyq25r4a0uv",
+        "state": "Athens",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/easychill?stream_id=16",
+        "band": "FM"
+    },
+    "007ef0cb-333e-4ee3-be75-03cdc3b954d5": {
+        "name": "Easy 97.2 Classic",
+        "stream": "https://stream.rcs.revma.com/y318r45r4a0uv",
+        "state": "Athens",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/easyclassic?stream_id=17",
+        "band": "FM"
+    },
+    "96245f5e-0601-11e8-ae97-52543be04c81": {
+        "name": "Easy 97.2 Love",
+        "stream": "https://stream.rcs.revma.com/bptnk55r4a0uv",
+        "state": "Athens",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/easylove?stream_id=18",
         "band": "FM"
     },
     "dec88d4d-39bc-4e53-8aca-3cb763536bab": {
