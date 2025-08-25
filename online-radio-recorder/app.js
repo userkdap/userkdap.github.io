@@ -39,7 +39,7 @@
     let request = null;
     let recorder = undefined;
     let data = [];
-    
+
     let mins = 0;
     let secs = 0;
     let intervalID = 0;
@@ -171,7 +171,7 @@
                 setStationTag(msgArea, "revert", stationTag);
                 fileInfo.innerHTML = stationTag; // global fileInfo
                 sizeInfo.textContent = showDuration(""); // global sizeInfo
-                resetResponse(msg="stationInfoURL: Empty");
+                resetResponse(msg = "stationInfoURL: Empty");
             } else if (getResponseType(stationInfoURL) === "evtsrc") {
                 showTrackInfoEventSource(stationInfoURL);
             } else if (getResponseType(stationInfoURL) !== "evtsrc") {
@@ -224,20 +224,20 @@
         if (current - last >= 1000) { // global last
             last = current;
             sizeInfo.textContent = showDuration(currentTrack["duration"]); // global sizeInfo, currentTrack
-            advanceDuration();  
+            advanceDuration();
         }
         requestAnimationFrame(handleDurationRAF);
     }
 
     function getResponseType(source) {
-        let jsonSource = ["radiojar", "atticaradios", "diesi", "airtime", "offradio", "radiomustathens", "php"];
+        let jsonSource = ["radiojar", "atticaradios", "diesi", "airtime", "offradio", "radiomustathens", "php", "soundis"];
         if (hasSubStr(source, jsonSource)) {
             return "json";
         } else if (hasSubStr(source, ["currentsong", "ertecho"])) {
             return "text";
-        }  else if (hasSubStr(source, ["xspf"])) {
+        } else if (hasSubStr(source, ["xspf"])) {
             return "xml";
-        }else if (hasSubStr(source, ["zeno"])) {
+        } else if (hasSubStr(source, ["zeno"])) {
             return "evtsrc";
         }
         return "";
@@ -262,7 +262,7 @@
             }
         } catch (error) {
             if (error.name === "AbortError") {
-                resetResponse(msg="Request cancelled!");
+                resetResponse(msg = "Request cancelled!");
             } else if (error.name !== "AbortError") {
                 console.log("Info not available");
             }
@@ -328,7 +328,7 @@
             "title": capitalize(responseData[mustRadios[code]].current.title),
             "duration": toMins(Math.ceil(responseData[mustRadios[code]].current.duration))
         };
-    }        
+    }
 
     function stegiRadioTrackInfo(responseData) {
         return {
@@ -336,7 +336,7 @@
             "title": capitalize(responseData.tracks.current.metadata.track_title),
             "duration": ""
         };
-    }         
+    }
 
     function offRadioTrackInfo(responseData) {
         return {
@@ -344,7 +344,7 @@
             "title": capitalize(responseData.track.name),
             "duration": ""
         };
-    }         
+    }
 
     function diesiTrackInfo(responseData) {
         return {
@@ -352,7 +352,7 @@
             "title": capitalize(responseData.data.song),
             "duration": ""
         };
-    }         
+    }
 
     function atticaRadiosTrackInfo(responseData) {
         return {
@@ -370,21 +370,31 @@
         };
     }
 
+    function soundisTrackInfo(responseData) {
+        return {
+            "artist": capitalize(responseData.current_track.artist),
+            "title": capitalize(responseData.current_track.track_name),
+            "duration": ""
+        };
+    }
+
     function getCurrentTrack(responseData, type = "json", method = "fetch") {
         let currentTrack = { "artist": "", "title": "", "duration": "" };
         if (type === "json") {
-            if (hasSubStr(url=stationInfoURL, ["radiomustathens"])) { // global stationInfoURL
+            if (hasSubStr(url = stationInfoURL, ["radiomustathens"])) { // global stationInfoURL
                 currentTrack = radioMustTrackInfo(responseData);
-            } else if (hasSubStr(url=stationInfoURL, ["airtime"])) {
+            } else if (hasSubStr(url = stationInfoURL, ["airtime"])) {
                 currentTrack = stegiRadioTrackInfo(responseData);
-            } else if (hasSubStr(url=stationInfoURL, ["offradio"])) {
+            } else if (hasSubStr(url = stationInfoURL, ["offradio"])) {
                 currentTrack = offRadioTrackInfo(responseData);
-            } else if (hasSubStr(url=stationInfoURL, ["diesi"])) {
+            } else if (hasSubStr(url = stationInfoURL, ["diesi"])) {
                 currentTrack = diesiTrackInfo(responseData);
-            } else if (hasSubStr(url=stationInfoURL, ["atticaradios"])) {
+            } else if (hasSubStr(url = stationInfoURL, ["atticaradios"])) {
                 currentTrack = atticaRadiosTrackInfo(responseData);
-            } else if (hasSubStr(url=stationInfoURL, ["now-playing"])) {
+            } else if (hasSubStr(url = stationInfoURL, ["now-playing"])) {
                 currentTrack = politisGroupTrackInfo(responseData);
+            }  else if (hasSubStr(url = stationInfoURL, ["soundis"])) {
+                currentTrack = soundisTrackInfo(responseData);
             } else {
                 if (responseData.artist !== undefined) {
                     currentTrack["artist"] = capitalize(responseData.artist);
@@ -420,7 +430,7 @@
 
     /* Long polling */
     /* https://javascript.info/long-polling */
-    async function showTrackInfo(url, type = "json", method="fetch") {
+    async function showTrackInfo(url, type = "json", method = "fetch") {
         let responseData = "";
         if (method === "fetch") {
             responseData = await subscribe(url, type);
@@ -516,11 +526,6 @@
         });
         return;
     }
-
-    /*
-    async function fetchTrackInfoXHR(url, type = "json") {
-    }
-    */
 
     //1573031 - starting video recording of video html element with MediaRecorder mutes its sound
     //https://bugzilla.mozilla.org/show_bug.cgi?id=1573031#c4
@@ -705,7 +710,7 @@
         return;
     }
 
-    function resetResponse(msg="Timeout cleared") {
+    function resetResponse(msg = "Timeout cleared") {
         clearTimeout(timeoutID); // global timeoutID
         timeoutID = 0; // global timeoutID
         if (msg !== "") {
@@ -713,7 +718,7 @@
         }
         return;
     }
-    
+
     function resetEventSource() {
         if (eventSource) { // global eventSource
             eventSource.close(); // global eventSource
@@ -739,7 +744,7 @@
         trackChange = false; // global trackChange
         return;
     }
-    
+
     function advanceDuration() {
         secs += 1; // global secs
         if (secs > 59) {
@@ -748,11 +753,11 @@
         }
         return;
     }
-    
+
     function setDuration() {
         return `${mins}:${doubleDigits(secs)}`; // global mins, secs
     }
-    
+
     function showDuration(durationText) {
         return (durationText === "" || durationText === undefined) ? `(${setDuration()})` : `(${setDuration()}/${durationText})`;
     }
