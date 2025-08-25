@@ -510,11 +510,116 @@
         "now_playing": "https://ice2.onestreaming.com/akouspalko.xspf",
         "band": "Web"
     },
-    "40aec012-d407-4653-ace9-80ac2f381c5c": {
-        "name": "Στράτος Emerson 846",
-        "stream": "https://media.streambrothers.com:8552/stream",
+    "9c5b9610-805c-478f-ac5d-b6b561b78cab": {
+        "name": "Mood Blue",
+        "stream": "https://stream.rcs.revma.com/upmv390nmhuvv",
         "state": "Athens",
-        "now_playing": "https://media.streambrothers.com:8552/stream.xspf",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/moodblue?stream_id=13",
+        "band": "Web"
+    },
+    "ca5f7478-6631-40d8-84b7-cc60ae3acf3d": {
+        "name": "Mood Exercise",
+        "stream": "https://stream.rcs.revma.com/fm1q8a2nmhuvv",
+        "state": "Athens",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/moodexercise?stream_id=11",
+        "band": "Web"
+    },
+    "535b9d6c-5d31-477d-9944-d801eaba95d4": {
+        "name": "Mood Happy",
+        "stream": "https://stream.rcs.revma.com/mb7be53nmhuvv",
+        "state": "Athens",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/moodhappy?stream_id=9",
+        "band": "Web"
+    },
+    "9f45dd09-170a-4bdb-b0f4-f72c4871f1bd": {
+        "name": "Mood Romance",
+        "stream": "https://stream.rcs.revma.com/2sv9ah4nmhuvv",
+        "state": "Athens",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/moodromance?stream_id=10",
+        "band": "Web"
+    },
+    "b29e5a1b-8548-475e-bf01-1d9c45c03524": {
+        "name": "Mood Sleep",
+        "stream": "https://stream.rcs.revma.com/uzd00r4nmhuvv",
+        "state": "Athens",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/moodsleep?stream_id=12",
+        "band": "Web"
+    },
+    "874b5bee-0349-44dc-8057-109164c286ba": {
+        "name": "Soundis Athens Beat",
+        "stream": "https://stream.rcs.revma.com/f0nsuk6bwg0uv",
+        "state": "Athens",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/athensbeat?stream_id=25",
+        "band": "Web"
+    },
+    "d722b212-4f14-4b51-b703-fa21a93a7938": {
+        "name": "Soundis Capri",
+        "stream": "https://stream.rcs.revma.com/bywm50058ehvv",
+        "state": "Athens",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/capri?stream_id=26",
+        "band": "Web"
+    },
+    "977ca6ef-db94-42ae-afce-ed47277eb103": {
+        "name": "Soundis Classical",
+        "stream": "https://stream.rcs.revma.com/6pupacq81k8uv",
+        "state": "Athens",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/classical?stream_id=27",
+        "band": "Web"
+    },
+    "fa33a4b0-ecc1-4514-845f-78dc4a2ed629": {
+        "name": "Soundis Dancefloor",
+        "stream": "https://stream.rcs.revma.com/4x72rznh9quvv",
+        "state": "Athens",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/dancefloor?stream_id=28",
+        "band": "Web"
+    },
+    "8f9eceae-302f-4369-9ad8-7f95a55e915e": {
+        "name": "Soundis Hammer",
+        "stream": "https://stream.rcs.revma.com/5ndtqgs5fd0uv",
+        "state": "Athens",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/hammer?stream_id=29",
+        "band": "Web"
+    },
+    "6af52675-5e85-4df8-a86d-abb560fc20ab": {
+        "name": "Soundis Hitmix",
+        "stream": "https://stream.rcs.revma.com/xnaynr058ehvv",
+        "state": "Athens",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/hitmix?stream_id=30",
+        "band": "Web"
+    },
+    "b35d7112-e309-4b5c-8b99-50cc12610b42": {
+        "name": "Soundis Lounge",
+        "stream": "https://stream.rcs.revma.com/pnz8khnmsuhvv",
+        "state": "Athens",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/lounge?stream_id=31",
+        "band": "Web"
+    },
+    "c940187f-3f68-45b8-8047-15a3beb1975d": {
+        "name": "Soundis Pride",
+        "stream": "https://stream.rcs.revma.com/uha7w9271k8uv",
+        "state": "Athens",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/pride?stream_id=32",
+        "band": "Web"
+    },
+    "36fe2f31-0b35-4eda-a8db-9a53a67a2670": {
+        "name": "Soundis Rook",
+        "stream": "https://stream.rcs.revma.com/sw9hyp371k8uv",
+        "state": "Athens",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/rook?stream_id=33",
+        "band": "Web"
+    },
+    "7c1152f2-8b6f-4f3f-a8a8-044fef55d87d": {
+        "name": "Soundis Soul",
+        "stream": "https://stream.rcs.revma.com/z1zng0ze0chvv",
+        "state": "Athens",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/soul?stream_id=34",
+        "band": "Web"
+    },
+    "f816902a-598d-4061-bff8-abcfee3f9b4f": {
+        "name": "Soundis Urban",
+        "stream": "https://stream.rcs.revma.com/dmbdx0wsxd0uv",
+        "state": "Athens",
+        "now_playing": "https://api.soundis.gr/api/stream-homepage/urban?stream_id=35",
         "band": "Web"
     },
     "ae1868b9-94be-4820-a9c3-a9969c5f3c0e": {
@@ -536,6 +641,13 @@
         "stream": "https://movementathens2.out.airtime.pro/movementathens2_a",
         "state": "Athens",
         "now_playing": "https://movementathens2.airtime.pro/api/live-info-v2",
+        "band": "Web"
+    },
+    "40aec012-d407-4653-ace9-80ac2f381c5c": {
+        "name": "Στράτος Emerson 846",
+        "stream": "https://media.streambrothers.com:8552/stream",
+        "state": "Athens",
+        "now_playing": "https://media.streambrothers.com:8552/stream.xspf",
         "band": "Web"
     },
     "d30ac0d6-671d-4533-ad9f-d7887aca0412": {
